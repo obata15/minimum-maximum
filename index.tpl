@@ -69,7 +69,7 @@
     {/block:Posts}
   </ol>
 
-  <p id="footer">
+  <nav id="footer-navigation">
     {block:PreviousPage}
       <a href="{PreviousPage}">&#171; Previous</a>
       {/block:PreviousPage}{block:NextPage}
@@ -77,7 +77,7 @@
     {/block:NextPage}
 
     <a href="/archive">Archive</a>
-  </p>
+  </nav>
 </body>
 
 </html>
