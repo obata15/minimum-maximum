@@ -16,15 +16,56 @@
 
   <style>
     body {
+      padding: 10px;
       background: {BackgroundColor};
-    }
-
-    h1 {
-      color: {TitleColor};
     }
 
     a {
       color: {AccentColor};
+    }
+
+    header a,
+    #posts a {
+      text-decoration: none;
+      color: {TitleColor};
+    }
+
+    .portrait-icon {
+      border-radius: 128px;
+    }
+
+    header#full-header {
+      text-align: center;
+    }
+
+    header#full-header .portrait-icon {
+      height: 64px;
+      width: 64px;
+    }
+
+    header#full-header h1 {
+      margin: 0px;
+    }
+
+    header#full-header p {
+      margin: 0;
+      color: {text:Aside text color};
+    }
+
+    header#compact-header {
+      /* depends on Tumblr header size */
+      height: 54px;
+      line-height: 54px;
+    }
+
+    header#compact-header .portrait-icon {
+      display: inline-block;
+      height: 1.5rem;
+      width: 1.5rem;
+    }
+
+    h1 {
+      color: {TitleColor};
     }
 
     footer,
@@ -35,30 +76,39 @@
 </head>
 
 <body>
-  <header>
-    {block:HomePage}
+  {block:HomePage}
+    <header id="full-header">
       {block:ShowTitle}
-        <h1><a href="/">{Title}</a></h1>
+        <img src="{PortraitURL-128}" alt="{URLEncodedName}" class="portrait-icon" />
+        <h1>
+          <a href="/">{Title}</a>
+        </h1>
       {/block:ShowTitle}
-
       {block:ShowDescription}
         <p id="description">{Description}</p>
       {/block:ShowDescription}
-    {/block:HomePage}
-    {block:PermalinkPage}
-      <nav><a href="/">{Title}</a></nav>
-    {/block:PermalinkPage}
-  </header>
+    </header>
+  {/block:HomePage}
+  {block:PermalinkPage}
+    <header id="compact-header">
+      <nav>
+        <a href="/">
+          <img src="{PortraitURL-128}" alt="{URLEncodedName}" class="portrait-icon" />
+          {Title}
+        </a>
+      </nav>
+    </header>
+  {/block:PermalinkPage}
 
   <ol id="posts">
     {block:Posts}
       <li class="post">
         {block:Text}
           {block:Title}
-            <h2><a href="{Permalink}">{Title}</a></h2>
+            <a href="{Permalink}">{Title}</a>
           {/block:Title}
-          {Body}
         {/block:Text}
+
         {block:Photo}
           <strong>Photo post is not supported.</strong>
         {/block:Photo}
