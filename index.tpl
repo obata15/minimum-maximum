@@ -162,7 +162,7 @@
     Powered by
     <a href="https://www.tumblr.com/">Tumblr</a>
     and
-    <a href="https://github.com/obata15/minimum-maximum">Minimum-Maximum Theme</a>
+    <a href="https://github.com/obata15/minimum-maximum">Minimum-Maximum</a>
   </footer>
 </body>
 
