@@ -29,13 +29,20 @@
 </head>
 
 <body>
-  {block:ShowTitle}
-    <h1><a href="/">{Title}</a></h1>
-  {/block:ShowTitle}
+  <header>
+    {block:HomePage}
+      {block:ShowTitle}
+        <h1><a href="/">{Title}</a></h1>
+      {/block:ShowTitle}
 
-  {block:ShowDescription}
-    <p id="description">{Description}</p>
-  {/block:ShowDescription}
+      {block:ShowDescription}
+        <p id="description">{Description}</p>
+      {/block:ShowDescription}
+    {/block:HomePage}
+    {block:PermalinkPage}
+      <nav><a href="/">{Title}</a></nav>
+    {/block:PermalinkPage}
+  </header>
 
   <ol id="posts">
     {block:Posts}
