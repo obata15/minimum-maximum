@@ -10,11 +10,13 @@
 </head>
 
 <body>
-  <h1>{Title}</h1>
+  {block:ShowTitle}
+    <h1>{Title}</h1>
+  {/block:ShowTitle}
 
-  {block:Description}
+  {block:ShowDescription}
     <p id="description">{Description}</p>
-  {/block:Description}
+  {/block:ShowDescription}
 
   <ol id="posts">
     {block:Posts}

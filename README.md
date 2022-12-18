@@ -20,8 +20,8 @@ Tumblr theme inspired by <a href="https://sanographix.github.io/tumblr/solo/">So
 - [ ] Show header image
 - [ ] Stretch header image
 - [ ] Show avatar
-- [ ] Show title
-- [ ] Show description
+- [x] Show title
+- [x] Show description
 
 
 ## Never Support
