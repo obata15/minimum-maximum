@@ -3,6 +3,7 @@
 
 <head>
   <meta name="text:Language BCP47" content="en">
+  <meta name="text:Aside text color" content="#eeeeee">
 
   <link rel="shortcut icon" href="{Favicon}">
   <link rel="alternate" type="application/rss+xml" href="{RSS}">
@@ -24,6 +25,11 @@
 
     a {
       color: {AccentColor};
+    }
+
+    footer,
+    footer a {
+      color: {text:Aside text color};
     }
   </style>
 </head>
@@ -90,6 +96,13 @@
 
     <a href="/archive">Archive</a>
   </nav>
+
+  <footer>
+    Powered by
+    <a href="https://www.tumblr.com/">Tumblr</a>
+    and
+    <a href="https://github.com/obata15/minimum-maximum">Minimum-Maximum Theme</a>
+  </footer>
 </body>
 
 </html>
