@@ -19,6 +19,15 @@ Tumblr theme inspired by <a href="https://sanographix.github.io/tumblr/solo/">So
 - [x] HTML language
 - [ ] Google Tag Manager
 
+### Pages
+
+- [ ] IndexPage
+  - [x] HomePage
+  - [ ] DayPage
+  - [ ] TagPage
+  - [ ] SearchPage
+- [ ] PermalinkPage
+
 ### Appearance options
 
 - [x] Title
@@ -40,3 +49,4 @@ Tumblr theme inspired by <a href="https://sanographix.github.io/tumblr/solo/">So
 ## Never Support
 
 - Non-text post
+- Custom CSS
