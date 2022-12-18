@@ -2,12 +2,15 @@
 
 <head>
   <title>{Title}</title>
+
   <link rel="shortcut icon" href="{Favicon}">
   <link rel="alternate" type="application/rss+xml" href="{RSS}">
+
   {block:Description}
     <meta name="description" content="{MetaDescription}" />
   {/block:Description}
 
+  <link href="https://unpkg.com/sanitize.css" rel="stylesheet" />
   <style>
     body {
       background: {BackgroundColor};

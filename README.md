@@ -2,6 +2,10 @@
 
 Tumblr theme inspired by <a href="https://sanographix.github.io/tumblr/solo/">Solo</a>.
 
+## Stacks
+
+- https://csstools.github.io/sanitize.css/
+
 ## Required Appearance options
 
 | Key | Value |
