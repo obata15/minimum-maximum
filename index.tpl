@@ -127,14 +127,15 @@
     nav.bottom.home-navigation a {
       display: flex;
       justify-content: center;
-      align-items: center;
+      align-items: baseline;
     }
 
     nav.bottom.home-navigation .portrait-icon {
       display: inline-block;
       height: 1.2rem;
       width: 1.2rem;
-      margin-top: -3px;
+      margin-left: 2px;
+      margin-right: 2px;
       border: solid 2px;
     }
 
