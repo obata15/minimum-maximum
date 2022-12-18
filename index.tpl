@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="{text:Language BCP47}">
 
 <head>
