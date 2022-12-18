@@ -4,16 +4,14 @@
 <head>
   <meta name="text:Language BCP47" content="en">
 
-  <title>{Title}</title>
-
   <link rel="shortcut icon" href="{Favicon}">
   <link rel="alternate" type="application/rss+xml" href="{RSS}">
-
-  {block:Description}
-    <meta name="description" content="{MetaDescription}" />
-  {/block:Description}
-
   <link href="https://unpkg.com/sanitize.css" rel="stylesheet" />
+
+  <title>{Title}</title>
+
+  <meta name="description" content="{MetaDescription}" />
+
   <style>
     body {
       background: {BackgroundColor};
