@@ -22,9 +22,6 @@ Tumblr theme inspired by <a href="https://sanographix.github.io/tumblr/solo/">So
 - [ ] Show avatar
 - [ ] Show title
 - [ ] Show description
-- [ ] Dark theme
-- [ ] Dark theme
-- [ ] Dark theme
 
 
 ## Never Support
