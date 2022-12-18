@@ -30,7 +30,7 @@
 
 <body>
   {block:ShowTitle}
-    <h1>{Title}</h1>
+    <h1><a href="/">{Title}</a></h1>
   {/block:ShowTitle}
 
   {block:ShowDescription}
