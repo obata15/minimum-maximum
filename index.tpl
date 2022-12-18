@@ -69,6 +69,17 @@
       color: {TitleColor};
     }
 
+    nav#pagination {
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+      text-align: center;
+      font-size: 1.5rem;
+    }
+
+    footer {
+      text-align: center;
+    }
+
     footer,
     footer a {
       color: {text:Aside text color};
@@ -138,14 +149,13 @@
     {/block:Posts}
   </ol>
 
-  <nav id="bottom-navigation">
+  <nav id="pagination">
     {block:PreviousPage}
-      <a href="{PreviousPage}">&#171; Previous</a>
-      {/block:PreviousPage}{block:NextPage}
-      <a href="{NextPage}">Next &#187;</a>
+      <a href="{PreviousPage}">&lt; Newer</a>
+    {/block:PreviousPage}
+    {block:NextPage}
+      <a href="{NextPage}">Older &gt;</a>
     {/block:NextPage}
-
-    <a href="/archive">Archive</a>
   </nav>
 
   <footer>
