@@ -23,7 +23,7 @@ Tumblr theme inspired by <a href="https://sanographix.github.io/tumblr/solo/">So
 - [ ] Title font
 - [x] Background color
 - [x] Title color
-- [ ] Accent color
+- [x] Accent color
 - [ ] Show header image
 - [ ] Stretch header image
 - [ ] Show avatar

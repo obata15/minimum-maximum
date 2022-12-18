@@ -16,6 +16,10 @@
     h1 {
       color: {TitleColor};
     }
+
+    a {
+      color: {AccentColor};
+    }
   </style>
 </head>
 
