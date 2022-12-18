@@ -22,11 +22,11 @@
     }
 
     a {
+      text-decoration: none;
       color: {AccentColor};
     }
 
     header a {
-      text-decoration: none;
       color: {TitleColor};
     }
 
@@ -64,17 +64,40 @@
       width: 1.5rem;
     }
 
+    main {
+      max-width: 960px;
+      margin: auto;
+    }
+
     h1 {
+      margin-bottom: 0;
       color: {TitleColor};
     }
 
-    ol#posts a {
-      text-decoration: none;
+    ol#posts {
+      list-style-type: none;
+      padding-left: 0;
+      font-size: 2rem;
+      font-weight: bold;
+    }
+
+    ol#posts>li {
+      margin-bottom: 1rem;
+    }
+
+    ol#posts>li>a {
       color: {TitleColor};
     }
 
-    ol#posts ul.tags,
-    ol#posts ul.tags a {
+    ul.date-and-tags {
+      list-style-type: none;
+      font-size: 1rem;
+      font-weight: normal;
+      padding-left: 0;
+    }
+
+    ul.date-and-tags li {
+      display: inline;
       color: {text:Aside text color};
     }
 
@@ -97,6 +120,34 @@
 </head>
 
 <body>
+  {block:PermalinkPage}
+    <header id="compact-header">
+      <nav>
+        <a href="/">
+          <img src="{PortraitURL-128}" alt="{URLEncodedName}" class="portrait-icon" />
+          {Title}
+        </a>
+      </nav>
+    </header>
+
+    <main>
+      {block:Posts}
+        <article>
+          {block:Text}
+            <h1>{Title}</h1>
+            <ul class="date-and-tags">
+              <li>{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}</li>
+              {block:Tags}
+                <li><a href="{TagURL}">#{Tag}</a></li>
+              {/block:Tags}
+            </ul>
+            {Body}
+          {/block:Text}
+        </article>
+      {/block:Posts}
+    </main>
+  {/block:PermalinkPage}
+
   {block:IndexPage}
     <header id="full-header">
       {block:ShowTitle}
@@ -109,78 +160,62 @@
         <p id="description">{Description}</p>
       {/block:ShowDescription}
     </header>
-  {/block:IndexPage}
-  {block:PermalinkPage}
-    <header id="compact-header">
-      <nav>
-        <a href="/">
-          <img src="{PortraitURL-128}" alt="{URLEncodedName}" class="portrait-icon" />
-          {Title}
-        </a>
-      </nav>
-    </header>
-  {/block:PermalinkPage}
 
-  <main>
-    {block:TagPage}
-      <h1>Posts tagged "{Tag}"</h1>
-    {/block:TagPage}
+    <main>
+      {block:TagPage}
+        <h1>Posts tagged "{Tag}"</h1>
+      {/block:TagPage}
 
-    {block:Posts}
       <ol id="posts">
-        <li class="post">
-          {block:Text}
-            {block:Title}
+        {block:Posts}
+          <li class="post">
+            {block:Text}
               <a href="{Permalink}">{Title}</a>
-              {block:HasTags}
-                <ul class="tags">
-                  {block:Tags}
-                    <li><a href="{TagURL}">#{Tag}</a></li>
-                  {/block:Tags}
-              </li>
-            {/block:HasTags}
-          {/block:Title}
-        {/block:Text}
+              <ul class="date-and-tags">
+                <li>{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}</li>
+              </ul>
+            {/block:Text}
 
-        {block:Photo}
-          <strong>Photo post is not supported.</strong>
-        {/block:Photo}
-        {block:Panorama}
-          <strong>Panorama post is not supported.</strong>
-        {/block:Panorama}
-        {block:Photoset}
-          <strong>Photoset post is not supported.</strong>
-        {/block:Photoset}
-        {block:Quote}
-          <strong>Quote post is not supported.</strong>
-        {/block:Quote}
-        {block:Link}
-          <strong>Link post is not supported.</strong>
-        {/block:Link}
-        {block:Chat}
-          <strong>Chat post is not supported.</strong>
-        {/block:Chat}
-        {block:Video}
-          <strong>Video post is not supported.</strong>
-        {/block:Video}
-        {block:Audio}
-          <strong>Audio post is not supported.</strong>
-        {/block:Audio}
-        </li>
+            {block:Photo}
+              <strong>[WARNING] Photo post is not supported.</strong>
+            {/block:Photo}
+            {block:Panorama}
+              <strong>[WARNING] Panorama post is not supported.</strong>
+            {/block:Panorama}
+            {block:Photoset}
+              <strong>[WARNING] Photoset post is not supported.</strong>
+            {/block:Photoset}
+            {block:Quote}
+              <strong>[WARNING] Quote post is not supported.</strong>
+            {/block:Quote}
+            {block:Link}
+              <strong>[WARNING] Link post is not supported.</strong>
+            {/block:Link}
+            {block:Chat}
+              <strong>[WARNING] Chat post is not supported.</strong>
+            {/block:Chat}
+            {block:Video}
+              <strong>[WARNING] Video post is not supported.</strong>
+            {/block:Video}
+            {block:Audio}
+              <strong>[WARNING] Audio post is not supported.</strong>
+            {/block:Audio}
+          </li>
+        {/block:Posts}
       </ol>
-    {/block:Posts}
-  </main>
+    </main>
 
-  {block:Pagination}
-    <nav id="pagination">
-      {block:PreviousPage}
-        <a href="{PreviousPage}">&lt; Newer</a>
-      {/block:PreviousPage}
-      {block:NextPage}
-        <a href="{NextPage}">Older &gt;</a>
-      {/block:NextPage}
-    </nav>
-  {/block:Pagination}
+    {block:Pagination}
+      <nav id="pagination">
+        {block:PreviousPage}
+          <a href="{PreviousPage}">&lt; Newer</a>
+        {/block:PreviousPage}
+        {block:NextPage}
+          <a href="{NextPage}">Older &gt;</a>
+        {/block:NextPage}
+      </nav>
+    {/block:Pagination}
+  {/block:IndexPage}
 
   <footer>
     Powered by
