@@ -18,92 +18,38 @@
 
   <ol id="posts">
     {block:Posts}
-      {block:Text}
-        <li class="post text">
+      <li class="post">
+        {block:Text}
           {block:Title}
-            <h3><a href="{Permalink}">{Title}</a></h3>
+            <h2><a href="{Permalink}">{Title}</a></h2>
           {/block:Title}
           {Body}
-        </li>
-      {/block:Text}
-      {block:Photo}
-        <li class="post photo">
-          <img src="{PhotoURL-500}" alt="{PhotoAlt}" />
-
-          {block:Caption}
-            <div class="caption">{Caption}</div>
-          {/block:Caption}
-        </li>
-      {/block:Photo}
-      {block:Panorama}
-        <li class="post panorama">
-          {LinkOpenTag}
-          <img src="{PhotoURL-Panorama}" alt="{PhotoAlt}" />
-          {LinkCloseTag}
-          {block:Caption}
-            <div class="caption">{Caption}</div>
-          {/block:Caption}
-        </li>
-      {/block:Panorama}
-      {block:Photoset}
-        <li class="post photoset">
-          {Photoset-500}
-          {block:Caption}
-            <div class="caption">{Caption}</div>
-          {/block:Caption}
-        </li>
-      {/block:Photoset}
-      {block:Quote}
-        <li class="post quote">
-          "{Quote}"
-
-          {block:Source}
-            <div class="source">{Source}</div>
-          {/block:Source}
-        </li>
-      {/block:Quote}
-      {block:Link}
-        <li class="post link">
-          <a href="{URL}" class="link" {Target}>{Name}</a>
-
-          {block:Description}
-            <div class="description">{Description}</div>
-          {/block:Description}
-        </li>
-      {/block:Link}
-      {block:Chat}
-        <li class="post chat">
-          {block:Title}
-            <h3><a href="{Permalink}">{Title}</a></h3>
-          {/block:Title}
-
-          <ul class="chat">
-            {block:Lines}
-              <li class="{Alt} user_{UserNumber}">
-                {block:Label}
-                  <span class="label">{Label}</span>
-                {/block:Label}{Line}
-              </li>
-            {/block:Lines}
-          </ul>
-        </li>
-      {/block:Chat}
-      {block:Video}
-        <li class="post video">
-          {Video-500}
-          {block:Caption}
-            <div class="caption">{Caption}</div>
-          {/block:Caption}
-        </li>
-      {/block:Video}
-      {block:Audio}
-        <li class="post audio">
-          {AudioEmbed}
-          {block:Caption}
-            <div class="caption">{Caption}</div>
-          {/block:Caption}
-        </li>
-      {/block:Audio}
+        {/block:Text}
+        {block:Photo}
+          <strong>Photo post is not supported.</strong>
+        {/block:Photo}
+        {block:Panorama}
+          <strong>Panorama post is not supported.</strong>
+        {/block:Panorama}
+        {block:Photoset}
+          <strong>Photoset post is not supported.</strong>
+        {/block:Photoset}
+        {block:Quote}
+          <strong>Quote post is not supported.</strong>
+        {/block:Quote}
+        {block:Link}
+          <strong>Link post is not supported.</strong>
+        {/block:Link}
+        {block:Chat}
+          <strong>Chat post is not supported.</strong>
+        {/block:Chat}
+        {block:Video}
+          <strong>Video post is not supported.</strong>
+        {/block:Video}
+        {block:Audio}
+          <strong>Audio post is not supported.</strong>
+        {/block:Audio}
+      </li>
     {/block:Posts}
   </ol>
 
