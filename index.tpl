@@ -7,6 +7,16 @@
   {block:Description}
     <meta name="description" content="{MetaDescription}" />
   {/block:Description}
+
+  <style>
+    body {
+      background: {BackgroundColor};
+    }
+
+    h1 {
+      color: {TitleColor};
+    }
+  </style>
 </head>
 
 <body>

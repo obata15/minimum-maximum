@@ -2,6 +2,13 @@
 
 Tumblr theme inspired by <a href="https://sanographix.github.io/tumblr/solo/">Solo</a>.
 
+## Required Appearance options
+
+| Key | Value |
+|-|-|
+| Background color | #f6f6f6 |
+| Title color | #222222 |
+
 ## Feature
 
 - [ ] Dark theme
@@ -14,8 +21,8 @@ Tumblr theme inspired by <a href="https://sanographix.github.io/tumblr/solo/">So
 - [ ] Avatar
 - [ ] Avatar shape
 - [ ] Title font
-- [ ] Background color
-- [ ] Title color
+- [x] Background color
+- [x] Title color
 - [ ] Accent color
 - [ ] Show header image
 - [ ] Stretch header image
