@@ -52,18 +52,6 @@
       color: {text:Aside text color};
     }
 
-    header#compact-header {
-      /* depends on Tumblr header size */
-      height: 54px;
-      line-height: 54px;
-    }
-
-    header#compact-header .portrait-icon {
-      display: inline-block;
-      height: 1.5rem;
-      width: 1.5rem;
-    }
-
     main {
       max-width: 960px;
       margin: auto;
@@ -101,10 +89,32 @@
       color: {text:Aside text color};
     }
 
-    nav#pagination {
+    nav.bottom {
       margin-top: 2rem;
       margin-bottom: 2rem;
       text-align: center;
+    }
+
+    nav.bottom.home-navigation {
+      text-align: center;
+      font-size: 1.5rem;
+    }
+
+    nav.bottom.home-navigation a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    nav.bottom.home-navigation .portrait-icon {
+      display: inline-block;
+      height: 1.2rem;
+      width: 1.2rem;
+      margin-top: -3px;
+      border: solid 2px;
+    }
+
+    nav.bottom.pagination {
       font-size: 1.5rem;
     }
 
@@ -121,15 +131,6 @@
 
 <body>
   {block:PermalinkPage}
-    <header id="compact-header">
-      <nav>
-        <a href="/">
-          <img src="{PortraitURL-128}" alt="{URLEncodedName}" class="portrait-icon" />
-          {Title}
-        </a>
-      </nav>
-    </header>
-
     <main>
       {block:Posts}
         <article>
@@ -146,6 +147,12 @@
         </article>
       {/block:Posts}
     </main>
+
+    <nav class="bottom home-navigation">
+      <a href="/">
+        <span>H</span><img src="{PortraitURL-128}" alt="{URLEncodedName}" class="portrait-icon" /><span>ME</span>
+      </a>
+    </nav>
   {/block:PermalinkPage}
 
   {block:IndexPage}
@@ -206,7 +213,7 @@
     </main>
 
     {block:Pagination}
-      <nav id="pagination">
+      <nav class="bottom pagination">
         {block:PreviousPage}
           <a href="{PreviousPage}">&lt; Newer</a>
         {/block:PreviousPage}
