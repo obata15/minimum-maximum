@@ -175,19 +175,19 @@
           {/block:Text}
         </article>
       {/block:Posts}
-    </main>
 
-    <nav class="bottom home-navigation">
-      <a href="/">
-        <span>H</span><img src="{PortraitURL-128}" alt="{URLEncodedName}" class="portrait-icon" /><span>ME</span>
-      </a>
-    </nav>
+      <nav class="bottom home-navigation">
+        <a href="/">
+          <span>H</span><img src="{PortraitURL-128}" alt="{URLEncodedName}" class="portrait-icon" /><span>ME</span>
+        </a>
+      </nav>
+    </main>
   {/block:PermalinkPage}
 
   {block:IndexPage}
     <header>
       {block:ShowTitle}
-        <img src="{PortraitURL-128}" alt="{URLEncodedName}" class="portrait-icon" />
+        <a href="/"><img src="{PortraitURL-128}" alt="{URLEncodedName}" class="portrait-icon" /></a>
         <h1>
           <a href="/">{Title}</a>
         </h1>
@@ -239,18 +239,18 @@
           </li>
         {/block:Posts}
       </ol>
-    </main>
 
-    {block:Pagination}
-      <nav class="bottom pagination">
-        {block:PreviousPage}
-          <a href="{PreviousPage}">&lt; Newer</a>
-        {/block:PreviousPage}
-        {block:NextPage}
-          <a href="{NextPage}">Older &gt;</a>
-        {/block:NextPage}
-      </nav>
-    {/block:Pagination}
+      {block:Pagination}
+        <nav class="bottom pagination">
+          {block:PreviousPage}
+            <a href="{PreviousPage}">&lt; Newer</a>
+          {/block:PreviousPage}
+          {block:NextPage}
+            <a href="{NextPage}">Older &gt;</a>
+          {/block:NextPage}
+        </nav>
+      {/block:Pagination}
+    </main>
   {/block:IndexPage}
 
   <footer>
