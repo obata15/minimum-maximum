@@ -31,6 +31,10 @@
       color: {TitleColor};
     }
 
+    ul.date-and-tags li.date a {
+      color: {TitleColor};
+    }
+
     @media (prefers-color-scheme: dark) {
       body {
         background: {TitleColor};
@@ -45,6 +49,9 @@
         color: {BackgroundColor};
       }
 
+      ul.date-and-tags li.date a {
+        color: {BackgroundColor};
+      }
     }
 
     body {
@@ -83,7 +90,7 @@
       margin: auto;
     }
 
-    h1 {
+    main h1 {
       margin-bottom: 0;
     }
 
@@ -172,7 +179,9 @@
           {block:Text}
             <h1>{Title}</h1>
             <ul class="date-and-tags">
-              <li class="date">{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}</li>
+              {block:Date}
+                <li class="date">{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}</li>
+              {/block:Date}
               {block:Tags}
                 <li class="tag"><a href="{TagURL}">#{Tag}</a></li>
               {/block:Tags}
@@ -234,7 +243,7 @@
             {block:Text}
               <a href="{Permalink}">{Title}</a>
               <ul class="date-and-tags">
-                <li class="date">{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}</li>
+                <li class="date"><a href="{Permalink}">{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}</a></li>
               </ul>
             {/block:Text}
 
