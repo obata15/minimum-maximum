@@ -1,6 +1,8 @@
-<html>
+<html lang="{text:Language BCP47}">
 
 <head>
+  <meta name="text:Language BCP47" content="en">
+
   <title>{Title}</title>
 
   <link rel="shortcut icon" href="{Favicon}">

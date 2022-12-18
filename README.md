@@ -16,6 +16,7 @@ Tumblr theme inspired by <a href="https://sanographix.github.io/tumblr/solo/">So
 ## Feature
 
 - [ ] Dark theme
+- [x] HTML language
 
 ### Appearance options
 
