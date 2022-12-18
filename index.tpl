@@ -87,6 +87,12 @@
       margin-bottom: 0;
     }
 
+    nav#menu ul {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+    }
+
     ol#posts {
       list-style-type: none;
       padding-left: 0;
@@ -198,6 +204,26 @@
     </header>
 
     <main>
+      <nav id="menu">
+        <ul>
+          {block:HasPages}
+            {block:Pages}
+              <li>
+                <a href="{URL}">{Label}</a>
+              </li>
+            {/block:Pages}
+          {/block:HasPages}
+          <li>
+            <a href="/archive">Archive</a>
+          </li>
+          {block:AskEnabled}
+            <li>
+              <a href="/ask">{AskLabel}</a>
+            </li>
+          {/block:AskEnabled}
+        </ul>
+      </nav>
+
       {block:TagPage}
         <h1>Posts tagged "{Tag}"</h1>
       {/block:TagPage}
