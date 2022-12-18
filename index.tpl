@@ -149,14 +149,18 @@
     {/block:Posts}
   </ol>
 
-  <nav id="pagination">
-    {block:PreviousPage}
-      <a href="{PreviousPage}">&lt; Newer</a>
-    {/block:PreviousPage}
-    {block:NextPage}
-      <a href="{NextPage}">Older &gt;</a>
-    {/block:NextPage}
-  </nav>
+  </main>
+
+  {block:Pagination}
+    <nav id="pagination">
+      {block:PreviousPage}
+        <a href="{PreviousPage}">&lt; Newer</a>
+      {/block:PreviousPage}
+      {block:NextPage}
+        <a href="{NextPage}">Older &gt;</a>
+      {/block:NextPage}
+    </nav>
+  {/block:Pagination}
 
   <footer>
     Powered by
