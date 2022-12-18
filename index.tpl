@@ -60,20 +60,20 @@
       border-radius: 128px;
     }
 
-    header#full-header {
+    header {
       text-align: center;
     }
 
-    header#full-header .portrait-icon {
+    header .portrait-icon {
       height: 64px;
       width: 64px;
     }
 
-    header#full-header h1 {
+    header h1 {
       margin: 0px;
     }
 
-    header#full-header p {
+    header p {
       margin: 0;
       opacity: 0.5;
     }
@@ -184,7 +184,7 @@
   {/block:PermalinkPage}
 
   {block:IndexPage}
-    <header id="full-header">
+    <header>
       {block:ShowTitle}
         <img src="{PortraitURL-128}" alt="{URLEncodedName}" class="portrait-icon" />
         <h1>
