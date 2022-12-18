@@ -3,7 +3,7 @@
 
 <head>
   <meta name="text:Language BCP47" content="en">
-  <meta name="text:Aside text color" content="#eeeeee">
+  <meta name="text:Aside text color" content="#999999">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="shortcut icon" href="{Favicon}">
@@ -25,8 +25,7 @@
       color: {AccentColor};
     }
 
-    header a,
-    #posts a {
+    header a {
       text-decoration: none;
       color: {TitleColor};
     }
@@ -69,6 +68,16 @@
       color: {TitleColor};
     }
 
+    ol#posts a {
+      text-decoration: none;
+      color: {TitleColor};
+    }
+
+    ol#posts ul.tags,
+    ol#posts ul.tags a {
+      color: {text:Aside text color};
+    }
+
     nav#pagination {
       margin-top: 2rem;
       margin-bottom: 2rem;
@@ -88,7 +97,7 @@
 </head>
 
 <body>
-  {block:HomePage}
+  {block:IndexPage}
     <header id="full-header">
       {block:ShowTitle}
         <img src="{PortraitURL-128}" alt="{URLEncodedName}" class="portrait-icon" />
@@ -100,7 +109,7 @@
         <p id="description">{Description}</p>
       {/block:ShowDescription}
     </header>
-  {/block:HomePage}
+  {/block:IndexPage}
   {block:PermalinkPage}
     <header id="compact-header">
       <nav>
@@ -112,12 +121,24 @@
     </header>
   {/block:PermalinkPage}
 
-  <ol id="posts">
+  <main>
+    {block:TagPage}
+      <h1>Posts tagged "{Tag}"</h1>
+    {/block:TagPage}
+
     {block:Posts}
-      <li class="post">
-        {block:Text}
-          {block:Title}
-            <a href="{Permalink}">{Title}</a>
+      <ol id="posts">
+        <li class="post">
+          {block:Text}
+            {block:Title}
+              <a href="{Permalink}">{Title}</a>
+              {block:HasTags}
+                <ul class="tags">
+                  {block:Tags}
+                    <li><a href="{TagURL}">#{Tag}</a></li>
+                  {/block:Tags}
+              </li>
+            {/block:HasTags}
           {/block:Title}
         {/block:Text}
 
@@ -145,10 +166,9 @@
         {block:Audio}
           <strong>Audio post is not supported.</strong>
         {/block:Audio}
-      </li>
+        </li>
+      </ol>
     {/block:Posts}
-  </ol>
-
   </main>
 
   {block:Pagination}
