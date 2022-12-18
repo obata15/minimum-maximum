@@ -256,7 +256,7 @@
   <footer>
     <span>Powered by</span>
     <a href="https://www.tumblr.com/">Tumblr</a>
-    <span>with</span>
+    <span>and</span>
     <a href="https://github.com/obata15/minimum-maximum">Minimum-Maximum</a>
   </footer>
 </body>
