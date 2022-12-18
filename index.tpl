@@ -3,7 +3,6 @@
 
 <head>
   <meta name="text:Language BCP47" content="en">
-  <meta name="text:Aside text color" content="#999999">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="shortcut icon" href="{Favicon}">
@@ -17,17 +16,41 @@
 
   <style>
     body {
-      padding: 10px;
       background: {BackgroundColor};
+      color: {TitleColor};
+    }
+
+    header a {
+      color: {TitleColor};
+    }
+
+    ol#posts>li>a {
+      color: {TitleColor};
+    }
+
+    @media (prefers-color-scheme: dark) {
+      body {
+        background: {TitleColor};
+        color: {BackgroundColor};
+      }
+
+      header a {
+        color: {BackgroundColor};
+      }
+
+      ol#posts>li>a {
+        color: {BackgroundColor};
+      }
+
+    }
+
+    body {
+      padding: 10px;
     }
 
     a {
       text-decoration: none;
       color: {AccentColor};
-    }
-
-    header a {
-      color: {TitleColor};
     }
 
     .portrait-icon {
@@ -49,7 +72,7 @@
 
     header#full-header p {
       margin: 0;
-      color: {text:Aside text color};
+      opacity: 0.5;
     }
 
     main {
@@ -59,7 +82,6 @@
 
     h1 {
       margin-bottom: 0;
-      color: {TitleColor};
     }
 
     ol#posts {
@@ -73,10 +95,6 @@
       margin-bottom: 1rem;
     }
 
-    ol#posts>li>a {
-      color: {TitleColor};
-    }
-
     ul.date-and-tags {
       list-style-type: none;
       font-size: 1rem;
@@ -86,7 +104,10 @@
 
     ul.date-and-tags li {
       display: inline;
-      color: {text:Aside text color};
+    }
+
+    ul.date-and-tags li.date {
+      opacity: 0.5;
     }
 
     nav.bottom {
@@ -122,9 +143,12 @@
       text-align: center;
     }
 
-    footer,
+    footer>span {
+      opacity: 0.5;
+    }
+
     footer a {
-      color: {text:Aside text color};
+      opacity: 1;
     }
   </style>
 </head>
@@ -137,9 +161,9 @@
           {block:Text}
             <h1>{Title}</h1>
             <ul class="date-and-tags">
-              <li>{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}</li>
+              <li class="date">{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}</li>
               {block:Tags}
-                <li><a href="{TagURL}">#{Tag}</a></li>
+                <li class="tag"><a href="{TagURL}">#{Tag}</a></li>
               {/block:Tags}
             </ul>
             {Body}
@@ -179,7 +203,7 @@
             {block:Text}
               <a href="{Permalink}">{Title}</a>
               <ul class="date-and-tags">
-                <li>{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}</li>
+                <li class="date">{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}</li>
               </ul>
             {/block:Text}
 
@@ -225,9 +249,9 @@
   {/block:IndexPage}
 
   <footer>
-    Powered by
+    <span>Powered by</span>
     <a href="https://www.tumblr.com/">Tumblr</a>
-    and
+    <span>and</span>
     <a href="https://github.com/obata15/minimum-maximum">Minimum-Maximum</a>
   </footer>
 </body>
