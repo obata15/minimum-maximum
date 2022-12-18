@@ -4,6 +4,7 @@
 <head>
   <meta name="text:Language BCP47" content="en">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="{AccentColor}">
 
   <link rel="shortcut icon" href="{Favicon}">
   <link rel="alternate" type="application/rss+xml" href="{RSS}">
