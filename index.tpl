@@ -3,6 +3,7 @@
 
 <head>
   <meta name="text:Language BCP47" content="en">
+  <meta name="text:Font Family" content="sans-serif">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="{AccentColor}">
 
@@ -19,6 +20,7 @@
     body {
       background: {BackgroundColor};
       color: {TitleColor};
+      font-family: {text:Font Family};
     }
 
     header a {
