@@ -33,7 +33,7 @@
       color: {TitleColor};
     }
 
-    ul.date-and-tags li.date a {
+    ul.metas li.date a {
       color: {TitleColor};
     }
 
@@ -51,7 +51,7 @@
         color: {BackgroundColor};
       }
 
-      ul.date-and-tags li.date a {
+      ul.metas li.date a {
         color: {BackgroundColor};
       }
     }
@@ -141,18 +141,18 @@
       display: none;
     }
 
-    ul.date-and-tags {
+    ul.metas {
       list-style-type: none;
       font-size: 1rem;
       font-weight: normal;
       padding-left: 0;
     }
 
-    ul.date-and-tags li {
+    ul.metas li {
       display: inline;
     }
 
-    ul.date-and-tags li.date {
+    ul.metas li.date {
       opacity: 0.5;
     }
 
@@ -208,7 +208,7 @@
         <article>
           {block:Text}
             <h1>{Title}</h1>
-            <ul class="date-and-tags">
+            <ul class="metas">
               {block:Date}
                 <li class="date">{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}</li>
               {/block:Date}
@@ -277,7 +277,7 @@
                   <div class="thumbnails" onclick="location.href='{Permalink}'">{Body}</div>
                 {/block:IfShowThumbnails}
               </div>
-              <ul class="date-and-tags">
+              <ul class="metas">
                 <li class="date"><a href="{Permalink}">{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}</a></li>
               </ul>
             {/block:Text}
