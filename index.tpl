@@ -229,7 +229,7 @@
 
       <nav class="bottom home-navigation">
         <a href="/">
-          <span>H</span><img src="{PortraitURL-128}" alt="{URLEncodedName}" class="portrait-icon" /><span>ME</span>
+          <span>H</span><img src="{PortraitURL-128}" alt="O" class="portrait-icon" /><span>ME</span>
         </a>
       </nav>
     </main>
