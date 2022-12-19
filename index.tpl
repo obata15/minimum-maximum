@@ -329,6 +329,7 @@
     </main>
   {/block:IndexPage}
 
+  <!-- Please remove followings and edit more code! -->
   <footer>
     <span>Powered by</span>
     <a href="https://www.tumblr.com/">Tumblr</a>
