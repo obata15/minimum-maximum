@@ -2,7 +2,7 @@
 
 Full-scratched Tumblr theme inspired by <a href="https://sanographix.github.io/tumblr/solo/">Solo</a>.
 
-## Stacks
+## CDN Stacks
 
 - https://csstools.github.io/sanitize.css/
 
