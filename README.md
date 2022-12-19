@@ -12,6 +12,7 @@ Tumblr theme inspired by <a href="https://sanographix.github.io/tumblr/solo/">So
 |-|-|
 | Background color | #f6f6f6 |
 | Title color | #222222 |
+| Accent color | #00b8ff |
 
 ## Feature
 
