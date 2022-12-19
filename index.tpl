@@ -137,6 +137,7 @@
       display: inherit;
       width: 0.8em;
       height: 0.8em;
+      margin-left: 0.5em;
     }
 
     ol#posts .post .title .thumbnails a {
