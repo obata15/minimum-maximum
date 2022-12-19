@@ -118,6 +118,12 @@
       align-items: baseline;
     }
 
+    ol#posts li.post .title a:empty::after,
+    /* Preview Selector */
+    ol#posts li.post .title a span:empty::after {
+      content: "∅";
+    }
+
     ol#posts .post .title .thumbnails {
       cursor: pointer;
       display: flex;
