@@ -4,6 +4,8 @@
 <head>
   <meta name="text:Language BCP47" content="en">
   <meta name="text:Font Family" content="sans-serif">
+  <meta name="if:Show Thumbnails" content="0">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="{AccentColor}">
 
@@ -27,7 +29,7 @@
       color: {TitleColor};
     }
 
-    ol#posts>li>a {
+    ol#posts li.post a {
       color: {TitleColor};
     }
 
@@ -45,7 +47,7 @@
         color: {BackgroundColor};
       }
 
-      ol#posts>li>a {
+      ol#posts li.post a {
         color: {BackgroundColor};
       }
 
@@ -107,8 +109,36 @@
       font-weight: bold;
     }
 
-    ol#posts>li {
+    ol#posts .post {
       margin-bottom: 1rem;
+    }
+
+    ol#posts .post .title {
+      display: flex;
+      align-items: baseline;
+    }
+
+    ol#posts .post .title .thumbnails {
+      cursor: pointer;
+      display: flex;
+    }
+
+    ol#posts .post .title .thumbnails div {
+      margin: 0;
+    }
+
+    ol#posts .post .title .thumbnails img {
+      display: inherit;
+      width: 0.8em;
+      height: 0.8em;
+    }
+
+    ol#posts .post .title .thumbnails a {
+      pointer-events: none;
+    }
+
+    ol#posts .post .title .thumbnails p {
+      display: none;
     }
 
     ul.date-and-tags {
@@ -241,7 +271,12 @@
         {block:Posts}
           <li class="post">
             {block:Text}
-              <a href="{Permalink}">{Title}</a>
+              <div class="title">
+                <a href="{Permalink}">{Title}</a>
+                {block:IfShowThumbnails}
+                  <div class="thumbnails" onclick="location.href='{Permalink}'">{Body}</div>
+                {/block:IfShowThumbnails}
+              </div>
               <ul class="date-and-tags">
                 <li class="date"><a href="{Permalink}">{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}</a></li>
               </ul>

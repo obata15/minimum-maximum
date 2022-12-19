@@ -17,6 +17,7 @@ Tumblr theme inspired by <a href="https://sanographix.github.io/tumblr/solo/">So
 
 - [x] Auto dark mode (Swap BackgroundColor and TitleColor)
 - [x] HTML lang attribute
+- [x] Show thumbnails in index (Beta)
 - [ ] Google Tag Manager
 
 ### Appearance options
