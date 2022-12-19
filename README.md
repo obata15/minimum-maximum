@@ -24,16 +24,9 @@ Tumblr theme inspired by <a href="https://sanographix.github.io/tumblr/solo/">So
 
 - [x] Title
 - [x] Description
-- [ ] Header image
-- [ ] Avatar
-- [ ] Avatar shape
-- [ ] Title font
 - [x] Background color
 - [x] Title color
 - [x] Accent color
-- [ ] Show header image
-- [ ] Stretch header image
-- [ ] Show avatar
 - [x] Show title
 - [x] Show description
 
@@ -41,5 +34,15 @@ Tumblr theme inspired by <a href="https://sanographix.github.io/tumblr/solo/">So
 ## Never Support
 
 - Non-text post
-- Custom CSS
 - Submission
+- Custom CSS
+
+### Appearance options
+
+- Header image
+- Avatar
+- Avatar shape
+- Title font
+- Show header image
+- Stretch header image
+- Show avatar
