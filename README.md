@@ -36,6 +36,7 @@ Tumblr theme inspired by <a href="https://sanographix.github.io/tumblr/solo/">So
 - Non-text post
 - Submission
 - Custom CSS
+- Disqus
 
 ### Appearance options
 
