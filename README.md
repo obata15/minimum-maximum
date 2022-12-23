@@ -30,7 +30,6 @@ Full-scratched Tumblr theme inspired by <a href="https://sanographix.github.io/t
 - [ ] NPF rendering
 - [x] Auto dark mode (Swap BackgroundColor and TitleColor)
 - [x] HTML lang attribute
-- [x] Show thumbnails in index (Beta)
 - [ ] OGP
 - [ ] Twitter card
 - [ ] Google Tag Manager
@@ -44,6 +43,11 @@ Full-scratched Tumblr theme inspired by <a href="https://sanographix.github.io/t
 - [x] Accent color
 - [x] Show title
 - [x] Show description
+- [ ] Title font
+- [ ] Alternate title font
+- [ ] Use alternate title font only
+- [ ] Body font
+- [x] Show thumbnails in index (Beta)
 
 ## Never Support
 
@@ -64,7 +68,6 @@ Full-scratched Tumblr theme inspired by <a href="https://sanographix.github.io/t
 - Header image
 - Avatar
 - Avatar shape
-- Title font
 - Show header image
 - Stretch header image
 - Show avatar
