@@ -21,6 +21,18 @@
   <title>{Title}</title>
 
   <meta name="description" content="{MetaDescription}" />
+  <meta property="og:title" content="{Title}" />
+  <meta property="og:description" content="{MetaDescription}" />
+  <meta property="og:image" content="{PortraitURL-128}" />
+  {block:IndexPage}
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{BlogUrl}{block:TagPage}/tagged/{URLSafeTag}{/block:TagPage}" />
+  {/block:IndexPage}
+  {block:PermalinkPage}
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="{Permalink}" />
+  {/block:PermalinkPage}
+  <meta name="twitter:card" content="summary" />
 
   <style>
     body {
