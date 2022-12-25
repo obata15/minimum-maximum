@@ -127,7 +127,7 @@
     }
 
     ol#posts .post {
-      margin-bottom: 1rem;
+      margin-bottom: 2rem;
     }
 
     ol#posts .post .title {
