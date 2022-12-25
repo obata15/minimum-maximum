@@ -90,6 +90,20 @@
       opacity: 0.5;
     }
 
+    header#compact-header a {
+      display: flex;
+      align-items: center;
+    }
+
+    header#compact-header a img {
+      width: 2em;
+      height: 2em;
+    }
+
+    header#compact-header a .title {
+      margin-left: 0.5em;
+    }
+
     main {
       max-width: 40em;
       margin: auto;
@@ -213,6 +227,17 @@
 
 <body>
   {block:PermalinkPage}
+    <header id="compact-header">
+      {block:ShowTitle}
+        <a href="/">
+          <img src="{PortraitURL-128}" alt="{URLEncodedName}" class="portrait-icon" />
+          {block:ShowTitle}
+            <div class="title">{Title}</div>
+          {/block:ShowTitle}
+        </a>
+      {/block:ShowTitle}
+    </header>
+
     <main>
       {block:Posts}
         <article>
@@ -241,8 +266,8 @@
 
   {block:IndexPage}
     <header>
+      <a href="/"><img src="{PortraitURL-128}" alt="{URLEncodedName}" class="portrait-icon" /></a>
       {block:ShowTitle}
-        <a href="/"><img src="{PortraitURL-128}" alt="{URLEncodedName}" class="portrait-icon" /></a>
         <h1>
           <a href="/">{Title}</a>
         </h1>
