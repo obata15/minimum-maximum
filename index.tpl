@@ -11,7 +11,9 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="{AccentColor}">
-  <meta name="google-site-verification" content="{text:Google Site Verification ID}" />
+  {block:IfGoogleSiteVerificationID}
+    <meta name="google-site-verification" content="{text:Google Site Verification ID}" />
+  {/block:IfGoogleSiteVerificationID}
 
   <link rel="shortcut icon" href="{Favicon}">
   <link rel="alternate" type="application/rss+xml" href="{RSS}">
