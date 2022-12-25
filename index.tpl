@@ -5,6 +5,7 @@
   <meta charset="utf-8">
 
   <meta name="text:Font Family" content="sans-serif">
+  <meta name="text:Paragraph Line Height In Article" content="1.5">
   <meta name="if:Show Thumbnails" content="0">
   <meta name="text:Google Site Verification ID" content="">
 
@@ -125,6 +126,10 @@
       display: flex;
       gap: 1rem;
       justify-content: center;
+    }
+
+    article p {
+      line-height: {text:Paragraph Line Height In Article};
     }
 
     ol#posts {

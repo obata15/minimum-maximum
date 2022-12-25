@@ -13,6 +13,7 @@ Full-scratched Tumblr theme inspired by <a href="https://sanographix.github.io/t
 | Background color | #f6f6f6 |
 | Title color | #222222 |
 | Accent color | #00b8ff |
+| Paragraph Line Height In Article | en: 1.5, ja: 1.75 |
 
 ## Feature
 
@@ -46,6 +47,7 @@ Full-scratched Tumblr theme inspired by <a href="https://sanographix.github.io/t
   - [ ] Alternate title font
   - [ ] Use alternate title font only
   - [ ] Body font
+- [x] Paragraph Line Height In Article
 - [x] Show thumbnails in index (Beta)
 
 ## Never Support
