@@ -214,9 +214,6 @@
       margin-top: 2rem;
       margin-bottom: 2rem;
       text-align: center;
-    }
-
-    nav.bottom.home-navigation {
       font-size: 1.5rem;
       font-weight: bold;
     }
@@ -236,10 +233,6 @@
       margin-left: 2px;
       margin-right: 2px;
       border: solid 3px;
-    }
-
-    nav.bottom.pagination {
-      font-size: 1.5rem;
     }
 
     footer {
