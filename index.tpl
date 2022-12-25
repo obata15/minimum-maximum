@@ -2,12 +2,25 @@
 <html>
 
 <head>
-  <meta charset="utf-8">
-
   <meta name="text:Font Family" content="sans-serif">
   <meta name="text:Paragraph Line Height In Article" content="1.5">
   <meta name="if:Show Thumbnails" content="0">
   <meta name="text:Google Site Verification ID" content="">
+  <meta name="text:Google Tag Manager ID" content="">
+
+  {block:IfGoogleTagManagerID}
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id={text:Google Tag Manager ID}"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', '{text:Google Tag Manager ID}');
+    </script>
+  {/block:IfGoogleTagManagerID}
+
+  <meta charset="utf-8">
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="{AccentColor}">
