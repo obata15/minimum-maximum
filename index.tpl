@@ -104,6 +104,7 @@
 
     header#compact-header a .title {
       margin-left: 0.5em;
+      font-size: 1.5rem;
       font-weight: bold;
     }
 
@@ -201,6 +202,7 @@
 
     nav.bottom.home-navigation {
       font-size: 1.5rem;
+      font-weight: bold;
     }
 
     nav.bottom.home-navigation a {
