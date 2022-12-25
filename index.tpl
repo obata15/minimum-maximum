@@ -2,11 +2,11 @@
 <html>
 
 <head>
-  <meta name="text:Font Family" content="sans-serif">
-  <meta name="text:Paragraph Line Height In Article" content="1.5">
-  <meta name="if:Show Thumbnails" content="0">
-  <meta name="text:Google Site Verification ID" content="">
-  <meta name="text:Google Tag Manager ID" content="">
+  <meta name="text:Font Family" content="sans-serif" />
+  <meta name="text:Paragraph Line Height In Article" content="1.5" />
+  <meta name="if:Show Thumbnails" content="0" />
+  <meta name="text:Google Site Verification ID" content="" />
+  <meta name="text:Google Tag Manager ID" content="" />
 
   {block:IfGoogleTagManagerID}
     <!-- Google tag (gtag.js) -->
@@ -20,17 +20,17 @@
     </script>
   {/block:IfGoogleTagManagerID}
 
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="{AccentColor}">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="{AccentColor}" />
   {block:IfGoogleSiteVerificationID}
     <meta name="google-site-verification" content="{text:Google Site Verification ID}" />
   {/block:IfGoogleSiteVerificationID}
 
-  <link rel="shortcut icon" href="{Favicon}">
-  <link rel="alternate" type="application/rss+xml" href="{RSS}">
-  <link rel="apple-touch-icon-precomposed" href="{PortraitURL-128}">
+  <link rel="shortcut icon" href="{Favicon}" />
+  <link rel="alternate" type="application/rss+xml" href="{RSS}" />
+  <link rel="apple-touch-icon-precomposed" href="{PortraitURL-128}" />
   <link href="https://unpkg.com/sanitize.css" rel="stylesheet" />
 
   <title>{Title}</title>
