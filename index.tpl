@@ -91,7 +91,7 @@
     }
 
     main {
-      max-width: 960px;
+      max-width: 40em;
       margin: auto;
     }
 
