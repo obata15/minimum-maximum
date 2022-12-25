@@ -21,7 +21,6 @@ Full-scratched Tumblr theme inspired by <a href="https://sanographix.github.io/t
   - [x] Tag page
   - [ ] Day page
   - [ ] Search page
-- [ ] Index page
 - [ ] Notes (Reblog and Like)
 - [ ] Reblog button
 - [ ] Like button
@@ -44,10 +43,11 @@ Full-scratched Tumblr theme inspired by <a href="https://sanographix.github.io/t
 - [x] Accent color
 - [x] Show title
 - [x] Show description
-- [ ] Title font
-- [ ] Alternate title font
-- [ ] Use alternate title font only
-- [ ] Body font
+- [x] Font Family
+  - [ ] Title font
+  - [ ] Alternate title font
+  - [ ] Use alternate title font only
+  - [ ] Body font
 - [x] Show thumbnails in index (Beta)
 
 ## Never Support
