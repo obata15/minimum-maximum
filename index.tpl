@@ -128,7 +128,7 @@
     ol#posts {
       list-style-type: none;
       padding-left: 0;
-      font-size: 2rem;
+      font-size: 1.75rem;
       font-weight: bold;
     }
 
