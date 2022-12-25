@@ -93,6 +93,7 @@
     header#compact-header a {
       display: flex;
       align-items: center;
+      color: {AccentColor};
     }
 
     header#compact-header a img {
@@ -102,6 +103,7 @@
 
     header#compact-header a .title {
       margin-left: 0.5em;
+      font-weight: bold;
     }
 
     main {
