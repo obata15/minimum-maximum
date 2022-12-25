@@ -219,7 +219,7 @@
       width: 1.2rem;
       margin-left: 2px;
       margin-right: 2px;
-      border: solid 2px;
+      border: solid 3px;
     }
 
     nav.bottom.pagination {
