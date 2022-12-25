@@ -146,6 +146,7 @@
 
     article p {
       line-height: {text:Paragraph Line Height In Article};
+      font-size: 18px;
     }
 
     ol#posts {
