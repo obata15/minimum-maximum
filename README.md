@@ -32,7 +32,7 @@ Full-scratched Tumblr theme inspired by <a href="https://sanographix.github.io/t
 - [ ] OGP
 - [ ] Twitter card
 - [ ] Google Tag Manager
-- [ ] Google Search Console
+- [x] Google Search Console
 
 ### Appearance options
 
