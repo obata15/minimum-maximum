@@ -113,6 +113,12 @@
       margin-bottom: 0;
     }
 
+    main h1#tag-header {
+      font-size: 1rem;
+      text-align: center;
+      font-weight: normal;
+    }
+
     nav#menu ul {
       display: flex;
       gap: 1rem;
@@ -299,7 +305,7 @@
       </nav>
 
       {block:TagPage}
-        <h1>Posts tagged "{Tag}"</h1>
+        <h1 id="tag-header">Posts tagged "{Tag}"</h1>
       {/block:TagPage}
 
       <ol id="posts">
