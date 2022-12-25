@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<html lang="{text:Language BCP47}">
+<html>
 
 <head>
   <meta charset="utf-8">
 
-  <meta name="text:Language BCP47" content="en">
   <meta name="text:Font Family" content="sans-serif">
   <meta name="if:Show Thumbnails" content="0">
   <meta name="text:Google Site Verification ID" content="">

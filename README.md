@@ -28,7 +28,6 @@ Full-scratched Tumblr theme inspired by <a href="https://sanographix.github.io/t
 - [ ] Question and Answer
 - [ ] NPF rendering
 - [x] Auto dark mode (Swap BackgroundColor and TitleColor)
-- [x] HTML lang attribute
 - [x] OGP
 - [x] Twitter card
 - [ ] Google Tag Manager
