@@ -7,6 +7,7 @@
   <meta name="text:Font Family" content="sans-serif" />
   <meta name="text:Paragraph Line Height In Article" content="1.5" />
   <meta name="if:Show Thumbnails" content="0" />
+  <meta name="if:Show Feedly Button" content="1" />
   <meta name="text:Google Site Verification ID" content="" />
   <meta name="text:Google Tag Manager ID" content="" />
 
@@ -149,6 +150,59 @@
       font-size: 18px;
     }
 
+    aside#notes {
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    aside#notes ul {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    aside#notes ul li>a {
+      width: 24px !important;
+      height: 24px !important;
+    }
+
+    aside#notes ul li.note-count {
+      font-size: 1.25em;
+    }
+
+    aside#notes ul li:not(.note-count) {
+      height: 20px;
+      width: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    aside#notes ul li.note-count {
+      font-weight: bold;
+    }
+
+    aside#notes ol.notes {
+      list-style-type: none;
+      padding: 0;
+      font-size: 0.75rem;
+    }
+
+    aside#notes ol.notes li.original_post {
+      display: none;
+    }
+
+    aside#notes ol.notes li>.avatar_frame {
+      margin-right: 0.5em;
+    }
+
+    aside#notes ol.notes li>.action a {
+      margin-right: 0.5em;
+    }
+
     ol#posts {
       list-style-type: none;
       padding-left: 0;
@@ -278,6 +332,20 @@
             {Body}
           {/block:Text}
         </article>
+
+        <aside id="notes">
+          <ul>
+            <li class="note-count">{NoteCountWithLabel}</li>
+            <li>{LikeButton color="grey"}</li>
+            <li>{ReblogButton color="grey"}</li>
+            {block:IfShowFeedlyButton}
+              <li><a href="https://feedly.com/i/subscription/feed%2F{RSS}" target="blank"><img id="feedlyFollow"
+                    src="https://s1.feedly.com/legacy/feedly-follow-circle-flat-green_2x.png" alt="follow us in feedly"
+                    width="20" height="20"></a></li>
+            {/block:IfShowFeedlyButton}
+          </ul>
+          {PostNotes}
+        </aside>
       {/block:Posts}
 
       <nav class="bottom home-navigation">

@@ -22,9 +22,9 @@ Full-scratched Tumblr theme inspired by <a href="https://sanographix.github.io/t
   - [x] Tag page
   - [ ] Day page
   - [ ] Search page
-- [ ] Notes (Reblog and Like)
-- [ ] Reblog button
-- [ ] Like button
+- [x] Notes (Reblog and Like)
+- [x] Reblog button
+- [x] Like button
 - [ ] Related posts
 - [ ] Question and Answer
 - [ ] NPF rendering
@@ -32,6 +32,7 @@ Full-scratched Tumblr theme inspired by <a href="https://sanographix.github.io/t
 - [x] OGP (By Tumblr default)
 - [x] Google Tag Manager (Google Analytics)
 - [x] Google Search Console
+- [x] Feedly Button
 
 ### Appearance options
 
