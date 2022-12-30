@@ -39,6 +39,8 @@
   <meta name="description" content="{MetaDescription}" />
 
   <style>
+    /* <ColorModeSettings> */
+
     body {
       background: {BackgroundColor};
       color: {TitleColor};
@@ -49,7 +51,7 @@
       color: {TitleColor};
     }
 
-    ol#posts li.post a {
+    ol#index-posts li.post a {
       color: {TitleColor};
     }
 
@@ -67,7 +69,7 @@
         color: {BackgroundColor};
       }
 
-      ol#posts li.post a {
+      ol#index-posts li.post a {
         color: {BackgroundColor};
       }
 
@@ -75,6 +77,10 @@
         color: {BackgroundColor};
       }
     }
+
+    /* </ColorModeSettings> */
+
+    /* <Common> */
 
     body {
       padding: 10px;
@@ -85,45 +91,6 @@
       color: {AccentColor};
     }
 
-    .portrait-icon {
-      border-radius: 128px;
-    }
-
-    header {
-      text-align: center;
-    }
-
-    header .portrait-icon {
-      height: 64px;
-      width: 64px;
-    }
-
-    header h1 {
-      margin: 0px;
-    }
-
-    header p {
-      margin: 0;
-      opacity: 0.5;
-    }
-
-    header#compact-header a {
-      display: flex;
-      align-items: center;
-      color: {AccentColor};
-    }
-
-    header#compact-header a img {
-      width: 2em;
-      height: 2em;
-    }
-
-    header#compact-header a .title {
-      margin-left: 0.5em;
-      font-size: 1.5rem;
-      font-weight: bold;
-    }
-
     main {
       max-width: 40em;
       margin: auto;
@@ -131,122 +98,6 @@
 
     main h1 {
       margin-bottom: 0;
-    }
-
-    main h1#tag-header {
-      font-size: 1rem;
-      text-align: center;
-      font-weight: normal;
-    }
-
-    nav#menu ul {
-      display: flex;
-      gap: 1rem;
-      justify-content: center;
-    }
-
-    article p {
-      line-height: {text:Paragraph Line Height In Article};
-      font-size: 18px;
-    }
-
-    aside#notes {
-      margin-top: 2rem;
-      margin-bottom: 2rem;
-    }
-
-    aside#notes ul {
-      display: flex;
-      gap: 20px;
-      align-items: center;
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-    }
-
-    aside#notes ul li>a {
-      width: 24px !important;
-      height: 24px !important;
-    }
-
-    aside#notes ul li.note-count {
-      font-size: 1.25em;
-    }
-
-    aside#notes ul li:not(.note-count) {
-      height: 20px;
-      width: 20px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    aside#notes ul li.note-count {
-      font-weight: bold;
-    }
-
-    aside#notes ol.notes {
-      list-style-type: none;
-      padding: 0;
-      font-size: 0.75rem;
-    }
-
-    aside#notes ol.notes li.original_post {
-      display: none;
-    }
-
-    aside#notes ol.notes li>.avatar_frame {
-      margin-right: 0.5em;
-    }
-
-    aside#notes ol.notes li>.action a {
-      margin-right: 0.5em;
-    }
-
-    ol#posts {
-      list-style-type: none;
-      padding-left: 0;
-      font-size: 1.75rem;
-      font-weight: bold;
-    }
-
-    ol#posts .post {
-      margin-bottom: 2rem;
-    }
-
-    ol#posts .post .title {
-      display: flex;
-      align-items: baseline;
-    }
-
-    ol#posts li.post .title a:empty::after,
-    /* Preview Selector */
-    ol#posts li.post .title a span:empty::after {
-      content: "∅";
-    }
-
-    ol#posts .post .title .thumbnails {
-      cursor: pointer;
-      display: flex;
-    }
-
-    ol#posts .post .title .thumbnails div {
-      margin: 0;
-    }
-
-    ol#posts .post .title .thumbnails img {
-      display: inherit;
-      width: 0.8em;
-      height: 0.8em;
-      margin-left: 0.5em;
-    }
-
-    ol#posts .post .title .thumbnails a {
-      pointer-events: none;
-    }
-
-    ol#posts .post .title .thumbnails p {
-      display: none;
     }
 
     ul.metas {
@@ -300,12 +151,184 @@
     footer a {
       opacity: 1;
     }
+
+    /* </Common> */
+
+    /* <PermalinkPage> */
+
+    #permalink-header .portrait-icon {
+      height: 32px;
+      width: 32px;
+      border-radius: 32px;
+    }
+
+    #permalink-header a {
+      display: flex;
+      align-items: center;
+      color: {AccentColor};
+    }
+
+    #permalink-header a img {
+      width: 2em;
+      height: 2em;
+    }
+
+    #permalink-header a .title {
+      margin-left: 0.5em;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    #permalink-article p {
+      line-height: {text:Paragraph Line Height In Article};
+      font-size: 18px;
+    }
+
+    #permalink-notes {
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    #permalink-notes ul {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    #permalink-notes ul li>a {
+      width: 24px !important;
+      height: 24px !important;
+    }
+
+    #permalink-notes ul li.note-count {
+      font-size: 1.25em;
+    }
+
+    #permalink-notes ul li:not(.note-count) {
+      height: 20px;
+      width: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #permalink-notes ul li.note-count {
+      font-weight: bold;
+    }
+
+    #permalink-notes ol.notes {
+      list-style-type: none;
+      padding: 0;
+      font-size: 0.75rem;
+    }
+
+    #permalink-notes ol.notes li.original_post {
+      display: none;
+    }
+
+    #permalink-notes ol.notes li>.avatar_frame {
+      margin-right: 0.5em;
+    }
+
+    #permalink-notes ol.notes li>.action a {
+      margin-right: 0.5em;
+    }
+
+    /* </PermalinkPage> */
+
+    /* <IndexPage> */
+
+    #index-header {
+      text-align: center;
+    }
+
+    #index-header .portrait-icon {
+      height: 96px;
+      width: 96px;
+      border-radius: 96px;
+    }
+
+    #index-header h1 {
+      margin: 0.25em 0;
+    }
+
+    #index-header p {
+      margin: 0;
+      opacity: 0.5;
+    }
+
+    #index-menu-navigation ul {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+    }
+
+    #index-posts {
+      list-style-type: none;
+      padding-left: 0;
+      font-size: 1.75rem;
+      font-weight: bold;
+    }
+
+    #index-posts .post {
+      margin-bottom: 2rem;
+    }
+
+    #index-posts .post .title {
+      display: flex;
+      align-items: baseline;
+    }
+
+    #index-posts li.post .title a:empty::after,
+    /* Preview Selector */
+    #index-posts li.post .title a span:empty::after {
+      content: "∅";
+    }
+
+    #index-posts .post .title .thumbnails {
+      cursor: pointer;
+      display: flex;
+    }
+
+    #index-posts .post .title .thumbnails div {
+      margin: 0;
+    }
+
+    #index-posts .post .title .thumbnails img {
+      display: inherit;
+      width: 0.8em;
+      height: 0.8em;
+      margin-left: 0.5em;
+    }
+
+    #index-posts .post .title .thumbnails a {
+      pointer-events: none;
+    }
+
+    #index-posts .post .title .thumbnails p {
+      display: none;
+    }
+
+    /* </IndexPage> */
+
+    /* <TagPage> */
+
+    #tag-heading {
+      font-size: 1rem;
+      text-align: center;
+      font-weight: normal;
+    }
+
+    /* </TagPage> */
   </style>
 </head>
 
 <body>
   {block:PermalinkPage}
-    <header id="compact-header">
+    <header id="permalink-header">
       {block:ShowTitle}
         <a href="/">
           <img src="{PortraitURL-128}" alt="{URLEncodedName}" class="portrait-icon" />
@@ -316,9 +339,9 @@
       {/block:ShowTitle}
     </header>
 
-    <main>
+    <main id="permalink-main">
       {block:Posts}
-        <article>
+        <article id="permalink-article">
           {block:Text}
             <h1>{Title}</h1>
             <ul class="metas">
@@ -333,7 +356,7 @@
           {/block:Text}
         </article>
 
-        <aside id="notes">
+        <aside id="permalink-notes">
           <ul>
             <li class="note-count">{NoteCountWithLabel}</li>
             <li>{LikeButton color="grey"}</li>
@@ -357,7 +380,7 @@
   {/block:PermalinkPage}
 
   {block:IndexPage}
-    <header>
+    <header id="index-header">
       <a href="/"><img src="{PortraitURL-128}" alt="{URLEncodedName}" class="portrait-icon" /></a>
       {block:ShowTitle}
         <h1>
@@ -369,32 +392,32 @@
       {/block:ShowDescription}
     </header>
 
-    <main>
-      <nav id="menu">
-        <ul>
-          {block:HasPages}
-            {block:Pages}
-              <li>
-                <a href="{URL}">{Label}</a>
-              </li>
-            {/block:Pages}
-          {/block:HasPages}
-          <li>
-            <a href="/archive">Archive</a>
-          </li>
-          {block:AskEnabled}
+    <nav id="index-menu-navigation">
+      <ul>
+        {block:HasPages}
+          {block:Pages}
             <li>
-              <a href="/ask">{AskLabel}</a>
+              <a href="{URL}">{Label}</a>
             </li>
-          {/block:AskEnabled}
-        </ul>
-      </nav>
+          {/block:Pages}
+        {/block:HasPages}
+        <li>
+          <a href="/archive">Archive</a>
+        </li>
+        {block:AskEnabled}
+          <li>
+            <a href="/ask">{AskLabel}</a>
+          </li>
+        {/block:AskEnabled}
+      </ul>
+    </nav>
 
+    <main id="index-main">
       {block:TagPage}
-        <h1 id="tag-header">Posts tagged "{Tag}"</h1>
+        <h1 id="tag-heading">Posts tagged "{Tag}"</h1>
       {/block:TagPage}
 
-      <ol id="posts">
+      <ol id="index-posts">
         {block:Posts}
           <li class="post">
             {block:Text}
