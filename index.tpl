@@ -135,6 +135,7 @@
       display: inline-block;
       height: 1.2rem;
       width: 1.2rem;
+      border-radius: 1.2rem;
       margin-left: 2px;
       margin-right: 2px;
       border: solid 3px;
