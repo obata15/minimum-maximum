@@ -33,7 +33,18 @@
   <link rel="apple-touch-icon-precomposed" href="{PortraitURL-128}" />
   <link href="https://unpkg.com/sanitize.css" rel="stylesheet" />
 
-  <title>{Title}</title>
+  <title>
+    {block:TagPage}
+      "{Tag}" |
+    {/block:TagPage}
+    {block:PermalinkPage}
+      {block:PostSummary}
+        {PostSummary}
+      {/block:PostSummary}
+      |
+    {/block:PermalinkPage}
+    {Title}
+  </title>
 
   <meta name="description" content="{MetaDescription}" />
 
@@ -423,7 +434,7 @@
 
     <main id="index-main">
       {block:TagPage}
-        <h1 id="tag-heading">Posts tagged "{Tag}"</h1>
+        <h1 id="tag-heading">"{Tag}"</h1>
       {/block:TagPage}
 
       <ol id="index-posts">
