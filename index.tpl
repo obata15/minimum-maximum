@@ -184,6 +184,13 @@
       font-size: 18px;
     }
 
+    #permalink-article blockquote {
+      margin: 0;
+      padding: 0 1em;
+      font-size: 1.5em;
+      border-left: solid 4px;
+    }
+
     #permalink-notes {
       margin-top: 2rem;
       margin-bottom: 2rem;
