@@ -133,6 +133,10 @@
       font-weight: bold;
     }
 
+    nav.bottom.pagination a {
+      margin: 0 0.5em;
+    }
+
     nav.bottom.home-navigation a {
       display: flex;
       justify-content: center;
