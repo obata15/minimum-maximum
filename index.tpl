@@ -65,6 +65,10 @@
       color: {TitleColor};
     }
 
+    ol#index-posts li.post a:hover {
+      color: {AccentColor};
+    }
+
     ul.metas li.date a {
       color: {TitleColor};
     }
