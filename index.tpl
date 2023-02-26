@@ -449,15 +449,17 @@
         {block:Posts}
           <li class="post">
             {block:Text}
-              <div class="title">
-                <a href="{Permalink}">{Title}</a>
-                {block:IfShowThumbnails}
-                  <div class="thumbnails" onclick="location.href='{Permalink}'">{Body}</div>
-                {/block:IfShowThumbnails}
-              </div>
-              <ul class="metas">
-                <li class="date"><a href="{Permalink}">{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}</a></li>
-              </ul>
+              <a href="{Permalink}">
+                <div class="title">
+                  {Title}
+                  {block:IfShowThumbnails}
+                    <div class="thumbnails" onclick="location.href='{Permalink}'">{Body}</div>
+                  {/block:IfShowThumbnails}
+                </div>
+                <ul class="metas">
+                  <li class="date">{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}</li>
+                </ul>
+              </a>
             {/block:Text}
 
             {block:Photo}
