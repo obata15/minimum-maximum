@@ -65,6 +65,10 @@
       color: {TitleColor};
     }
 
+    ol#index-posts li.post a:visited {
+      color: #999999;
+    }
+
     ol#index-posts li.post a:hover {
       color: {AccentColor};
     }
