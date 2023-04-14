@@ -382,21 +382,19 @@
           {/block:Text}
         </article>
 
-        {block:PostNotes}
-          <aside id="permalink-notes">
-            <ul>
-              <li class="note-count">{NoteCountWithLabel}</li>
-              <li>{LikeButton color="grey"}</li>
-              <li>{ReblogButton color="grey"}</li>
-              {block:IfShowFeedlyButton}
-                <li><a href="https://feedly.com/i/subscription/feed%2F{RSS}" target="blank"><img id="feedlyFollow"
-                      src="https://s1.feedly.com/legacy/feedly-follow-circle-flat-green_2x.png" alt="follow us in feedly"
-                      width="20" height="20"></a></li>
-              {/block:IfShowFeedlyButton}
-            </ul>
-            {PostNotes}
-          </aside>
-        {/block:PostNotes}
+        <aside id="permalink-notes">
+          <ul>
+            <li class="note-count">{NoteCountWithLabel}</li>
+            <li>{LikeButton color="grey"}</li>
+            <li>{ReblogButton color="grey"}</li>
+            {block:IfShowFeedlyButton}
+              <li><a href="https://feedly.com/i/subscription/feed%2F{RSS}" target="blank"><img id="feedlyFollow"
+                    src="https://s1.feedly.com/legacy/feedly-follow-circle-flat-green_2x.png" alt="follow us in feedly"
+                    width="20" height="20"></a></li>
+            {/block:IfShowFeedlyButton}
+          </ul>
+          {PostNotes}
+        </aside>
       {/block:Posts}
 
       <nav class="bottom home-navigation">
