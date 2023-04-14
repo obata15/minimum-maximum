@@ -120,7 +120,7 @@
 
     ul.metas {
       list-style-type: none;
-      font-size: 1rem;
+      font-size: 0.75rem;
       font-weight: normal;
       padding-left: 0;
     }
@@ -299,16 +299,16 @@
     #index-posts {
       list-style-type: none;
       padding-left: 0;
-      font-size: 1.75rem;
       font-weight: bold;
     }
 
     #index-posts .post {
-      margin-bottom: 2rem;
+      margin-bottom: 1rem;
     }
 
     #index-posts .post .title {
       display: flex;
+      font-size: 1.25rem;
       align-items: baseline;
     }
 
