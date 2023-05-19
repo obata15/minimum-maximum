@@ -109,6 +109,14 @@
       color: {AccentColor};
     }
 
+    p a:visited {
+      color: #999999;
+    }
+
+    p a:hover {
+      opacity: 0.5;
+    }
+
     main {
       max-width: 40em;
       margin: auto;
