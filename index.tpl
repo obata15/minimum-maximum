@@ -282,7 +282,7 @@
     }
 
     #index-header h1 {
-      margin: 0.25em 0;
+      margin: 0;
     }
 
     #index-header p {
@@ -294,6 +294,7 @@
       display: flex;
       gap: 1rem;
       justify-content: center;
+      margin: 0.5em 0 2em 0;
     }
 
     #index-posts {
