@@ -210,7 +210,7 @@
       font-weight: bold;
     }
 
-    #permalink-article p {
+    #permalink-article {
       line-height: {text:Paragraph Line Height In Article};
       font-size: 18px;
     }
@@ -218,7 +218,6 @@
     #permalink-article blockquote {
       margin: 0;
       padding: 0 1em;
-      font-size: 1.5em;
       border-left: solid 4px;
     }
 
