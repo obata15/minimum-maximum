@@ -118,7 +118,7 @@
     }
 
     main {
-      max-width: 40em;
+      max-width: 45em;
       margin: auto;
     }
 
