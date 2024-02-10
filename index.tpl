@@ -220,6 +220,10 @@
       font-size: 18px;
     }
 
+    #permalink-article h1 {
+      line-height: 1.5em;
+    }
+
     #permalink-article blockquote {
       margin: 0;
       padding: 0 1em;
