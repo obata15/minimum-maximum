@@ -118,7 +118,7 @@
     }
 
     main {
-      max-width: 45em;
+      max-width: 45rem;
       margin: auto;
     }
 
@@ -186,6 +186,11 @@
     /* </Common> */
 
     /* <PermalinkPage> */
+
+    #permalink-header {
+      max-width: 45rem;
+      margin: 0 auto;
+    }
 
     #permalink-header .portrait-icon {
       height: 32px;
