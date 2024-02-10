@@ -221,6 +221,7 @@
     }
 
     #permalink-article h1 {
+      font-size: 1.5em;
       line-height: 1.5em;
     }
 
