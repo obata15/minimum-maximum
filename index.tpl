@@ -193,8 +193,8 @@
     }
 
     #permalink-header .portrait-icon {
-      height: 32px;
-      width: 32px;
+      height: 60px;
+      width: 60px;
       border-radius: 32px;
     }
 
@@ -211,7 +211,7 @@
 
     #permalink-header a .title {
       margin-left: 0.5em;
-      font-size: 1.5rem;
+      font-size: 2rem;
       font-weight: bold;
     }
 
