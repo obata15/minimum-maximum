@@ -65,14 +65,6 @@
       color: {TitleColor};
     }
 
-    ol#index-posts li.post a:visited {
-      color: #999999;
-    }
-
-    ol#index-posts li.post a:hover {
-      color: {AccentColor};
-    }
-
     ul.metas li.date a {
       color: {TitleColor};
     }
@@ -109,16 +101,8 @@
       color: {AccentColor};
     }
 
-    p a:visited {
-      color: #999999;
-    }
-
-    p a:hover {
-      opacity: 0.5;
-    }
-
     main {
-      max-width: 45em;
+      max-width: 40rem;
       margin: auto;
     }
 
@@ -128,7 +112,7 @@
 
     ul.metas {
       list-style-type: none;
-      font-size: 0.75rem;
+      font-size: 1rem;
       font-weight: normal;
       padding-left: 0;
     }
@@ -187,6 +171,12 @@
 
     /* <PermalinkPage> */
 
+    #permalink-header {
+      max-width: 40rem;
+      margin: 0 auto;
+    }
+
+
     #permalink-header .portrait-icon {
       height: 32px;
       width: 32px;
@@ -210,7 +200,7 @@
       font-weight: bold;
     }
 
-    #permalink-article {
+    #permalink-article p {
       line-height: {text:Paragraph Line Height In Article};
       font-size: 18px;
     }
@@ -218,6 +208,7 @@
     #permalink-article blockquote {
       margin: 0;
       padding: 0 1em;
+      font-size: 1.5em;
       border-left: solid 4px;
     }
 
@@ -289,7 +280,7 @@
     }
 
     #index-header h1 {
-      margin: 0;
+      margin: 0.25em 0;
     }
 
     #index-header p {
@@ -301,22 +292,21 @@
       display: flex;
       gap: 1rem;
       justify-content: center;
-      margin: 0.5em 0 2em 0;
     }
 
     #index-posts {
       list-style-type: none;
       padding-left: 0;
+      font-size: 1.75rem;
       font-weight: bold;
     }
 
     #index-posts .post {
-      margin-bottom: 1rem;
+      margin-bottom: 2rem;
     }
 
     #index-posts .post .title {
       display: flex;
-      font-size: 1.25rem;
       align-items: baseline;
     }
 
@@ -394,19 +384,21 @@
           {/block:Text}
         </article>
 
-        <aside id="permalink-notes">
-          <ul>
-            <li class="note-count">{NoteCountWithLabel}</li>
-            <li>{LikeButton color="grey"}</li>
-            <li>{ReblogButton color="grey"}</li>
-            {block:IfShowFeedlyButton}
-              <li><a href="https://feedly.com/i/subscription/feed%2F{RSS}" target="blank"><img id="feedlyFollow"
-                    src="https://s1.feedly.com/legacy/feedly-follow-circle-flat-green_2x.png" alt="follow us in feedly"
-                    width="20" height="20"></a></li>
-            {/block:IfShowFeedlyButton}
-          </ul>
-          {PostNotes}
-        </aside>
+        {block:PostNotes}
+          <aside id="permalink-notes">
+            <ul>
+              <li class="note-count">{NoteCountWithLabel}</li>
+              <li>{LikeButton color="grey"}</li>
+              <li>{ReblogButton color="grey"}</li>
+              {block:IfShowFeedlyButton}
+                <li><a href="https://feedly.com/i/subscription/feed%2F{RSS}" target="blank"><img id="feedlyFollow"
+                      src="https://s1.feedly.com/legacy/feedly-follow-circle-flat-green_2x.png" alt="follow us in feedly"
+                      width="20" height="20"></a></li>
+              {/block:IfShowFeedlyButton}
+            </ul>
+            {PostNotes}
+          </aside>
+        {/block:PostNotes}
       {/block:Posts}
 
       <nav class="bottom home-navigation">
@@ -459,17 +451,15 @@
         {block:Posts}
           <li class="post">
             {block:Text}
-              <a href="{Permalink}">
-                <div class="title">
-                  {Title}
-                  {block:IfShowThumbnails}
-                    <div class="thumbnails" onclick="location.href='{Permalink}'">{Body}</div>
-                  {/block:IfShowThumbnails}
-                </div>
-                <ul class="metas">
-                  <li class="date">{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}</li>
-                </ul>
-              </a>
+              <div class="title">
+                <a href="{Permalink}">{Title}</a>
+                {block:IfShowThumbnails}
+                  <div class="thumbnails" onclick="location.href='{Permalink}'">{Body}</div>
+                {/block:IfShowThumbnails}
+              </div>
+              <ul class="metas">
+                <li class="date"><a href="{Permalink}">{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}</a></li>
+              </ul>
             {/block:Text}
 
             {block:Photo}
