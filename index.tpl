@@ -224,6 +224,10 @@
       line-height: 1.5em;
     }
 
+    #permalink-article #body-section {
+      margin-top: 2em;
+    }
+
     #permalink-article blockquote {
       margin: 0;
       padding: 0 1em;
@@ -399,7 +403,9 @@
                 <li class="tag"><a href="{TagURL}">#{Tag}</a></li>
               {/block:Tags}
             </ul>
-            {Body}
+            <section id="body-section">
+              {Body}
+            </section>
           {/block:Text}
         </article>
 
