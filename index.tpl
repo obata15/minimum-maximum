@@ -189,7 +189,7 @@
 
     #permalink-header {
       max-width: 45rem;
-      margin: 0 auto;
+      margin: 4px auto 0 auto;
     }
 
     #permalink-header .portrait-icon {
