@@ -342,12 +342,6 @@
       align-items: baseline;
     }
 
-    #index-posts li.post .title a:empty::after,
-    /* Preview Selector */
-    #index-posts li.post .title a span:empty::after {
-      content: "∅";
-    }
-
     #index-posts .post .title .thumbnails {
       cursor: pointer;
       display: flex;
