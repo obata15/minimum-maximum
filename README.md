@@ -6,6 +6,10 @@ Full-scratched Tumblr theme inspired by <a href="https://sanographix.github.io/t
 
 https://minimum-maximum-theme.tumblr.com/
 
+## Showcase
+
+- https://text15.tumblr.com/
+
 ## CDN Stacks
 
 - https://csstools.github.io/sanitize.css/
