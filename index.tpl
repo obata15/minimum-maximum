@@ -101,7 +101,7 @@
     /* <Common> */
 
     body {
-      padding: 10px;
+      padding: 14px;
     }
 
     a {
@@ -124,6 +124,10 @@
 
     main h1 {
       margin-bottom: 0;
+    }
+
+    main h2 {
+      font-size: 1.25rem;
     }
 
     ul.metas {
@@ -189,12 +193,12 @@
 
     #permalink-header {
       max-width: 45rem;
-      margin: 4px auto 0 auto;
+      margin: 0 auto 1.5em auto;
     }
 
     #permalink-header .portrait-icon {
-      height: 60px;
-      width: 60px;
+      height: 40px;
+      width: 40px;
       border-radius: 32px;
     }
 
@@ -211,22 +215,26 @@
 
     #permalink-header a .title {
       margin-left: 0.5em;
-      font-size: 2rem;
+      font-size: 1.5rem;
       font-weight: bold;
     }
 
-    #permalink-article {
+    #permalink-article p {
       line-height: {text:Paragraph Line Height In Article};
       font-size: 18px;
     }
 
     #permalink-article h1 {
-      font-size: 1.5em;
+      font-size: 2rem;
       line-height: 1.5em;
     }
 
+    #permalink-article ul.metas {
+      margin: 1em 0 2em 0;
+    }
+
     #permalink-article #body-section {
-      margin-top: 2em;
+      margin-top: 1em;
     }
 
     #permalink-article blockquote {
