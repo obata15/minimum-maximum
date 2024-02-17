@@ -18,8 +18,8 @@ https://minimum-maximum-theme.tumblr.com/
 
 | Key | Value |
 |-|-|
-| Background color | #f6f6f6 |
-| Title color | #222222 |
+| Background color | #f6f6f6 or #f7f8f8 |
+| Title color | #222222 or #011219 |
 | Accent color | #00b8ff |
 | Paragraph Line Height In Article | 1.75 |
 

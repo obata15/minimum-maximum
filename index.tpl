@@ -100,6 +100,10 @@
 
     /* <Common> */
 
+    html {
+      font-size: 17px;
+    }
+
     body {
       padding: 14px;
     }
@@ -132,7 +136,6 @@
 
     ul.metas {
       list-style-type: none;
-      font-size: 0.75rem;
       font-weight: normal;
       padding-left: 0;
     }
@@ -193,7 +196,7 @@
 
     #permalink-header {
       max-width: 45rem;
-      margin: 0 auto 1.5em auto;
+      margin: 0 auto;
     }
 
     #permalink-header .portrait-icon {
@@ -221,12 +224,11 @@
 
     #permalink-article p {
       line-height: {text:Paragraph Line Height In Article};
-      font-size: 18px;
     }
 
     #permalink-article h1 {
       font-size: 2rem;
-      line-height: 1.5em;
+      line-height: 1.4em;
     }
 
     #permalink-article ul.metas {
@@ -263,7 +265,7 @@
     }
 
     #permalink-notes ul li.note-count {
-      font-size: 1.25em;
+      font-size: 1.25rem;
     }
 
     #permalink-notes ul li:not(.note-count) {
@@ -340,6 +342,12 @@
       display: flex;
       font-size: 1.25rem;
       align-items: baseline;
+    }
+
+    #index-posts li.post .title a:empty::after,
+    /* Preview Selector */
+    #index-posts li.post .title a span:empty::after {
+      content: "∅";
     }
 
     #index-posts .post .title .thumbnails {
@@ -450,6 +458,9 @@
 
     <nav id="index-menu-navigation">
       <ul>
+        <li>
+          <a href="/">Home</a>
+        </li>
         {block:HasPages}
           {block:Pages}
             <li>
