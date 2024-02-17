@@ -7,7 +7,7 @@
   <meta name="text:Paragraph Line Height In Article" content="1.5" />
   <meta name="if:Show Thumbnails" content="0" />
   <meta name="if:Show Feedly Button" content="1" />
-  <meta name="if:Hide iframe as popup" content="0" />
+  <meta name="if:Hide Thumblr Menu And Popup" content="0" />
   <meta name="text:Google Site Verification ID" content="" />
   <meta name="text:Google Tag Manager ID" content="" />
 
@@ -101,13 +101,17 @@
 
     /* <Common> */
 
-    {block:IfHideIframeAsPopup}
+    {block:ifHideThumblrMenuAndPopup}
 
       iframe {
         display: none !important;
       }
 
-    {/block:IfHideIframeAsPopup}
+      body {
+        padding-top: 14px !important;
+      }
+
+    {/block:ifHideThumblrMenuAndPopup}
 
     html {
       font-size: 17px;

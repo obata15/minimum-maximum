@@ -41,7 +41,7 @@ https://minimum-maximum-theme.tumblr.com/
 - [x] Google Tag Manager (Google Analytics)
 - [x] Google Search Console
 - [x] Feedly Button
-- [x] Hide iframe as popup
+- [x] Hide Thumblr Menu And Popup
 
 ### Appearance options
 
