@@ -6,7 +6,6 @@
   <meta name="text:Font Family" content="sans-serif" />
   <meta name="text:Paragraph Line Height In Article" content="1.5" />
   <meta name="if:Show Thumbnails" content="0" />
-  <meta name="if:Show Feedly Button" content="1" />
   <meta name="if:Hide Thumblr Menu And Popup" content="0" />
   <meta name="text:Google Site Verification ID" content="" />
   <meta name="text:Google Tag Manager ID" content="" />
@@ -438,11 +437,6 @@
             <li class="note-count">{NoteCountWithLabel}</li>
             <li>{LikeButton color="grey"}</li>
             <li>{ReblogButton color="grey"}</li>
-            {block:IfShowFeedlyButton}
-              <li><a href="https://feedly.com/i/subscription/feed%2F{RSS}" target="blank"><img id="feedlyFollow"
-                    src="https://s1.feedly.com/legacy/feedly-follow-circle-flat-green_2x.png" alt="follow us in feedly"
-                    width="20" height="20"></a></li>
-            {/block:IfShowFeedlyButton}
           </ul>
           {PostNotes}
         </aside>

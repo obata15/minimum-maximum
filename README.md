@@ -40,7 +40,6 @@ https://minimum-maximum-theme.tumblr.com/
 - [x] OGP (By Tumblr default)
 - [x] Google Tag Manager (Google Analytics)
 - [x] Google Search Console
-- [x] Feedly Button
 - [x] Hide Thumblr Menu And Popup
 
 ### Appearance options
