@@ -7,6 +7,7 @@
   <meta name="text:Paragraph Line Height In Article" content="1.5" />
   <meta name="if:Show Thumbnails" content="0" />
   <meta name="if:Show Feedly Button" content="1" />
+  <meta name="if:Hide iframe as popup" content="0" />
   <meta name="text:Google Site Verification ID" content="" />
   <meta name="text:Google Tag Manager ID" content="" />
 
@@ -99,6 +100,14 @@
     /* </ColorModeSettings> */
 
     /* <Common> */
+
+    {block:IfHideIframeAsPopup}
+
+      iframe {
+        display: none !important;
+      }
+
+    {/block:IfHideIframeAsPopup}
 
     html {
       font-size: 17px;
