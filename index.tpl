@@ -226,10 +226,10 @@
     #permalink-header a img {
       width: 2em;
       height: 2em;
+      margin-right: 12px;
     }
 
     #permalink-header a .title {
-      margin-left: 0.5em;
       font-size: 1.5rem;
       font-weight: bold;
     }
@@ -325,7 +325,7 @@
     }
 
     #index-header h1 {
-      margin: 0;
+      margin: 0.25em 0;
     }
 
     #index-header p {
@@ -334,10 +334,10 @@
     }
 
     #index-menu-navigation ul {
+      margin: 1.5em 0;
       display: flex;
       gap: 1rem;
       justify-content: center;
-      margin: 0.5em 0 2em 0;
     }
 
     #index-posts {
