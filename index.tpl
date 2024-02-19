@@ -103,7 +103,7 @@
       #permalink-article ul.metas li a,
       #index-menu-navigation a,
       ol#index-posts li.post a:hover,
-      nav.bottom.pagination,
+      nav.bottom.pagination a,
       nav.bottom a>span,
       footer a,
       p a {
