@@ -102,7 +102,7 @@
 
     {block:ifHideThumblrMenuAndPopup}
 
-      iframe {
+      iframe[class^="tmblr"] {
         display: none !important;
       }
 
