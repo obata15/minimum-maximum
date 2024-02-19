@@ -103,6 +103,7 @@
       #permalink-article ul.metas li a,
       #index-menu-navigation a,
       ol#index-posts li.post a:hover,
+      ol.notes a,
       nav.bottom.pagination a,
       nav.bottom a>span,
       footer a,
@@ -142,10 +143,6 @@
     a {
       text-decoration: none;
       color: {AccentColor};
-    }
-
-    p a:visited {
-      color: #999999;
     }
 
     p a:hover {
