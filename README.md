@@ -20,7 +20,7 @@ https://minimum-maximum-theme.tumblr.com/
 |-|-|
 | Background color | #f6f6f6 |
 | Title color | #222222 or #011219 |
-| Accent color | #00b8ff |
+| Accent color | #0079a8 |
 | Paragraph Line Height In Article | 1.75 |
 
 ## Feature

@@ -57,7 +57,7 @@
       font-family: {text:Font Family};
     }
 
-    header a {
+    #index-header a {
       color: {TitleColor};
     }
 
@@ -77,13 +77,17 @@
       color: {TitleColor};
     }
 
+    nav.bottom.home-navigation .portrait-icon {
+      color: {AccentColor};
+    }
+
     @media (prefers-color-scheme: dark) {
       body {
         background: {TitleColor};
         color: {BackgroundColor};
       }
 
-      header a {
+      #index-header a {
         color: {BackgroundColor};
       }
 
@@ -93,6 +97,21 @@
 
       ul.metas li.date a {
         color: {BackgroundColor};
+      }
+
+      #permalink-header a .title,
+      #permalink-article ul.metas li a,
+      #index-menu-navigation a,
+      ol#index-posts li.post a:hover,
+      nav.bottom.pagination,
+      nav.bottom a>span,
+      footer a,
+      p a {
+        filter: brightness(150%);
+      }
+
+      nav.bottom a>span img {
+        filter: brightness(66.66%);
       }
     }
 
@@ -180,14 +199,23 @@
       width: 4em;
     }
 
-    nav.bottom.home-navigation .portrait-icon {
+    nav.bottom.home-navigation span.o {
+      position: relative;
       display: inline-block;
-      height: 1.2rem;
-      width: 1.2rem;
+      height: 20px;
+      width: 20px;
       border-radius: 1.2rem;
       margin-left: 2px;
       margin-right: 2px;
       border: solid 3px;
+    }
+
+    nav.bottom.home-navigation span img {
+      border-radius: 1.2rem;
+      position: absolute;
+      height: 14px;
+      width: 14px;
+      left: 0;
     }
 
     footer {
@@ -220,7 +248,6 @@
     #permalink-header a {
       display: flex;
       align-items: center;
-      color: {AccentColor};
     }
 
     #permalink-header a img {
@@ -444,7 +471,8 @@
 
       <nav class="bottom home-navigation">
         <a href="/">
-          <span>H</span><img src="{PortraitURL-128}" alt="O" class="portrait-icon" /><span>ME</span>
+          <span>H</span><span class="o"><img src="{PortraitURL-128}" alt="O"
+              class="portrait-icon" /></span><span>ME</span>
         </a>
       </nav>
     </main>
