@@ -107,7 +107,7 @@
       }
 
       body {
-        padding-top: 14px !important;
+        padding-top: 17px !important;
       }
 
     {/block:ifHideThumblrMenuAndPopup}
@@ -117,7 +117,7 @@
     }
 
     body {
-      padding: 14px;
+      padding: 17px;
     }
 
     a {
