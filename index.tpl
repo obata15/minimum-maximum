@@ -145,6 +145,10 @@
       color: {AccentColor};
     }
 
+    p a {
+      text-decoration: underline;
+    }
+
     p a:hover {
       opacity: 0.5;
     }
