@@ -2,7 +2,7 @@
 
 Full-scratched Tumblr theme inspired by <a href="https://sanographix.github.io/tumblr/solo/">Solo</a>.
 
-## Sample
+## Demo
 
 https://minimum-maximum-theme.tumblr.com/
 
