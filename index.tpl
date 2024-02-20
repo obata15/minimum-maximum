@@ -107,7 +107,9 @@
       nav.bottom.pagination a,
       nav.bottom a>span,
       footer a,
-      #body-section a {
+      #body-section p a,
+      #body-section ul a,
+      #body-section ol a {
         filter: brightness(150%);
       }
 
@@ -145,7 +147,9 @@
       color: {AccentColor};
     }
 
-    #body-section a {
+    #body-section p a,
+    #body-section ul a,
+    #body-section ol a {
       text-decoration: underline;
     }
 
@@ -188,8 +192,8 @@
       font-weight: bold;
     }
 
-    nav.bottom.pagination a {
-      margin: 0 0.5em;
+    nav.bottom.pagination .current {
+      font-size: 1.5em;
     }
 
     nav.bottom.home-navigation a {
@@ -565,16 +569,26 @@
         {/block:Posts}
       </ol>
 
+
       {block:Pagination}
         <nav class="bottom pagination">
           {block:PreviousPage}
-            <a href="{PreviousPage}">&lt; Newer</a>
+            <a href="{PreviousPage}">&lt;</a>
           {/block:PreviousPage}
+          {block:JumpPagination length="5"}
+            {block:CurrentPage}
+              <span class="current">{PageNumber}</span>
+            {/block:CurrentPage}
+            {block:JumpPage}
+              <a href="{URL}">{PageNumber}</a>
+            {/block:JumpPage}
+          {/block:JumpPagination}
           {block:NextPage}
-            <a href="{NextPage}">Older &gt;</a>
+            <a href="{NextPage}">&gt;</a>
           {/block:NextPage}
         </nav>
       {/block:Pagination}
+
     </main>
   {/block:IndexPage}
 
