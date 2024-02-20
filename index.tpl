@@ -107,7 +107,7 @@
       nav.bottom.pagination a,
       nav.bottom a>span,
       footer a,
-      p a {
+      #permalink-article a {
         filter: brightness(150%);
       }
 
@@ -145,7 +145,7 @@
       color: {AccentColor};
     }
 
-    p a {
+    #permalink-article a {
       text-decoration: underline;
     }
 
