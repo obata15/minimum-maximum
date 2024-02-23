@@ -125,9 +125,9 @@
       margin: 0;
     }
 
-    .my-4 {
-      margin-top: 1rem;
-      margin-bottom: 1rem;
+    .my-3 {
+      margin-top: 0.75rem;
+      margin-bottom: 0.75rem;
     }
 
     .my-6 {
@@ -184,14 +184,14 @@
         </a>
       {/block:ShowAvatar}
       {block:ShowTitle}
-        <h1 class="my-4 leading-none">
+        <h1 class="my-3 leading-none">
           <a href="/" class="title-color">
             {Title}
           </a>
         </h1>
       {/block:ShowTitle}
       {block:ShowDescription}
-        <p class="my-4 leading-none opacity">
+        <p class="my-3 leading-none opacity">
           {Description}
         </p>
       {/block:ShowDescription}
@@ -326,9 +326,9 @@
 
   <!-- Please remove followings and edit more code! -->
   <footer class="text-center">
-    <span>Powered by</span>
+    <span class="opacity">Powered by</span>
     <a href="https://www.tumblr.com/" target="_blank" class="accent-color">Tumblr</a>
-    <span>and</span>
+    <span class="opacity">and</span>
     <a href="https://github.com/obata15/minimum-maximum" target="_blank" class="accent-color">Minimum-Maximum</a>
   </footer>
 </body>
