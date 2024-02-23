@@ -143,6 +143,10 @@
       line-height: 1;
     }
 
+    .rounded-full {
+      border-radius: 9999px;
+    }
+
     .fill-empty:empty::after,
     .fill-empty span:empty::after {
       content: "∅";
@@ -180,7 +184,7 @@
     <header class="text-center">
       {block:ShowAvatar}
         <a href="/">
-          <img src="{PortraitURL-128}" alt="{URLEncodedName}" class="align-bottom" />
+          <img src="{PortraitURL-128}" alt="{URLEncodedName}" class="align-bottom rounded-full" />
         </a>
       {/block:ShowAvatar}
       {block:ShowTitle}
