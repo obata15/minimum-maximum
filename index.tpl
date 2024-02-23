@@ -76,8 +76,12 @@
       color: {TitleColor};
     }
 
+    a.visited-opacity:visited {
+      color: #777777;
+    }
+
     .opacity {
-      opacity: 0.5;
+      opacity: 0.3;
     }
 
     @media (prefers-color-scheme: dark) {
@@ -161,7 +165,7 @@
           <li>
             {block:Text}
               <p>
-                <a href="{Permalink}" class="title-color">
+                <a href="{Permalink}" class="title-color visited-opacity">
                   {Title}
                 </a>
               </p>
