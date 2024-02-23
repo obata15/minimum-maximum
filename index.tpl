@@ -81,7 +81,7 @@
     }
 
     .opacity {
-      opacity: 0.3;
+      opacity: 0.4;
     }
 
     @media (prefers-color-scheme: dark) {
@@ -121,10 +121,6 @@
       padding-bottom: 1.5rem;
     }
 
-    .m-auto {
-      margin: auto;
-    }
-
     .m-0 {
       margin: 0;
     }
@@ -132,6 +128,11 @@
     .my-1 {
       margin-top: 0.25rem;
       margin-bottom: 0.25rem;
+    }
+
+    .my-2 {
+      margin-top: 0.5rem;
+      margin-bottom: 0.5rem;
     }
 
     .my-4 {
@@ -144,12 +145,21 @@
       margin-bottom: 1.5rem;
     }
 
+    .-my-0.1 {
+      margin-top: -0.125rem;
+      margin-bottom: -0.125rem;
+    }
+
     .list-none {
       list-style-type: none;
     }
 
     .text-bold {
       font-weight: bold;
+    }
+
+    .text-sm {
+      font-size: 0.875rem;
     }
 
     .text-xl {
@@ -164,12 +174,20 @@
       font-size: 1.875rem;
     }
 
+    .block {
+      display: block;
+    }
+
     .inline-block {
       display: inline-block;
     }
 
     .leading-none {
       line-height: 1;
+    }
+
+    .leading-xl {
+      line-height: 1.75rem;
     }
 
     .rounded-full {
@@ -182,7 +200,10 @@
     }
 
     .body {
-      max-width: 40rem;
+      max-width: 45rem;
+      margin: auto;
+      padding-right: 1rem;
+      padding-left: 1rem;
     }
 
     .flex-nav-list {
@@ -197,7 +218,7 @@
   </style>
 </head>
 
-<body class="m-auto px-4 py-6 body">
+<body class="body">
   {block:ifHideThumblrMenuAndPopup}
     <script>
       const mutationObserver = new MutationObserver((mutations) => {
@@ -218,19 +239,21 @@
   {block:IndexPage}
     <header class="text-center">
       {block:ShowAvatar}
-        <a href="/">
-          <img src="{PortraitURL-128}" alt="{URLEncodedName}" class="align-bottom rounded-full" />
-        </a>
+        <div class="my-4 block">
+          <a href="/">
+            <img src="{PortraitURL-128}" alt="{URLEncodedName}" class="align-bottom rounded-full" />
+          </a>
+        </div>
       {/block:ShowAvatar}
       {block:ShowTitle}
-        <h1 class="my-4 leading-none text-3xl">
+        <h1 class="my-2 leading-none text-3xl">
           <a href="/" class="title-color">
             {Title}
           </a>
         </h1>
       {/block:ShowTitle}
       {block:ShowDescription}
-        <p class="my-4 leading-none opacity">
+        <p class="my-2 leading-none opacity">
           {Description}
         </p>
       {/block:ShowDescription}
@@ -253,10 +276,10 @@
       {block:TagPage}
         <h2>"{Tag}"</h2>
       {/block:TagPage}
-      <ol class="list-none p-0">
+      <ol class="-my-0.1 p-0 list-none">
         {block:Posts}
           <li class="my-4">
-            <p class="m-0 text-bold text-xl">
+            <p class="m-0 text-bold text-xl leading-xl">
               {block:Text}
                 <a href="{Permalink}" class="title-color visited-opacity fill-empty">{Title}</a>
               {/block:Text}
@@ -361,7 +384,7 @@
   {/block:PermalinkPage}
 
   <!-- Please remove followings and edit more code! -->
-  <footer class="text-center">
+  <footer class="my-4 text-center text-sm">
     <span class="opacity">Powered by</span>
     <a href="https://www.tumblr.com/" target="_blank" class="accent-color">Tumblr</a>
     <span class="opacity">and</span>
