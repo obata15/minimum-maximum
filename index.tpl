@@ -54,59 +54,13 @@
 </head>
 
 <body>
-  {block:PermalinkPage}
-    <header id="permalink-header">
-      {block:ShowTitle}
+  {block:IndexPage}
+    <header>
+      {block:ShowAvatar}
         <a href="/">
           <img src="{PortraitURL-128}" alt="{URLEncodedName}" class="portrait-icon" />
-          {block:ShowTitle}
-            <div class="title">{Title}</div>
-          {/block:ShowTitle}
         </a>
-      {/block:ShowTitle}
-    </header>
-
-    <main id="permalink-main">
-      {block:Posts}
-        <article id="permalink-article">
-          {block:Text}
-            <h1>{Title}</h1>
-            <ul class="metas">
-              {block:Date}
-                <li class="date">{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}</li>
-              {/block:Date}
-              {block:Tags}
-                <li class="tag"><a href="{TagURL}">#{Tag}</a></li>
-              {/block:Tags}
-            </ul>
-            <section id="body-section">
-              {Body}
-            </section>
-          {/block:Text}
-        </article>
-
-        <aside id="permalink-notes">
-          <ul>
-            <li class="note-count">{NoteCountWithLabel}</li>
-            <li>{LikeButton color="grey"}</li>
-            <li>{ReblogButton color="grey"}</li>
-          </ul>
-          {PostNotes}
-        </aside>
-      {/block:Posts}
-
-      <nav class="bottom home-navigation">
-        <a href="/">
-          <span>H</span><span class="o"><img src="{PortraitURL-128}" alt="O"
-              class="portrait-icon" /></span><span>ME</span>
-        </a>
-      </nav>
-    </main>
-  {/block:PermalinkPage}
-
-  {block:IndexPage}
-    <header id="index-header">
-      <a href="/"><img src="{PortraitURL-128}" alt="{URLEncodedName}" class="portrait-icon" /></a>
+      {/block:ShowAvatar}
       {block:ShowTitle}
         <h1>
           <a href="/">{Title}</a>
@@ -116,7 +70,6 @@
         <p id="description">{Description}</p>
       {/block:ShowDescription}
     </header>
-
     <nav id="index-menu-navigation">
       <ul>
         <li>
@@ -139,12 +92,10 @@
         {/block:AskEnabled}
       </ul>
     </nav>
-
     <main id="index-main">
       {block:TagPage}
         <h1 id="tag-heading">"{Tag}"</h1>
       {/block:TagPage}
-
       <ol id="index-posts">
         {block:Posts}
           <li class="post">
@@ -161,7 +112,6 @@
                 </ul>
               </a>
             {/block:Text}
-
             {block:Photo}
               <strong>[WARNING] Photo post is not supported.</strong>
             {/block:Photo}
@@ -189,7 +139,6 @@
           </li>
         {/block:Posts}
       </ol>
-
       {block:Pagination}
         <nav class="bottom pagination">
           {block:PreviousPage}
@@ -208,16 +157,62 @@
           {/block:NextPage}
         </nav>
       {/block:Pagination}
-
     </main>
   {/block:IndexPage}
+
+  {block:PermalinkPage}
+    <header id="permalink-header">
+      {block:ShowTitle}
+        <a href="/">
+          <img src="{PortraitURL-128}" alt="{URLEncodedName}" class="portrait-icon" />
+          {block:ShowTitle}
+            <div class="title">{Title}</div>
+          {/block:ShowTitle}
+        </a>
+      {/block:ShowTitle}
+    </header>
+    <main id="permalink-main">
+      {block:Posts}
+        <article id="permalink-article">
+          {block:Text}
+            <h1>{Title}</h1>
+            <ul class="metas">
+              {block:Date}
+                <li class="date">{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}</li>
+              {/block:Date}
+              {block:Tags}
+                <li class="tag"><a href="{TagURL}">#{Tag}</a></li>
+              {/block:Tags}
+            </ul>
+            <section id="body-section">
+              {Body}
+            </section>
+          {/block:Text}
+        </article>
+        <aside id="permalink-notes">
+          <ul>
+            <li class="note-count">{NoteCountWithLabel}</li>
+            <li>{LikeButton color="grey"}</li>
+            <li>{ReblogButton color="grey"}</li>
+          </ul>
+          {PostNotes}
+        </aside>
+      {/block:Posts}
+      <nav class="bottom home-navigation">
+        <a href="/">
+          <span>H</span><span class="o"><img src="{PortraitURL-128}" alt="O"
+              class="portrait-icon" /></span><span>ME</span>
+        </a>
+      </nav>
+    </main>
+  {/block:PermalinkPage}
 
   <!-- Please remove followings and edit more code! -->
   <footer>
     <span>Powered by</span>
-    <a href="https://www.tumblr.com/">Tumblr</a>
+    <a href="https://www.tumblr.com/" target="_blank">Tumblr</a>
     <span>and</span>
-    <a href="https://github.com/obata15/minimum-maximum">Minimum-Maximum</a>
+    <a href="https://github.com/obata15/minimum-maximum" target="_blank">Minimum-Maximum</a>
   </footer>
 </body>
 

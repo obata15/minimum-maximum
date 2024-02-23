@@ -52,16 +52,12 @@ https://minimum-maximum-theme.tumblr.com/
 - [x] Show title
 - [x] Show description
 - [x] Font Family
-  - [ ] Title font
-  - [ ] Alternate title font
-  - [ ] Use alternate title font only
-  - [ ] Body font
 - [x] Paragraph Line Height In Article
 - [x] Show thumbnails in index (Beta)
 
 ## Never Support
 
-- Non-text post
+- Non-NPF (Neue Post Format) post
 - Source block
 - Localizing
 - Submission
@@ -76,9 +72,7 @@ https://minimum-maximum-theme.tumblr.com/
 ### Appearance options
 
 - Header image
-- Avatar
 - Avatar shape
 - Show header image
 - Stretch header image
-- Show avatar
 - Custom CSS
