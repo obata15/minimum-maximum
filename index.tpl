@@ -85,31 +85,23 @@
         <li>
           <a href="/archive">Archive</a>
         </li>
-        {block:AskEnabled}
-          <li>
-            <a href="/ask">{AskLabel}</a>
-          </li>
-        {/block:AskEnabled}
       </ul>
     </nav>
     <main>
       {block:TagPage}
-        <h1>"{Tag}"</h1>
+        <h2>"{Tag}"</h2>
       {/block:TagPage}
       <ol>
         {block:Posts}
           <li>
             {block:Text}
-              <a href="{Permalink}">
-                <div>
+              <p>
+                <a href="{Permalink}">
                   {Title}
-                  {block:IfShowThumbnails}
-                    <div onclick="location.href='{Permalink}'">{Body}</div>
-                  {/block:IfShowThumbnails}
-                </div>
-                <ul>
-                  <li>{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}</li>
-                </ul>
+                </a>
+              </p>
+              <a href="{Permalink}">
+                {Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}
               </a>
             {/block:Text}
             {block:Photo}

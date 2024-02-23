@@ -34,7 +34,7 @@ https://minimum-maximum-theme.tumblr.com/
 - [x] Reblog button
 - [x] Like button
 - [ ] Related posts
-- [ ] Question and Answer
+- [ ] Ask (Question and Answer)
 - [ ] NPF rendering
 - [x] Auto dark mode (Swap BackgroundColor and TitleColor)
 - [x] OGP (By Tumblr default)
@@ -53,7 +53,7 @@ https://minimum-maximum-theme.tumblr.com/
 - [x] Show description
 - [x] Font Family
 - [x] Paragraph Line Height In Article
-- [x] Show thumbnails in index (Beta)
+- [ ] Show thumbnails in index (Beta)
 
 ## Never Support
 
