@@ -213,20 +213,22 @@
       </ol>
       {block:Pagination}
         <nav class="text-center">
-          {block:PreviousPage}
-            <a href="{PreviousPage}" class="accent-color">&lt;</a>
-          {/block:PreviousPage}
-          {block:JumpPagination length="5"}
-            {block:CurrentPage}
-              <span>{PageNumber}</span>
-            {/block:CurrentPage}
-            {block:JumpPage}
-              <a href="{URL}" class="accent-color">{PageNumber}</a>
-            {/block:JumpPage}
-          {/block:JumpPagination}
-          {block:NextPage}
-            <a href="{NextPage}" class="accent-color">&gt;</a>
-          {/block:NextPage}
+          <ul class="flex-nav-list">
+            {block:PreviousPage}
+              <li><a href="{PreviousPage}" class="accent-color">&lsaquo;</a></li>
+            {/block:PreviousPage}
+            {block:JumpPagination length="5"}
+              {block:CurrentPage}
+                <li><span>{PageNumber}</span></li>
+              {/block:CurrentPage}
+              {block:JumpPage}
+                <li><a href="{URL}" class="accent-color">{PageNumber}</a></li>
+              {/block:JumpPage}
+            {/block:JumpPagination}
+            {block:NextPage}
+              <li><a href="{NextPage}" class="accent-color">&rsaquo;</a></li>
+            {/block:NextPage}
+          </ul>
         </nav>
       {/block:Pagination}
     </main>
