@@ -237,9 +237,6 @@
     </header>
     <nav class="text-center my-6">
       <ul class="flex-nav-list">
-        <li>
-          <a href="/" class="accent-color">Home</a>
-        </li>
         {block:HasPages}
           {block:Pages}
             <li>
