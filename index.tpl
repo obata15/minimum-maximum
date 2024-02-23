@@ -31,7 +31,7 @@
   <link rel="shortcut icon" href="{Favicon}" />
   <link rel="alternate" type="application/rss+xml" href="{RSS}" />
   <link rel="apple-touch-icon-precomposed" href="{PortraitURL-128}" />
-  <link href="https://unpkg.com/sanitize.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet" />
 
   <title>
     {block:TagPage}

@@ -12,7 +12,7 @@ https://minimum-maximum-theme.tumblr.com/
 
 ## CDN Stacks
 
-- https://csstools.github.io/sanitize.css/
+- https://necolas.github.io/normalize.css/
 
 ## Required Appearance options
 
