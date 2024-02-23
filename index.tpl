@@ -103,6 +103,10 @@
       text-align: center;
     }
 
+    .align-baseline {
+      vertical-align: baseline;
+    }
+
     .flex-nav-list {
       list-style-type: none;
       display: flex;
@@ -134,7 +138,7 @@
     <header class="text-center">
       {block:ShowAvatar}
         <a href="/">
-          <img src="{PortraitURL-128}" alt="{URLEncodedName}" />
+          <img src="{PortraitURL-128}" alt="{URLEncodedName}" class="align-baseline" />
         </a>
       {/block:ShowAvatar}
       {block:ShowTitle}
