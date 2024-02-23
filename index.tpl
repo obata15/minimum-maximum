@@ -143,6 +143,11 @@
       line-height: 1;
     }
 
+    .fill-empty:empty::after,
+    .fill-empty span:empty::after {
+      content: "∅";
+    }
+
     .flex-nav-list {
       list-style-type: none;
       padding: 0;
@@ -215,40 +220,38 @@
       <ol class="list-none p-0">
         {block:Posts}
           <li>
-            {block:Text}
-              <p class="m-0">
-                <a href="{Permalink}" class="title-color visited-opacity">
-                  {Title}
-                </a>
-              </p>
-              <a href="{Permalink}" class="title-color opacity">
-                {Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}
-              </a>
-            {/block:Text}
-            {block:Photo}
-              <strong>[WARNING] Photo post is not supported.</strong>
-            {/block:Photo}
-            {block:Panorama}
-              <strong>[WARNING] Panorama post is not supported.</strong>
-            {/block:Panorama}
-            {block:Photoset}
-              <strong>[WARNING] Photoset post is not supported.</strong>
-            {/block:Photoset}
-            {block:Quote}
-              <strong>[WARNING] Quote post is not supported.</strong>
-            {/block:Quote}
-            {block:Link}
-              <strong>[WARNING] Link post is not supported.</strong>
-            {/block:Link}
-            {block:Chat}
-              <strong>[WARNING] Chat post is not supported.</strong>
-            {/block:Chat}
-            {block:Video}
-              <strong>[WARNING] Video post is not supported.</strong>
-            {/block:Video}
-            {block:Audio}
-              <strong>[WARNING] Audio post is not supported.</strong>
-            {/block:Audio}
+            <p class="m-0">
+              {block:Text}
+                <a href="{Permalink}" class="title-color visited-opacity fill-empty">{Title}</a>
+              {/block:Text}
+              {block:Photo}
+                [WARNING] Photo post is not supported.
+              {/block:Photo}
+              {block:Panorama}
+                [WARNING] Panorama post is not supported.
+              {/block:Panorama}
+              {block:Photoset}
+                [WARNING] Photoset post is not supported.
+              {/block:Photoset}
+              {block:Quote}
+                [WARNING] Quote post is not supported.
+              {/block:Quote}
+              {block:Link}
+                [WARNING] Link post is not supported.
+              {/block:Link}
+              {block:Chat}
+                [WARNING] Chat post is not supported.
+              {/block:Chat}
+              {block:Video}
+                [WARNING] Video post is not supported.
+              {/block:Video}
+              {block:Audio}
+                [WARNING] Audio post is not supported.
+              {/block:Audio}
+            </p>
+            <a href="{Permalink}" class="title-color opacity">
+              {Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}
+            </a>
           </li>
         {/block:Posts}
       </ol>
