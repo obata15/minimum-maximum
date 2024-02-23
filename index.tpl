@@ -49,7 +49,51 @@
   <meta name="description" content="{MetaDescription}" />
 
   <style>
+    body {
+      background: {BackgroundColor};
+      color: {TitleColor};
+      font-family: {text:Font Family};
+    }
 
+    a {
+      color: {AccentColor};
+      text-decoration: none;
+    }
+
+    a:visited {
+      color: #777777;
+    }
+
+    a:hover {
+      color: {AccentColor};
+    }
+
+    a.accent-color {
+      color: {AccentColor};
+    }
+
+    a.title-color {
+      color: {TitleColor};
+    }
+
+    .opacity {
+      opacity: 0.5;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      body {
+        background: {TitleColor};
+        color: {BackgroundColor};
+      }
+
+      a:not(:has(img)) {
+        filter: brightness(150%);
+      }
+
+      a.title-color {
+        color: {BackgroundColor};
+      }
+    }
   </style>
 </head>
 
@@ -80,11 +124,15 @@
       {/block:ShowAvatar}
       {block:ShowTitle}
         <h1>
-          <a href="/">{Title}</a>
+          <a href="/" class="title-color">
+            {Title}
+          </a>
         </h1>
       {/block:ShowTitle}
       {block:ShowDescription}
-        <p>{Description}</p>
+        <p class="opacity">
+          {Description}
+        </p>
       {/block:ShowDescription}
     </header>
     <nav>
@@ -113,11 +161,11 @@
           <li>
             {block:Text}
               <p>
-                <a href="{Permalink}">
+                <a href="{Permalink}" class="title-color">
                   {Title}
                 </a>
               </p>
-              <a href="{Permalink}">
+              <a href="{Permalink}" class="title-color opacity">
                 {Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}
               </a>
             {/block:Text}
@@ -151,18 +199,18 @@
       {block:Pagination}
         <nav>
           {block:PreviousPage}
-            <a href="{PreviousPage}">&lt;</a>
+            <a href="{PreviousPage}" class="accent-color">&lt;</a>
           {/block:PreviousPage}
           {block:JumpPagination length="5"}
             {block:CurrentPage}
               <span>{PageNumber}</span>
             {/block:CurrentPage}
             {block:JumpPage}
-              <a href="{URL}">{PageNumber}</a>
+              <a href="{URL}" class="accent-color">{PageNumber}</a>
             {/block:JumpPage}
           {/block:JumpPagination}
           {block:NextPage}
-            <a href="{NextPage}">&gt;</a>
+            <a href="{NextPage}" class="accent-color">&gt;</a>
           {/block:NextPage}
         </nav>
       {/block:Pagination}
@@ -174,10 +222,10 @@
       {block:ShowTitle}
         <a href="/">
           <img src="{PortraitURL-128}" alt="{URLEncodedName}" />
-          {block:ShowTitle}
-            <div>{Title}</div>
-          {/block:ShowTitle}
         </a>
+        {block:ShowTitle}
+          <a href="/">{Title}</a>
+        {/block:ShowTitle}
       {/block:ShowTitle}
     </header>
     <main>
@@ -218,9 +266,9 @@
   <!-- Please remove followings and edit more code! -->
   <footer>
     <span>Powered by</span>
-    <a href="https://www.tumblr.com/" target="_blank">Tumblr</a>
+    <a href="https://www.tumblr.com/" target="_blank" class="accent-color">Tumblr</a>
     <span>and</span>
-    <a href="https://github.com/obata15/minimum-maximum" target="_blank">Minimum-Maximum</a>
+    <a href="https://github.com/obata15/minimum-maximum" target="_blank" class="accent-color">Minimum-Maximum</a>
   </footer>
 </body>
 
