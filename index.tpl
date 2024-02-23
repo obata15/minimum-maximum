@@ -121,13 +121,22 @@
       padding-bottom: 1.5rem;
     }
 
+    .m-auto {
+      margin: auto;
+    }
+
     .m-0 {
       margin: 0;
     }
 
-    .my-3 {
-      margin-top: 0.75rem;
-      margin-bottom: 0.75rem;
+    .my-1 {
+      margin-top: 0.25rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .my-4 {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
     }
 
     .my-6 {
@@ -137,6 +146,26 @@
 
     .list-none {
       list-style-type: none;
+    }
+
+    .text-bold {
+      font-weight: bold;
+    }
+
+    .text-xl {
+      font-size: 1.25rem;
+    }
+
+    .text-2xl {
+      font-size: 1.5rem;
+    }
+
+    .text-3xl {
+      font-size: 1.875rem;
+    }
+
+    .inline-block {
+      display: inline-block;
     }
 
     .leading-none {
@@ -152,17 +181,23 @@
       content: "∅";
     }
 
+    .body {
+      max-width: 40rem;
+    }
+
     .flex-nav-list {
+      line-height: 1;
       list-style-type: none;
       padding: 0;
       display: flex;
       gap: 1rem;
       justify-content: center;
+      align-items: baseline;
     }
   </style>
 </head>
 
-<body class="px-4 py-6">
+<body class="m-auto px-4 py-6 body">
   {block:ifHideThumblrMenuAndPopup}
     <script>
       const mutationObserver = new MutationObserver((mutations) => {
@@ -188,14 +223,14 @@
         </a>
       {/block:ShowAvatar}
       {block:ShowTitle}
-        <h1 class="my-3 leading-none">
+        <h1 class="my-4 leading-none text-3xl">
           <a href="/" class="title-color">
             {Title}
           </a>
         </h1>
       {/block:ShowTitle}
       {block:ShowDescription}
-        <p class="my-3 leading-none opacity">
+        <p class="my-4 leading-none opacity">
           {Description}
         </p>
       {/block:ShowDescription}
@@ -223,8 +258,8 @@
       {/block:TagPage}
       <ol class="list-none p-0">
         {block:Posts}
-          <li>
-            <p class="m-0">
+          <li class="my-4">
+            <p class="m-0 text-bold text-xl">
               {block:Text}
                 <a href="{Permalink}" class="title-color visited-opacity fill-empty">{Title}</a>
               {/block:Text}
@@ -253,14 +288,14 @@
                 [WARNING] Audio post is not supported.
               {/block:Audio}
             </p>
-            <a href="{Permalink}" class="title-color opacity">
+            <a href="{Permalink}" class="my-1 inline-block title-color opacity">
               {Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}
             </a>
           </li>
         {/block:Posts}
       </ol>
       {block:Pagination}
-        <nav class="text-center my-6">
+        <nav class="text-center my-6 text-xl">
           <ul class="flex-nav-list">
             {block:PreviousPage}
               <li><a href="{PreviousPage}" class="accent-color">&lsaquo;</a></li>
