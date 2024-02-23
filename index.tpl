@@ -54,6 +54,21 @@
 </head>
 
 <body>
+  <script>
+    const mutationObserver = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        elements = document.getElementsByClassName("tmblr-iframe");
+        while (elements.length) {
+          elements.item(0).remove()
+        }
+      });
+    });
+
+    mutationObserver.observe(
+      document.body, { childList: true, subtree: true }
+    );
+  </script>
+
   {block:IndexPage}
     <header>
       {block:ShowAvatar}
