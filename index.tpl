@@ -102,6 +102,13 @@
     .text-center {
       text-align: center;
     }
+
+    .flex-nav-list {
+      list-style-type: none;
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+    }
   </style>
 </head>
 
@@ -144,19 +151,19 @@
       {/block:ShowDescription}
     </header>
     <nav class="text-center">
-      <ul>
+      <ul class="flex-nav-list">
         <li>
-          <a href="/">Home</a>
+          <a href="/" class="accent-color">Home</a>
         </li>
         {block:HasPages}
           {block:Pages}
             <li>
-              <a href="{URL}">{Label}</a>
+              <a href="{URL}" class="accent-color">{Label}</a>
             </li>
           {/block:Pages}
         {/block:HasPages}
         <li>
-          <a href="/archive">Archive</a>
+          <a href="/archive" class="accent-color">Archive</a>
         </li>
       </ul>
     </nav>
