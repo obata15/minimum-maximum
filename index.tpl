@@ -103,12 +103,49 @@
       text-align: center;
     }
 
-    .align-baseline {
-      vertical-align: baseline;
+    .align-bottom {
+      vertical-align: bottom;
+    }
+
+    .p-0 {
+      padding: 0;
+    }
+
+    .px-4 {
+      padding-right: 1rem;
+      padding-left: 1rem;
+    }
+
+    .py-6 {
+      padding-top: 1.5rem;
+      padding-bottom: 1.5rem;
+    }
+
+    .m-0 {
+      margin: 0;
+    }
+
+    .my-4 {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .my-6 {
+      margin-top: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .list-none {
+      list-style-type: none;
+    }
+
+    .leading-none {
+      line-height: 1;
     }
 
     .flex-nav-list {
       list-style-type: none;
+      padding: 0;
       display: flex;
       gap: 1rem;
       justify-content: center;
@@ -116,7 +153,7 @@
   </style>
 </head>
 
-<body>
+<body class="px-4 py-6">
   {block:ifHideThumblrMenuAndPopup}
     <script>
       const mutationObserver = new MutationObserver((mutations) => {
@@ -138,23 +175,23 @@
     <header class="text-center">
       {block:ShowAvatar}
         <a href="/">
-          <img src="{PortraitURL-128}" alt="{URLEncodedName}" class="align-baseline" />
+          <img src="{PortraitURL-128}" alt="{URLEncodedName}" class="align-bottom" />
         </a>
       {/block:ShowAvatar}
       {block:ShowTitle}
-        <h1>
+        <h1 class="my-4 leading-none">
           <a href="/" class="title-color">
             {Title}
           </a>
         </h1>
       {/block:ShowTitle}
       {block:ShowDescription}
-        <p class="opacity">
+        <p class="my-4 leading-none opacity">
           {Description}
         </p>
       {/block:ShowDescription}
     </header>
-    <nav class="text-center">
+    <nav class="text-center my-6">
       <ul class="flex-nav-list">
         <li>
           <a href="/" class="accent-color">Home</a>
@@ -171,15 +208,15 @@
         </li>
       </ul>
     </nav>
-    <main>
+    <main class="my-6">
       {block:TagPage}
         <h2>"{Tag}"</h2>
       {/block:TagPage}
-      <ol>
+      <ol class="list-none p-0">
         {block:Posts}
           <li>
             {block:Text}
-              <p>
+              <p class="m-0">
                 <a href="{Permalink}" class="title-color visited-opacity">
                   {Title}
                 </a>
@@ -216,7 +253,7 @@
         {/block:Posts}
       </ol>
       {block:Pagination}
-        <nav class="text-center">
+        <nav class="text-center my-6">
           <ul class="flex-nav-list">
             {block:PreviousPage}
               <li><a href="{PreviousPage}" class="accent-color">&lsaquo;</a></li>
