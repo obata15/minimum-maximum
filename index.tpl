@@ -58,7 +58,7 @@
     <header>
       {block:ShowAvatar}
         <a href="/">
-          <img src="{PortraitURL-128}" alt="{URLEncodedName}" class="portrait-icon" />
+          <img src="{PortraitURL-128}" alt="{URLEncodedName}" />
         </a>
       {/block:ShowAvatar}
       {block:ShowTitle}
@@ -67,10 +67,10 @@
         </h1>
       {/block:ShowTitle}
       {block:ShowDescription}
-        <p id="description">{Description}</p>
+        <p>{Description}</p>
       {/block:ShowDescription}
     </header>
-    <nav id="index-menu-navigation">
+    <nav>
       <ul>
         <li>
           <a href="/">Home</a>
@@ -92,23 +92,23 @@
         {/block:AskEnabled}
       </ul>
     </nav>
-    <main id="index-main">
+    <main>
       {block:TagPage}
-        <h1 id="tag-heading">"{Tag}"</h1>
+        <h1>"{Tag}"</h1>
       {/block:TagPage}
-      <ol id="index-posts">
+      <ol>
         {block:Posts}
-          <li class="post">
+          <li>
             {block:Text}
               <a href="{Permalink}">
-                <div class="title">
+                <div>
                   {Title}
                   {block:IfShowThumbnails}
-                    <div class="thumbnails" onclick="location.href='{Permalink}'">{Body}</div>
+                    <div onclick="location.href='{Permalink}'">{Body}</div>
                   {/block:IfShowThumbnails}
                 </div>
-                <ul class="metas">
-                  <li class="date">{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}</li>
+                <ul>
+                  <li>{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}</li>
                 </ul>
               </a>
             {/block:Text}
@@ -140,13 +140,13 @@
         {/block:Posts}
       </ol>
       {block:Pagination}
-        <nav class="bottom pagination">
+        <nav>
           {block:PreviousPage}
             <a href="{PreviousPage}">&lt;</a>
           {/block:PreviousPage}
           {block:JumpPagination length="5"}
             {block:CurrentPage}
-              <span class="current">{PageNumber}</span>
+              <span>{PageNumber}</span>
             {/block:CurrentPage}
             {block:JumpPage}
               <a href="{URL}">{PageNumber}</a>
@@ -161,47 +161,46 @@
   {/block:IndexPage}
 
   {block:PermalinkPage}
-    <header id="permalink-header">
+    <header>
       {block:ShowTitle}
         <a href="/">
-          <img src="{PortraitURL-128}" alt="{URLEncodedName}" class="portrait-icon" />
+          <img src="{PortraitURL-128}" alt="{URLEncodedName}" />
           {block:ShowTitle}
-            <div class="title">{Title}</div>
+            <div>{Title}</div>
           {/block:ShowTitle}
         </a>
       {/block:ShowTitle}
     </header>
-    <main id="permalink-main">
+    <main>
       {block:Posts}
-        <article id="permalink-article">
+        <article>
           {block:Text}
             <h1>{Title}</h1>
-            <ul class="metas">
+            <ul>
               {block:Date}
-                <li class="date">{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}</li>
+                <li>{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}</li>
               {/block:Date}
               {block:Tags}
-                <li class="tag"><a href="{TagURL}">#{Tag}</a></li>
+                <li><a href="{TagURL}">#{Tag}</a></li>
               {/block:Tags}
             </ul>
-            <section id="body-section">
+            <section>
               {Body}
             </section>
           {/block:Text}
         </article>
-        <aside id="permalink-notes">
+        <aside>
           <ul>
-            <li class="note-count">{NoteCountWithLabel}</li>
+            <li>{NoteCountWithLabel}</li>
             <li>{LikeButton color="grey"}</li>
             <li>{ReblogButton color="grey"}</li>
           </ul>
           {PostNotes}
         </aside>
       {/block:Posts}
-      <nav class="bottom home-navigation">
+      <nav>
         <a href="/">
-          <span>H</span><span class="o"><img src="{PortraitURL-128}" alt="O"
-              class="portrait-icon" /></span><span>ME</span>
+          <span>H</span><span><img src="{PortraitURL-128}" alt="O" /></span><span>ME</span>
         </a>
       </nav>
     </main>
