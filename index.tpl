@@ -98,6 +98,10 @@
         color: {BackgroundColor};
       }
     }
+
+    .text-center {
+      text-align: center;
+    }
   </style>
 </head>
 
@@ -120,7 +124,7 @@
   {/block:ifHideThumblrMenuAndPopup}
 
   {block:IndexPage}
-    <header>
+    <header class="text-center">
       {block:ShowAvatar}
         <a href="/">
           <img src="{PortraitURL-128}" alt="{URLEncodedName}" />
@@ -139,7 +143,7 @@
         </p>
       {/block:ShowDescription}
     </header>
-    <nav>
+    <nav class="text-center">
       <ul>
         <li>
           <a href="/">Home</a>
@@ -201,7 +205,7 @@
         {/block:Posts}
       </ol>
       {block:Pagination}
-        <nav>
+        <nav class="text-center">
           {block:PreviousPage}
             <a href="{PreviousPage}" class="accent-color">&lt;</a>
           {/block:PreviousPage}
@@ -268,7 +272,7 @@
   {/block:PermalinkPage}
 
   <!-- Please remove followings and edit more code! -->
-  <footer>
+  <footer class="text-center">
     <span>Powered by</span>
     <a href="https://www.tumblr.com/" target="_blank" class="accent-color">Tumblr</a>
     <span>and</span>
