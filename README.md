@@ -1,7 +1,6 @@
 # Minimum-Maximum
 
-Tumblr theme inspired by <a href="https://sanographix.github.io/tumblr/solo/">Solo</a>, <a href="https://www.tumblr.com/theme/37310">Tumblr Official</a> and many awesome website.
-CSS like <a href="https://tailwindcss.com/">Tailwind</a>.
+Tumblr theme inspired by <a href="https://sanographix.github.io/tumblr/solo/">Solo</a>, <a href="https://www.tumblr.com/theme/37310">Tumblr Official</a>, <a href="https://developer.mozilla.org/">MDN</a>, <a href="https://tailwindcss.com/">Tailwind</a> and many awesome website.
 
 ## Demo
 
