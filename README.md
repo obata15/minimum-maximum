@@ -10,9 +10,10 @@ https://minimum-maximum-theme.tumblr.com/
 
 - https://text15.tumblr.com/
 
-## CDN Stacks
+## Stacks
 
 - https://necolas.github.io/normalize.css/
+- https://heroicons.com/
 
 ## Required Appearance options
 
@@ -41,6 +42,7 @@ https://minimum-maximum-theme.tumblr.com/
 - [x] Google Tag Manager (Google Analytics)
 - [x] Google Search Console
 - [x] Hide Thumblr Menu And Popup
+- [ ] Support Brand Address
 
 ### Appearance options
 
