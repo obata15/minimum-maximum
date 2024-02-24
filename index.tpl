@@ -299,6 +299,16 @@
 
       open("https://www.tumblr.com/" + blogId + "/" + postId + "/" + slug + "?source=blognetwork&action=like", "_blank")
     }
+
+    document.addEventListener("DOMContentLoaded", (event) => {
+      if (!location.pathname.match(/\/post\/(\d+)\/(.+)/)) {
+        reaction = document.getElementById("reaction");
+        reaction && reaction.remove()
+
+        articleMeta = document.getElementById("article-meta");
+        articleMeta && articleMeta.remove()
+      }
+    });
   </script>
 </head>
 
@@ -307,9 +317,9 @@
     <script>
       const mutationObserver = new MutationObserver((mutations) => {
         mutations.forEach((mutation) => {
-          elements = document.getElementsByClassName("tmblr-iframe");
-          while (elements.length) {
-            elements.item(0).remove()
+          tumblrIframes = document.getElementsByClassName("tmblr-iframe");
+          while (tumblrIframes.length) {
+            tumblrIframes.item(0).remove()
           }
         });
       });
@@ -432,7 +442,7 @@
         <article>
           {block:Text}
             <h1 class="text-3xl leading-3xl leading-trim-3xl">{Title}</h1>
-            <ul class="flex-list">
+            <ul id="article-meta" class="flex-list">
               {block:Date}
                 <li>{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}</li>
               {/block:Date}
@@ -445,7 +455,7 @@
             </section>
           {/block:Text}
         </article>
-        <aside>
+        <aside id="reaction">
           <ul class="flex-list">
             <li class="opacity">
               {NoteCountWithLabel}
