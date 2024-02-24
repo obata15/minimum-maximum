@@ -214,7 +214,7 @@
     }
 
     .leading-3xl {
-      line-height: 2.25rem;
+      line-height: 2.5rem;
     }
 
     .leading-4xl {
@@ -227,8 +227,8 @@
     }
 
     .leading-trim-3xl {
-      margin-top: -0.1875rem;
-      margin-bottom: -0.1875rem;
+      margin-top: -0.3215rem;
+      margin-bottom: -0.3215rem;
     }
 
     .rounded-full {
