@@ -391,7 +391,7 @@
       </p>
     {/block:ShowDescription}
   </header>
-  <nav class="my-4 text-lg ui">
+  <nav class="my-6 text-lg ui">
     <ul class="flex-nav-list">
       <li>
         <a href="/" class="accent-color">Home</a>
@@ -452,27 +452,27 @@
           </li>
         {/block:Posts}
       </ol>
-      {block:Pagination}
-        <nav class="my-6 text-center text-2xl ui">
-          <ul class="flex-nav-list">
-            {block:PreviousPage}
-              <li><a href="{PreviousPage}" class="accent-color">&lsaquo;</a></li>
-            {/block:PreviousPage}
-            {block:JumpPagination length="5"}
-              {block:CurrentPage}
-                <li><span>{PageNumber}</span></li>
-              {/block:CurrentPage}
-              {block:JumpPage}
-                <li><a href="{URL}" class="accent-color">{PageNumber}</a></li>
-              {/block:JumpPage}
-            {/block:JumpPagination}
-            {block:NextPage}
-              <li><a href="{NextPage}" class="accent-color">&rsaquo;</a></li>
-            {/block:NextPage}
-          </ul>
-        </nav>
-      {/block:Pagination}
     </main>
+    {block:Pagination}
+      <nav class="my-6 text-center text-2xl ui">
+        <ul class="flex-nav-list">
+          {block:PreviousPage}
+            <li><a href="{PreviousPage}" class="accent-color">&lsaquo;</a></li>
+          {/block:PreviousPage}
+          {block:JumpPagination length="5"}
+            {block:CurrentPage}
+              <li><span>{PageNumber}</span></li>
+            {/block:CurrentPage}
+            {block:JumpPage}
+              <li><a href="{URL}" class="accent-color">{PageNumber}</a></li>
+            {/block:JumpPage}
+          {/block:JumpPagination}
+          {block:NextPage}
+            <li><a href="{NextPage}" class="accent-color">&rsaquo;</a></li>
+          {/block:NextPage}
+        </ul>
+      </nav>
+    {/block:Pagination}
   {/block:IndexPage}
 
   {block:PermalinkPage}
