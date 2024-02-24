@@ -255,6 +255,7 @@
 
     .flex-list {
       padding: 0;
+      line-height: 1;
       list-style-type: none;
       display: flex;
       gap: 0.5rem;
@@ -314,8 +315,8 @@
 
     article h2 {
       font-size: 1.5rem;
-      margin-top: 1rem;
-      margin-bottom: 0.5rem;
+      margin-top: 1.5rem;
+      margin-bottom: 1rem;
     }
 
     article p {
@@ -509,7 +510,7 @@
           {block:Text}
             <h1 class="text-3xl leading-3xl leading-trim-3xl">{Title}</h1>
             {block:Date}
-              <ul id="article-meta" class="my-4 flex-list">
+              <ul id="article-meta" class="my-6 flex-list">
                 <li class="grey">{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}</li>
                 {block:Tags}
                   <li><a href="{TagURL}" class="accent-color">#{Tag}</a></li>
