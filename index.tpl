@@ -187,10 +187,6 @@
       display: inline-block;
     }
 
-    .leading-none {
-      line-height: 1;
-    }
-
     .leading-xl {
       line-height: 1.75rem;
     }
@@ -205,10 +201,11 @@
     }
 
     .body {
-      max-width: 45rem;
       margin: auto;
       padding-right: 1rem;
       padding-left: 1rem;
+      max-width: 45rem;
+      line-height: 1;
     }
 
     .ui {
@@ -217,9 +214,8 @@
     }
 
     .flex-nav-list {
-      line-height: 1;
-      list-style-type: none;
       padding: 0;
+      list-style-type: none;
       display: flex;
       gap: 1rem;
       justify-content: center;
@@ -256,14 +252,14 @@
     {/block:ShowAvatar}
     {block:ShowTitle}
       <{block:IndexPage}h1{/block:IndexPage}{block:PermalinkPage}div{/block:PermalinkPage}
-        class="my-3 leading-none text-3xl text-bold">
+        class="my-3 text-3xl text-bold">
         <a href="/" class="title-color">
           {Title}
         </a>
       </{block:IndexPage}h1{/block:IndexPage}{block:PermalinkPage}div{/block:PermalinkPage}>
     {/block:ShowTitle}
     {block:ShowDescription}
-      <p class="my-2 leading-none opacity">
+      <p class="my-2 opacity">
         {Description}
       </p>
     {/block:ShowDescription}
