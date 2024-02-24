@@ -257,7 +257,7 @@
       padding: 0;
       list-style-type: none;
       display: flex;
-      gap: 1rem;
+      gap: 0.5rem;
       align-items: center;
     }
 
