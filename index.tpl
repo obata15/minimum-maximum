@@ -279,6 +279,34 @@
       gap: 1.5rem;
     }
 
+    .back-to-home a {
+      display: flex;
+      justify-content: center;
+      align-items: baseline;
+      margin: auto;
+      width: 4em;
+    }
+
+    .back-to-home span.o {
+      position: relative;
+      display: inline-block;
+      height: 14px;
+      width: 14px;
+      border-radius: 9999px;
+      border: solid 2px;
+      margin-left: 2px;
+      margin-right: 2px;
+    }
+
+    .back-to-home span img {
+      position: absolute;
+      height: 14px;
+      width: 14px;
+      left: 0;
+      border-radius: 9999px;
+      filter: brightness(0.66);
+    }
+
     article p {
       line-height: 1.75rem;
     }
@@ -352,7 +380,7 @@
       </p>
     {/block:ShowDescription}
   </header>
-  <nav class="my-4 text-center text-lg ui">
+  <nav class="my-4 text-lg ui">
     <ul class="flex-nav-list">
       <li>
         <a href="/" class="accent-color">Home</a>
@@ -474,9 +502,9 @@
           {PostNotes}
         </aside>
       {/block:Posts}
-      <nav>
-        <a href="/">
-          <span>H</span><span><img src="{PortraitURL-128}" alt="O" /></span><span>ME</span>
+      <nav class="back-to-home text-2xl ui">
+        <a href="/" class="accent-color">
+          <span>H</span><span class="o"><img src="{PortraitURL-128}" alt="O" /></span><span>ME</span>
         </a>
       </nav>
     </main>
