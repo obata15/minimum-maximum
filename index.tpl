@@ -179,6 +179,10 @@
       font-size: 1.875rem;
     }
 
+    .text-4xl {
+      font-size: 2.25rem;
+    }
+
     .block {
       display: block;
     }
@@ -189,6 +193,14 @@
 
     .leading-xl {
       line-height: 1.75rem;
+    }
+
+    .leading-3xl {
+      line-height: 2.25rem;
+    }
+
+    .leading-4xl {
+      line-height: 2.5rem;
     }
 
     .rounded-full {
@@ -220,6 +232,10 @@
       gap: 1rem;
       justify-content: center;
       align-items: baseline;
+    }
+
+    article p {
+      line-height: 1.75rem;
     }
   </style>
 </head>
@@ -350,7 +366,7 @@
       {block:Posts}
         <article>
           {block:Text}
-            <h1>{Title}</h1>
+            <h1 class="text-3xl leading-3xl">{Title}</h1>
             <ul>
               {block:Date}
                 <li>{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}</li>
