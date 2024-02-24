@@ -268,7 +268,7 @@
         </p>
       {/block:ShowDescription}
     </header>
-    <nav class="text-center text-xl my-6 ui">
+    <nav class="my-6 text-center text-xl ui">
       <ul class="flex-nav-list">
         {block:HasPages}
           {block:Pages}
@@ -325,7 +325,7 @@
         {/block:Posts}
       </ol>
       {block:Pagination}
-        <nav class="text-center my-6 text-2xl ui">
+        <nav class="my-6 text-center text-2xl ui">
           <ul class="flex-nav-list">
             {block:PreviousPage}
               <li><a href="{PreviousPage}" class="accent-color">&lsaquo;</a></li>
