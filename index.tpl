@@ -494,7 +494,7 @@
             </section>
           {/block:Text}
         </article>
-        {block:Likes}
+        {block:Date}
           <aside id="reaction">
             <ul class="flex-list">
               <li class="opacity">
@@ -513,7 +513,7 @@
             </ul>
             {PostNotes}
           </aside>
-        {/block:Likes}
+        {/block:Date}
       {/block:Posts}
       <nav class="back-to-home text-2xl ui">
         <a href="/" class="accent-color">
