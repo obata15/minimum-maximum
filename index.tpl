@@ -150,9 +150,8 @@
       margin-bottom: 1.5rem;
     }
 
-    .-my-0.1 {
-      margin-top: -0.125rem;
-      margin-bottom: -0.125rem;
+    .mt-2 {
+      margin-top: 0.5rem;
     }
 
     .list-none {
@@ -203,6 +202,11 @@
       line-height: 2.5rem;
     }
 
+    .leading-trim-xl {
+      margin-top: -0.125rem;
+      margin-bottom: -0.125rem;
+    }
+
     .rounded-full {
       border-radius: 9999px;
     }
@@ -232,6 +236,14 @@
       gap: 1rem;
       justify-content: center;
       align-items: baseline;
+    }
+
+    .index-post-list {
+      padding: 0;
+      list-style-type: none;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
     }
 
     article p {
@@ -303,10 +315,10 @@
       {block:TagPage}
         <h2>"{Tag}"</h2>
       {/block:TagPage}
-      <ol class="-my-0.1 p-0 list-none leading-xl">
+      <ol class="index-post-list">
         {block:Posts}
-          <li class="my-4">
-            <p class="m-0 text-bold text-xl">
+          <li>
+            <p class="m-0 text-bold text-xl leading-xl leading-trim-xl">
               {block:Text}
                 <a href="{Permalink}" class="title-color visited-opacity fill-empty">{Title}</a>
               {/block:Text}
@@ -335,7 +347,7 @@
                 [WARNING] Audio post is not supported.
               {/block:Audio}
             </p>
-            <a href="{Permalink}" class="inline-block title-color opacity">
+            <a href="{Permalink}" class="mt-2 inline-block title-color opacity">
               {Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}
             </a>
           </li>
