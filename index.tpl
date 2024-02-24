@@ -307,8 +307,25 @@
       filter: brightness(0.66);
     }
 
-    article p {
+    article {
       line-height: 1.75rem;
+    }
+
+    article h2 {
+      font-size: 1.5rem;
+      margin-top: -0.125rem;
+      margin-bottom: -0.125rem;
+    }
+
+    article p {
+      margin-top: 0.875rem;
+      margin-bottom: 0.875rem;
+    }
+
+    article blockquote {
+      margin: 0;
+      padding: 0 1em;
+      border-left: solid 4px;
     }
 
     .like_button iframe {
