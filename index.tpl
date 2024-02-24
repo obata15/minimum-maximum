@@ -282,6 +282,9 @@
   </header>
   <nav class="my-6 text-center text-xl ui">
     <ul class="flex-nav-list">
+      <li>
+        <a href="/" class="accent-color">Home</a>
+      </li>
       {block:HasPages}
         {block:Pages}
           <li>
