@@ -80,6 +80,10 @@
       color: #777777;
     }
 
+    .grey {
+      color: #777777;
+    }
+
     .opacity {
       opacity: 0.4;
     }
@@ -375,7 +379,7 @@
     {/block:ShowAvatar}
     {block:ShowTitle}
       <{block:IndexPage}h1{/block:IndexPage}{block:PermalinkPage}div{/block:PermalinkPage}
-        class="my-2 text-2xl text-bold">
+        class="my-3 text-2xl text-bold">
         <a href="/" class="title-color">
           {Title}
         </a>
@@ -479,7 +483,7 @@
             <h1 class="text-3xl leading-3xl leading-trim-3xl">{Title}</h1>
             {block:Date}
               <ul id="article-meta" class="flex-list">
-                <li>{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}</li>
+                <li class="grey">{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}</li>
                 {block:Tags}
                   <li><a href="{TagURL}" class="accent-color">#{Tag}</a></li>
                 {/block:Tags}
