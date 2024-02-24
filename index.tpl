@@ -96,7 +96,8 @@
 
       a.title-color:not(.base-brightness),
       a.accent-color:not(.base-brightness),
-      article section>:not(div) a {
+      article section>:not(div) a,
+      #notes .action a {
         filter: brightness(150%);
       }
 
@@ -255,8 +256,6 @@
     }
 
     .flex-list {
-      margin-top: 1rem;
-      margin-bottom: 1rem;
       padding: 0;
       list-style-type: none;
       display: flex;
@@ -328,8 +327,31 @@
 
     article blockquote {
       margin: 0;
-      padding: 0 1em;
+      padding: 0 1rem;
       border-left: solid 4px;
+    }
+
+    #notes .notes {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+    }
+
+    #notes .notes li .avatar_frame {
+      margin-right: 0.5rem;
+    }
+
+    #notes .notes li .avatar_frame img {
+      border-radius: 9999px;
+      vertical-align: bottom;
+    }
+
+    #notes .notes li.original_post {
+      display: none;
+    }
+
+    #notes .notes li .action a {
+      margin-right: 0.5rem;
     }
 
     .like_button iframe {
@@ -482,7 +504,7 @@
           {block:Text}
             <h1 class="text-3xl leading-3xl leading-trim-3xl">{Title}</h1>
             {block:Date}
-              <ul id="article-meta" class="flex-list">
+              <ul id="article-meta" class="my-4 flex-list">
                 <li class="grey">{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}</li>
                 {block:Tags}
                   <li><a href="{TagURL}" class="accent-color">#{Tag}</a></li>
@@ -495,9 +517,9 @@
           {/block:Text}
         </article>
         {block:Date}
-          <aside id="reaction">
-            <ul class="flex-list">
-              <li class="opacity">
+          <aside id="notes" class="my-8 grey">
+            <ul class="my-3 flex-list">
+              <li class="text-bold text-lg">
                 {NoteCountWithLabel}
               </li>
               <li onclick="like()">
