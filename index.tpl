@@ -336,9 +336,10 @@
     }
 
     #notes .notes {
-      margin: 0;
+      margin: -0.25rem 0;
       padding: 0;
       list-style-type: none;
+      line-height: 1.5;
     }
 
     #notes .notes li .avatar_frame {
@@ -347,15 +348,15 @@
 
     #notes .notes li .avatar_frame img {
       border-radius: 9999px;
-      vertical-align: bottom;
+      vertical-align: middle;
     }
 
     #notes .notes li.original_post {
       display: none;
     }
 
-    #notes .notes li .action a {
-      margin-right: 0.5rem;
+    #notes .notes li .action a:after {
+      content: " ";
     }
 
     .like_button iframe {
