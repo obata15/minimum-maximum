@@ -314,17 +314,23 @@
 
     article h2 {
       font-size: 1.5rem;
+      margin-top: 1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    article p {
       margin-top: -0.125rem;
       margin-bottom: -0.125rem;
     }
 
-    article p {
-      margin-top: 0.875rem;
-      margin-bottom: 0.875rem;
+    article ul,
+    article ol {
+      margin: 0.5rem 0;
+      padding-left: 1rem;
     }
 
     article blockquote {
-      margin: 0;
+      margin: 1rem 0;
       padding: 0 1rem;
       border-left: solid 4px;
     }
