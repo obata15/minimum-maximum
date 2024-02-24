@@ -90,7 +90,9 @@
         color: {BackgroundColor};
       }
 
-      a:not(:has(img)) {
+      a.title-color:not(.base-brightness),
+      a.accent-color:not(.base-brightness),
+      article section>:not(div) a {
         filter: brightness(150%);
       }
 
@@ -145,9 +147,19 @@
       margin-bottom: 1rem;
     }
 
+    .my-5 {
+      margin-top: 1.25rem;
+      margin-bottom: 1.25rem;
+    }
+
     .my-6 {
       margin-top: 1.5rem;
       margin-bottom: 1.5rem;
+    }
+
+    .my-8 {
+      margin-top: 2rem;
+      margin-bottom: 2rem;
     }
 
     .mt-2 {
@@ -188,6 +200,10 @@
 
     .inline-block {
       display: inline-block;
+    }
+
+    .text-lg {
+      font-size: 1.125rem;
     }
 
     .leading-xl {
@@ -234,6 +250,16 @@
       font-family: "Segoe UI", Roboto, sans-serif;
     }
 
+    .flex-list {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      padding: 0;
+      list-style-type: none;
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+    }
+
     .flex-nav-list {
       margin-top: 1rem;
       margin-bottom: 1rem;
@@ -242,16 +268,6 @@
       display: flex;
       gap: 1rem;
       justify-content: center;
-      align-items: baseline;
-    }
-
-    .flex-meta-list {
-      margin-top: 0.5rem;
-      margin-bottom: 0.5rem;
-      padding: 0;
-      list-style-type: none;
-      display: flex;
-      gap: 1rem;
       align-items: baseline;
     }
 
@@ -265,6 +281,10 @@
 
     article p {
       line-height: 1.75rem;
+    }
+
+    .like_button iframe {
+      vertical-align: bottom;
     }
   </style>
 </head>
@@ -289,27 +309,27 @@
 
   <header class="text-center">
     {block:ShowAvatar}
-      <div class="my-4 block">
+      <div class="my-3 block">
         <a href="/">
-          <img src="{PortraitURL-128}" alt="{URLEncodedName}" class="align-bottom rounded-full" />
+          <img src="{PortraitURL-128}" alt="{URLEncodedName}" class="align-bottom rounded-full" width="96" height="96" />
         </a>
       </div>
     {/block:ShowAvatar}
     {block:ShowTitle}
       <{block:IndexPage}h1{/block:IndexPage}{block:PermalinkPage}div{/block:PermalinkPage}
-        class="my-3 text-3xl text-bold">
+        class="my-2 text-2xl text-bold">
         <a href="/" class="title-color">
           {Title}
         </a>
       </{block:IndexPage}h1{/block:IndexPage}{block:PermalinkPage}div{/block:PermalinkPage}>
     {/block:ShowTitle}
     {block:ShowDescription}
-      <p class="my-2 opacity">
+      <p class="my-1 opacity">
         {Description}
       </p>
     {/block:ShowDescription}
   </header>
-  <nav class="my-6 text-center text-xl ui">
+  <nav class="my-4 text-center text-lg ui">
     <ul class="flex-nav-list">
       <li>
         <a href="/" class="accent-color">Home</a>
@@ -328,7 +348,7 @@
   </nav>
 
   {block:IndexPage}
-    <main class="my-6">
+    <main class="my-8">
       {block:TagPage}
         <h2>"{Tag}"</h2>
       {/block:TagPage}
@@ -394,12 +414,12 @@
   {/block:IndexPage}
 
   {block:PermalinkPage}
-    <main>
+    <main class="my-8">
       {block:Posts}
         <article>
           {block:Text}
             <h1 class="text-3xl leading-3xl leading-trim-3xl">{Title}</h1>
-            <ul class="flex-meta-list">
+            <ul class="flex-list">
               {block:Date}
                 <li>{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}</li>
               {/block:Date}
@@ -407,14 +427,14 @@
                 <li><a href="{TagURL}" class="accent-color">#{Tag}</a></li>
               {/block:Tags}
             </ul>
-            <section>
+            <section class="my-4">
               {Body}
             </section>
           {/block:Text}
         </article>
         <aside>
-          <ul>
-            <li>{NoteCountWithLabel}</li>
+          <ul class="flex-list">
+            <li class="opacity">{NoteCountWithLabel}</li>
             <li>{LikeButton color="grey"}</li>
             <li>{ReblogButton color="grey"}</li>
           </ul>
