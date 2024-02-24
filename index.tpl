@@ -211,6 +211,11 @@
       padding-left: 1rem;
     }
 
+    .ui {
+      font-weight: 500;
+      font-family: "Segoe UI", Roboto, sans-serif;
+    }
+
     .flex-nav-list {
       line-height: 1;
       list-style-type: none;
@@ -263,7 +268,7 @@
         </p>
       {/block:ShowDescription}
     </header>
-    <nav class="text-center my-6">
+    <nav class="text-center text-xl my-6 ui">
       <ul class="flex-nav-list">
         {block:HasPages}
           {block:Pages}
@@ -320,7 +325,7 @@
         {/block:Posts}
       </ol>
       {block:Pagination}
-        <nav class="text-center my-6 text-xl">
+        <nav class="text-center my-6 text-2xl ui">
           <ul class="flex-nav-list">
             {block:PreviousPage}
               <li><a href="{PreviousPage}" class="accent-color">&lsaquo;</a></li>
