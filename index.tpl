@@ -246,42 +246,44 @@
     </script>
   {/block:ifHideThumblrMenuAndPopup}
 
+  <header class="text-center">
+    {block:ShowAvatar}
+      <div class="my-4 block">
+        <a href="/">
+          <img src="{PortraitURL-128}" alt="{URLEncodedName}" class="align-bottom rounded-full" />
+        </a>
+      </div>
+    {/block:ShowAvatar}
+    {block:ShowTitle}
+      <{block:IndexPage}h1{/block:IndexPage}{block:PermalinkPage}div{/block:PermalinkPage}
+        class="my-3 leading-none text-3xl text-bold">
+        <a href="/" class="title-color">
+          {Title}
+        </a>
+      </{block:IndexPage}h1{/block:IndexPage}{block:PermalinkPage}div{/block:PermalinkPage}>
+    {/block:ShowTitle}
+    {block:ShowDescription}
+      <p class="my-2 leading-none opacity">
+        {Description}
+      </p>
+    {/block:ShowDescription}
+  </header>
+  <nav class="my-6 text-center text-xl ui">
+    <ul class="flex-nav-list">
+      {block:HasPages}
+        {block:Pages}
+          <li>
+            <a href="{URL}" class="accent-color">{Label}</a>
+          </li>
+        {/block:Pages}
+      {/block:HasPages}
+      <li>
+        <a href="/archive" class="accent-color">Archive</a>
+      </li>
+    </ul>
+  </nav>
+
   {block:IndexPage}
-    <header class="text-center">
-      {block:ShowAvatar}
-        <div class="my-4 block">
-          <a href="/">
-            <img src="{PortraitURL-128}" alt="{URLEncodedName}" class="align-bottom rounded-full" />
-          </a>
-        </div>
-      {/block:ShowAvatar}
-      {block:ShowTitle}
-        <h1 class="my-3 leading-none text-3xl">
-          <a href="/" class="title-color">
-            {Title}
-          </a>
-        </h1>
-      {/block:ShowTitle}
-      {block:ShowDescription}
-        <p class="my-2 leading-none opacity">
-          {Description}
-        </p>
-      {/block:ShowDescription}
-    </header>
-    <nav class="my-6 text-center text-xl ui">
-      <ul class="flex-nav-list">
-        {block:HasPages}
-          {block:Pages}
-            <li>
-              <a href="{URL}" class="accent-color">{Label}</a>
-            </li>
-          {/block:Pages}
-        {/block:HasPages}
-        <li>
-          <a href="/archive" class="accent-color">Archive</a>
-        </li>
-      </ul>
-    </nav>
     <main class="my-6">
       {block:TagPage}
         <h2>"{Tag}"</h2>
@@ -348,16 +350,6 @@
   {/block:IndexPage}
 
   {block:PermalinkPage}
-    <header>
-      {block:ShowTitle}
-        <a href="/">
-          <img src="{PortraitURL-128}" alt="{URLEncodedName}" />
-        </a>
-        {block:ShowTitle}
-          <a href="/">{Title}</a>
-        {/block:ShowTitle}
-      {/block:ShowTitle}
-    </header>
     <main>
       {block:Posts}
         <article>
