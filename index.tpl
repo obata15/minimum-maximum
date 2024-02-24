@@ -207,6 +207,11 @@
       margin-bottom: -0.125rem;
     }
 
+    .leading-trim-3xl {
+      margin-top: -0.1875rem;
+      margin-bottom: -0.1875rem;
+    }
+
     .rounded-full {
       border-radius: 9999px;
     }
@@ -230,11 +235,23 @@
     }
 
     .flex-nav-list {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
       padding: 0;
       list-style-type: none;
       display: flex;
       gap: 1rem;
       justify-content: center;
+      align-items: baseline;
+    }
+
+    .flex-meta-list {
+      margin-top: 0.5rem;
+      margin-bottom: 0.5rem;
+      padding: 0;
+      list-style-type: none;
+      display: flex;
+      gap: 1rem;
       align-items: baseline;
     }
 
@@ -381,13 +398,13 @@
       {block:Posts}
         <article>
           {block:Text}
-            <h1 class="text-3xl leading-3xl">{Title}</h1>
-            <ul>
+            <h1 class="text-3xl leading-3xl leading-trim-3xl">{Title}</h1>
+            <ul class="flex-meta-list">
               {block:Date}
                 <li>{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}</li>
               {/block:Date}
               {block:Tags}
-                <li><a href="{TagURL}">#{Tag}</a></li>
+                <li><a href="{TagURL}" class="accent-color">#{Tag}</a></li>
               {/block:Tags}
             </ul>
             <section>
