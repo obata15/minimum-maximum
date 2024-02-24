@@ -135,6 +135,11 @@
       margin-bottom: 0.5rem;
     }
 
+    .my-3 {
+      margin-top: 0.75rem;
+      margin-bottom: 0.75rem;
+    }
+
     .my-4 {
       margin-top: 1rem;
       margin-bottom: 1rem;
@@ -246,7 +251,7 @@
         </div>
       {/block:ShowAvatar}
       {block:ShowTitle}
-        <h1 class="my-2 leading-none text-3xl">
+        <h1 class="my-3 leading-none text-3xl">
           <a href="/" class="title-color">
             {Title}
           </a>
@@ -276,10 +281,10 @@
       {block:TagPage}
         <h2>"{Tag}"</h2>
       {/block:TagPage}
-      <ol class="-my-0.1 p-0 list-none">
+      <ol class="-my-0.1 p-0 list-none leading-xl">
         {block:Posts}
           <li class="my-4">
-            <p class="m-0 text-bold text-xl leading-xl">
+            <p class="m-0 text-bold text-xl">
               {block:Text}
                 <a href="{Permalink}" class="title-color visited-opacity fill-empty">{Title}</a>
               {/block:Text}
@@ -308,7 +313,7 @@
                 [WARNING] Audio post is not supported.
               {/block:Audio}
             </p>
-            <a href="{Permalink}" class="my-1 inline-block title-color opacity">
+            <a href="{Permalink}" class="inline-block title-color opacity">
               {Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}
             </a>
           </li>
