@@ -371,7 +371,7 @@
 
   <header class="text-center">
     {block:ShowAvatar}
-      <div class="my-3 block">
+      <div class="my-4 block">
         <a href="/">
           <img src="{PortraitURL-128}" alt="{URLEncodedName}" class="align-bottom rounded-full" width="96" height="96" />
         </a>
