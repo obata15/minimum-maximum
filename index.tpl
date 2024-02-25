@@ -58,7 +58,10 @@
       text-decoration: none;
     }
 
-    a:visited {
+    a:visited,
+    a:hover,
+    a:active,
+    a:focus {
       color: #777777;
     }
 
@@ -74,7 +77,10 @@
       color: {TitleColor};
     }
 
-    a.visited-opacity:visited {
+    a.title-color:not(.keep-link-color):visited,
+    a.title-color:not(.keep-link-color):hover,
+    a.title-color:not(.keep-link-color):active,
+    a.title-color:not(.keep-link-color):focus {
       color: #777777;
     }
 
@@ -92,15 +98,13 @@
         color: {BackgroundColor};
       }
 
-      a.title-color:not(.base-brightness),
-      a.accent-color:not(.base-brightness),
-      article section>:not(div) a,
-      #notes .action a {
-        filter: brightness(150%);
-      }
-
       a.title-color {
         color: {BackgroundColor};
+      }
+
+      a.accent-color,
+      article a:link {
+        filter: brightness(150%);
       }
     }
 
@@ -408,7 +412,7 @@
     {block:ShowTitle}
       <{block:IndexPage}h1{/block:IndexPage}{block:PermalinkPage}div{/block:PermalinkPage}
         class="my-3 text-2xl text-bold">
-        <a href="/" class="title-color">
+        <a href="/" class="title-color keep-link-color">
           {Title}
         </a>
       </{block:IndexPage}h1{/block:IndexPage}{block:PermalinkPage}div{/block:PermalinkPage}>
@@ -447,7 +451,7 @@
           <li>
             <p class="m-0 text-bold text-xl leading-xl leading-trim-xl">
               {block:Text}
-                <a href="{Permalink}" class="title-color visited-opacity fill-empty">{Title}</a>
+                <a href="{Permalink}" class="title-color fill-empty">{Title}</a>
               {/block:Text}
               {block:Photo}
                 [WARNING] Photo post is not supported.
@@ -506,7 +510,7 @@
   {block:PermalinkPage}
     <main class="my-8">
       {block:Posts}
-        <article>
+        <article class="my-8">
           {block:Text}
             <h1 class="text-3xl leading-3xl leading-trim-3xl">{Title}</h1>
             {block:Date}
