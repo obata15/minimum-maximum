@@ -56,7 +56,6 @@
 
     a {
       color: {AccentColor};
-      text-decoration: none;
     }
 
     a:hover {
@@ -134,6 +133,11 @@
       }
 
     {/block:ifAutoDarkMode}
+
+    a {
+      text-decoration: none;
+      word-wrap: break-word;
+    }
 
     .text-center {
       text-align: center;
@@ -360,6 +364,12 @@
       margin-bottom: 1rem;
     }
 
+    article h3 {
+      font-size: 1.25rem;
+      margin-top: 1.25rem;
+      margin-bottom: 1rem;
+    }
+
     article p {
       margin-top: 1rem;
       margin-bottom: 1rem;
@@ -368,13 +378,20 @@
     article ul,
     article ol {
       margin: 0.5rem 0;
-      padding-left: 1rem;
+      padding-left: 2rem;
     }
 
     article blockquote {
       margin: 1rem 0;
       padding: 0 1rem;
       border-left: solid 4px;
+    }
+
+    article img {
+      max-width: 100%;
+      width: auto;
+      height: auto;
+      display: block;
     }
 
     #notes svg {
