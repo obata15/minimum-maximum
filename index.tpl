@@ -244,6 +244,10 @@
       line-height: 1.75rem;
     }
 
+    .leading-2xl {
+      line-height: 2rem;
+    }
+
     .leading-3xl {
       line-height: 2.5rem;
     }
@@ -346,19 +350,15 @@
       border-radius: 9999px;
     }
 
-    article {
-      line-height: 1.75rem;
-    }
-
     article h2 {
       font-size: 1.5rem;
-      margin-top: 1.5rem;
+      margin-top: 1.75rem;
       margin-bottom: 1rem;
     }
 
     article p {
-      margin-top: -0.125rem;
-      margin-bottom: -0.125rem;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
     }
 
     article ul,
@@ -453,7 +453,7 @@
     {/block:ShowAvatar}
     {block:ShowTitle}
       <{block:IndexPage}h1{/block:IndexPage}{block:PermalinkPage}div{/block:PermalinkPage}
-        class="my-3 text-2xl text-bold">
+        class="my-3 text-3xl text-bold">
         <a href="/" class="title-color keep-link-color">
           {Title}
         </a>
@@ -486,7 +486,7 @@
   {block:IndexPage}
     <main class="my-8">
       {block:TagPage}
-        <h2 class="text-3xl leading-trim-3xl text-center">#{Tag}</h2>
+        <h2 class="text-3xl text-center">#{Tag}</h2>
       {/block:TagPage}
       <ol class="my-6 index-post-list">
         {block:Posts}
@@ -563,7 +563,7 @@
                 {/block:Tags}
               </ul>
             {/block:Date}
-            <section class="my-4">
+            <section class="my-4 text-lg leading-2xl">
               {Body}
             </section>
           {/block:Text}
