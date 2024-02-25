@@ -5,6 +5,7 @@
 
   <meta name="text:Font Family" content="sans-serif" />
   <meta name="if:Hide Thumblr Menu And Popup" content="0" />
+  <meta name="if:Auto Dark Mode" content="1" />
   <meta name="text:Google Site Verification ID" content="" />
   <meta name="text:Google Tag Manager ID" content="" />
 
@@ -99,37 +100,40 @@
       fill: {AccentColor}
     }
 
-    @media (prefers-color-scheme: dark) {
-      body {
-        background: {TitleColor};
-        color: {BackgroundColor};
+    {block:ifAutoDarkMode}
+      @media (prefers-color-scheme: dark) {
+        body {
+          background: {TitleColor};
+          color: {BackgroundColor};
+        }
+
+        a.title-color {
+          color: {BackgroundColor};
+        }
+
+        a.accent-color,
+        #notes svg,
+        #notes .notes a {
+          filter: brightness(150%);
+        }
+
+        .back-to-home span img {
+          filter: brightness(0.66);
+        }
+
+        article a {
+          color: {BackgroundColor};
+        }
+
+        article a:not(.keep-link-color):visited,
+        article a:not(.keep-link-color):hover,
+        article a:not(.keep-link-color):active,
+        article a:not(.keep-link-color):focus {
+          color: #777777;
+        }
       }
 
-      a.title-color {
-        color: {BackgroundColor};
-      }
-
-      a.accent-color,
-      #notes svg,
-      #notes .notes a {
-        filter: brightness(150%);
-      }
-
-      .back-to-home span img {
-        filter: brightness(0.66);
-      }
-
-      article a {
-        color: {BackgroundColor};
-      }
-
-      article a:not(.keep-link-color):visited,
-      article a:not(.keep-link-color):hover,
-      article a:not(.keep-link-color):active,
-      article a:not(.keep-link-color):focus {
-        color: #777777;
-      }
-    }
+    {/block:ifAutoDarkMode}
 
     .text-center {
       text-align: center;

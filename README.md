@@ -23,7 +23,9 @@ https://minimum-maximum-theme.tumblr.com/
 | Title color | #222222 or #011219 |
 | Accent color | #0079a8 |
 
-## Feature
+## Support
+
+### Feature
 
 - [x] Index page
   - [x] Home page
@@ -37,12 +39,10 @@ https://minimum-maximum-theme.tumblr.com/
 - [ ] Related posts
 - [ ] Ask (Question and Answer)
 - [ ] NPF rendering
-- [x] Auto dark mode (Swap BackgroundColor and TitleColor)
 - [x] OGP (By Tumblr default)
 - [x] Google Tag Manager (Google Analytics)
 - [x] Google Search Console
-- [x] Hide Thumblr Menu And Popup
-- [ ] Support Brand Address
+- [ ] Brand Address
 
 ### Appearance options
 
@@ -55,6 +55,8 @@ https://minimum-maximum-theme.tumblr.com/
 - [x] Show description
 - [x] Font Family
 - [x] Paragraph Line Height In Article
+- [x] Hide Thumblr Menu And Popup
+- [x] Auto dark mode (Swap BackgroundColor and TitleColor)
 - [ ] Show thumbnails in index (Beta)
 
 ## Never Support
