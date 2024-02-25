@@ -89,7 +89,7 @@
       color: {TitleColor};
     }
 
-    article setion a {
+    article section a {
       text-decoration: underline;
     }
 
@@ -124,7 +124,6 @@
       article a:not(.keep-link-color):active,
       article a:not(.keep-link-color):focus {
         color: #777777;
-        text-decoration: underline;
       }
     }
 
@@ -193,8 +192,8 @@
       margin-top: 0.5rem;
     }
 
-    .mr-2 {
-      margin-right: 0.5rem;
+    .mr-auto {
+      margin-right: auto;
     }
 
     .list-none {
@@ -263,6 +262,14 @@
       border-radius: 9999px;
     }
 
+    .gap-2 {
+      gap: 0.5rem;
+    }
+
+    .gap-4 {
+      gap: 1rem;
+    }
+
     .fill-empty:empty::after,
     .fill-empty span:empty::after {
       content: "∅";
@@ -286,7 +293,6 @@
       line-height: 1;
       list-style-type: none;
       display: flex;
-      gap: 0.5rem;
       align-items: center;
     }
 
@@ -551,8 +557,8 @@
           {block:Text}
             <h1 class="text-3xl leading-3xl leading-trim-3xl">{Title}</h1>
             {block:Date}
-              <ul id="article-meta" class="my-6 flex-list">
-                <li class="mr-2 grey">{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}</li>
+              <ul id="article-meta" class="my-6 flex-list gap-2">
+                <li class="grey">{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}</li>
                 {block:Tags}
                   <li><a href="{TagURL}" class="accent-color">#{Tag}</a></li>
                 {/block:Tags}
@@ -565,8 +571,8 @@
         </article>
         {block:Date}
           <aside id="notes" class="my-8">
-            <ul class="my-3 flex-list">
-              <li class="mr-2 text-bold text-lg">
+            <ul class="my-3 flex-list gap-4">
+              <li class="mr-auto text-bold text-lg">
                 {NoteCountWithLabel}
               </li>
               <li onclick="action('like')" class="like">
