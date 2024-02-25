@@ -532,7 +532,7 @@
       </ol>
     </main>
     {block:Pagination}
-      <nav class="my-6 text-center text-2xl ui">
+      <nav class="my-8 text-center text-2xl ui">
         <ul class="flex-nav-list">
           {block:PreviousPage}
             <li><a href="{PreviousPage}" class="accent-color keep-link-color">&lsaquo;</a></li>
@@ -608,12 +608,12 @@
           </aside>
         {/block:Date}
       {/block:Posts}
-      <nav class="back-to-home text-2xl ui">
-        <a href="/" class="accent-color keep-link-color">
-          <span>H</span><span class="o"><img src="{PortraitURL-128}" alt="O" /></span><span>ME</span>
-        </a>
-      </nav>
     </main>
+    <nav class="my-8 back-to-home text-2xl ui">
+      <a href="/" class="accent-color keep-link-color">
+        <span>H</span><span class="o"><img src="{PortraitURL-128}" alt="O" /></span><span>ME</span>
+      </a>
+    </nav>
   {/block:PermalinkPage}
 
   <!-- Please remove followings and edit more code! -->
