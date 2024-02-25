@@ -33,7 +33,7 @@
 
   <title>
     {block:TagPage}
-      {Tag} |
+      #{Tag} |
     {/block:TagPage}
     {block:PermalinkPage}
       {block:PostSummary}
@@ -486,7 +486,7 @@
   {block:IndexPage}
     <main class="my-8">
       {block:TagPage}
-        <h2 class="text-3xl leading-trim-3xl text-center">&ldquo; {Tag} &rdquo;</h2>
+        <h2 class="text-3xl leading-trim-3xl text-center">#{Tag}</h2>
       {/block:TagPage}
       <ol class="my-6 index-post-list">
         {block:Posts}
