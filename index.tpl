@@ -115,6 +115,10 @@
         filter: brightness(150%);
       }
 
+      .back-to-home span img {
+        filter: brightness(0.66);
+      }
+
       article a {
         color: {BackgroundColor};
       }
@@ -340,7 +344,6 @@
       width: 14px;
       left: 0;
       border-radius: 9999px;
-      filter: brightness(0.66);
     }
 
     article {
@@ -406,10 +409,6 @@
 
     #notes .notes li .action a:after {
       content: " ";
-    }
-
-    .like_button iframe {
-      vertical-align: bottom;
     }
   </style>
 
@@ -558,7 +557,7 @@
             <h1 class="text-3xl leading-3xl leading-trim-3xl">{Title}</h1>
             {block:Date}
               <ul id="article-meta" class="my-6 flex-list gap-2">
-                <li class="grey">{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}</li>
+                <li class="opacity">{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}</li>
                 {block:Tags}
                   <li><a href="{TagURL}" class="accent-color">#{Tag}</a></li>
                 {/block:Tags}
@@ -572,7 +571,7 @@
         {block:Date}
           <aside id="notes" class="my-8">
             <ul class="my-3 flex-list gap-4">
-              <li class="mr-auto text-bold text-lg">
+              <li class="mr-auto text-bold text-lg opacity">
                 {NoteCountWithLabel}
               </li>
               <li onclick="action('like')" class="like">
