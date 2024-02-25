@@ -4,8 +4,6 @@
   <meta charset="utf-8" />
 
   <meta name="text:Font Family" content="sans-serif" />
-  <meta name="text:Paragraph Line Height In Article" content="1.5" />
-  <meta name="if:Show Thumbnails" content="0" />
   <meta name="if:Hide Thumblr Menu And Popup" content="0" />
   <meta name="text:Google Site Verification ID" content="" />
   <meta name="text:Google Tag Manager ID" content="" />
@@ -31,11 +29,11 @@
   <link rel="shortcut icon" href="{Favicon}" />
   <link rel="alternate" type="application/rss+xml" href="{RSS}" />
   <link rel="apple-touch-icon-precomposed" href="{PortraitURL-128}" />
-  <link href="https://unpkg.com/sanitize.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet" />
 
   <title>
     {block:TagPage}
-      "{Tag}" |
+      #{Tag} |
     {/block:TagPage}
     {block:PermalinkPage}
       {block:PostSummary}
@@ -49,36 +47,56 @@
   <meta name="description" content="{MetaDescription}" />
 
   <style>
-    /* <ColorModeSettings> */
-
     body {
       background: {BackgroundColor};
       color: {TitleColor};
       font-family: {text:Font Family};
     }
 
-    #index-header a {
-      color: {TitleColor};
+    a {
+      color: {AccentColor};
+      text-decoration: none;
     }
 
-    ol#index-posts li.post a {
-      color: {TitleColor};
-    }
-
-    ol#index-posts li.post a:visited {
-      color: #999999;
-    }
-
-    ol#index-posts li.post a:hover {
+    a:hover {
       color: {AccentColor};
     }
 
-    ul.metas li.date a {
+    a.accent-color {
+      color: {AccentColor};
+    }
+
+    a.title-color {
       color: {TitleColor};
     }
 
-    nav.bottom.home-navigation .portrait-icon {
-      color: {AccentColor};
+    a:not(.keep-link-color):visited,
+    a:not(.keep-link-color):hover,
+    a:not(.keep-link-color):active,
+    a:not(.keep-link-color):focus {
+      color: #777777;
+    }
+
+    .grey {
+      color: #777777;
+    }
+
+    .opacity {
+      opacity: 0.4;
+    }
+
+    article a {
+      color: {TitleColor};
+    }
+
+    article section a {
+      text-decoration: underline;
+    }
+
+    svg,
+    path,
+    polygon {
+      fill: {AccentColor}
     }
 
     @media (prefers-color-scheme: dark) {
@@ -87,116 +105,225 @@
         color: {BackgroundColor};
       }
 
-      #index-header a {
+      a.title-color {
         color: {BackgroundColor};
       }
 
-      ol#index-posts li.post a {
-        color: {BackgroundColor};
-      }
-
-      ul.metas li.date a {
-        color: {BackgroundColor};
-      }
-
-      #permalink-header a .title,
-      #permalink-article ul.metas li a,
-      #index-menu-navigation a,
-      ol#index-posts li.post a:hover,
-      ol.notes a,
-      nav.bottom.pagination a,
-      nav.bottom a>span,
-      footer a,
-      #body-section p a,
-      #body-section ul a,
-      #body-section ol a {
+      a.accent-color,
+      #notes svg,
+      #notes .notes a {
         filter: brightness(150%);
       }
 
-      nav.bottom a>span img {
-        filter: brightness(66.66%);
+      .back-to-home span img {
+        filter: brightness(0.66);
+      }
+
+      article a {
+        color: {BackgroundColor};
+      }
+
+      article a:not(.keep-link-color):visited,
+      article a:not(.keep-link-color):hover,
+      article a:not(.keep-link-color):active,
+      article a:not(.keep-link-color):focus {
+        color: #777777;
       }
     }
 
-    /* </ColorModeSettings> */
-
-    /* <Common> */
-
-    {block:ifHideThumblrMenuAndPopup}
-
-      iframe[class^="tmblr"] {
-        display: none !important;
-      }
-
-      body {
-        padding-top: 17px !important;
-      }
-
-    {/block:ifHideThumblrMenuAndPopup}
-
-    html {
-      font-size: 17px;
+    .text-center {
+      text-align: center;
     }
 
-    body {
-      padding: 17px;
+    .align-bottom {
+      vertical-align: bottom;
     }
 
-    a {
-      text-decoration: none;
-      color: {AccentColor};
+    .p-0 {
+      padding: 0;
     }
 
-    #body-section p a,
-    #body-section ul a,
-    #body-section ol a {
-      text-decoration: underline;
+    .px-4 {
+      padding-right: 1rem;
+      padding-left: 1rem;
     }
 
-    p a:hover {
-      opacity: 0.5;
+    .py-6 {
+      padding-top: 1.5rem;
+      padding-bottom: 1.5rem;
     }
 
-    main {
-      max-width: 45rem;
-      margin: auto;
+    .m-0 {
+      margin: 0;
     }
 
-    main h1 {
-      margin-bottom: 0;
+    .my-1 {
+      margin-top: 0.25rem;
+      margin-bottom: 0.25rem;
     }
 
-    main h2 {
-      font-size: 1.25rem;
+    .my-2 {
+      margin-top: 0.5rem;
+      margin-bottom: 0.5rem;
     }
 
-    ul.metas {
-      list-style-type: none;
-      font-weight: normal;
-      padding-left: 0;
+    .my-3 {
+      margin-top: 0.75rem;
+      margin-bottom: 0.75rem;
     }
 
-    ul.metas li {
-      display: inline;
+    .my-4 {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
     }
 
-    ul.metas li.date {
-      opacity: 0.5;
+    .my-5 {
+      margin-top: 1.25rem;
+      margin-bottom: 1.25rem;
     }
 
-    nav.bottom {
+    .my-6 {
+      margin-top: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .my-8 {
       margin-top: 2rem;
       margin-bottom: 2rem;
-      text-align: center;
-      font-size: 1.5rem;
+    }
+
+    .mt-2 {
+      margin-top: 0.5rem;
+    }
+
+    .mr-auto {
+      margin-right: auto;
+    }
+
+    .list-none {
+      list-style-type: none;
+    }
+
+    .text-bold {
       font-weight: bold;
     }
 
-    nav.bottom.pagination .current {
-      font-size: 1.5em;
+    .text-sm {
+      font-size: 0.875rem;
     }
 
-    nav.bottom.home-navigation a {
+    .text-xl {
+      font-size: 1.25rem;
+    }
+
+    .text-2xl {
+      font-size: 1.5rem;
+    }
+
+    .text-3xl {
+      font-size: 1.875rem;
+    }
+
+    .text-4xl {
+      font-size: 2.25rem;
+    }
+
+    .block {
+      display: block;
+    }
+
+    .inline-block {
+      display: inline-block;
+    }
+
+    .text-lg {
+      font-size: 1.125rem;
+    }
+
+    .leading-xl {
+      line-height: 1.75rem;
+    }
+
+    .leading-2xl {
+      line-height: 2rem;
+    }
+
+    .leading-3xl {
+      line-height: 2.5rem;
+    }
+
+    .leading-4xl {
+      line-height: 2.5rem;
+    }
+
+    .leading-trim-xl {
+      margin-top: -0.125rem;
+      margin-bottom: -0.125rem;
+    }
+
+    .leading-trim-3xl {
+      margin-top: -0.3215rem;
+      margin-bottom: -0.3215rem;
+    }
+
+    .rounded-full {
+      border-radius: 9999px;
+    }
+
+    .gap-2 {
+      gap: 0.5rem;
+    }
+
+    .gap-4 {
+      gap: 1rem;
+    }
+
+    .fill-empty:empty::after,
+    .fill-empty span:empty::after {
+      content: "∅";
+    }
+
+    .body {
+      margin: auto;
+      padding-right: 1rem;
+      padding-left: 1rem;
+      max-width: 45rem;
+      line-height: 1;
+    }
+
+    .ui {
+      font-weight: 500;
+      font-family: "Segoe UI", Roboto, sans-serif;
+    }
+
+    .flex-list {
+      padding: 0;
+      line-height: 1;
+      list-style-type: none;
+      display: flex;
+      align-items: center;
+    }
+
+    .flex-nav-list {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      padding: 0;
+      list-style-type: none;
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      align-items: baseline;
+    }
+
+    .index-post-list {
+      padding: 0;
+      list-style-type: none;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .back-to-home a {
       display: flex;
       justify-content: center;
       align-items: baseline;
@@ -204,400 +331,294 @@
       width: 4em;
     }
 
-    nav.bottom.home-navigation span.o {
+    .back-to-home span.o {
       position: relative;
       display: inline-block;
-      height: 20px;
-      width: 20px;
-      border-radius: 1.2rem;
+      height: 14px;
+      width: 14px;
+      border-radius: 9999px;
+      border: solid 2px;
       margin-left: 2px;
       margin-right: 2px;
-      border: solid 3px;
     }
 
-    nav.bottom.home-navigation span img {
-      border-radius: 1.2rem;
+    .back-to-home span img {
       position: absolute;
       height: 14px;
       width: 14px;
       left: 0;
+      border-radius: 9999px;
     }
 
-    footer {
-      text-align: center;
-    }
-
-    footer>span {
-      opacity: 0.5;
-    }
-
-    footer a {
-      opacity: 1;
-    }
-
-    /* </Common> */
-
-    /* <PermalinkPage> */
-
-    #permalink-header {
-      max-width: 45rem;
-      margin: 0 auto;
-    }
-
-    #permalink-header .portrait-icon {
-      height: 40px;
-      width: 40px;
-      border-radius: 32px;
-    }
-
-    #permalink-header a {
-      display: flex;
-      align-items: center;
-    }
-
-    #permalink-header a img {
-      width: 2em;
-      height: 2em;
-      margin-right: 12px;
-    }
-
-    #permalink-header a .title {
+    article h2 {
       font-size: 1.5rem;
-      font-weight: bold;
-    }
-
-    #permalink-article p {
-      line-height: {text:Paragraph Line Height In Article};
-    }
-
-    #permalink-article h1 {
-      font-size: 2rem;
-      line-height: 1.4em;
-    }
-
-    #permalink-article ul.metas {
-      margin: 1em 0 2em 0;
-    }
-
-    #permalink-article #body-section {
-      margin-top: 1em;
-    }
-
-    #permalink-article blockquote {
-      margin: 0;
-      padding: 0 1em;
-      border-left: solid 4px;
-    }
-
-    #permalink-notes {
-      margin-top: 2rem;
-      margin-bottom: 2rem;
-    }
-
-    #permalink-notes ul {
-      display: flex;
-      gap: 20px;
-      align-items: center;
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-    }
-
-    #permalink-notes ul li>a {
-      width: 24px !important;
-      height: 24px !important;
-    }
-
-    #permalink-notes ul li.note-count {
-      font-size: 1.25rem;
-    }
-
-    #permalink-notes ul li:not(.note-count) {
-      height: 20px;
-      width: 20px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    #permalink-notes ul li.note-count {
-      font-weight: bold;
-    }
-
-    #permalink-notes ol.notes {
-      list-style-type: none;
-      padding: 0;
-      font-size: 0.75rem;
-    }
-
-    #permalink-notes ol.notes li.original_post {
-      display: none;
-    }
-
-    #permalink-notes ol.notes li>.avatar_frame {
-      margin-right: 0.5em;
-    }
-
-    #permalink-notes ol.notes li>.action a {
-      margin-right: 0.5em;
-    }
-
-    /* </PermalinkPage> */
-
-    /* <IndexPage> */
-
-    #index-header {
-      text-align: center;
-    }
-
-    #index-header .portrait-icon {
-      height: 96px;
-      width: 96px;
-      border-radius: 96px;
-    }
-
-    #index-header h1 {
-      margin: 0.25em 0;
-    }
-
-    #index-header p {
-      margin: 0;
-      opacity: 0.5;
-    }
-
-    #index-menu-navigation ul {
-      margin: 1.5em 0;
-      display: flex;
-      gap: 1rem;
-      justify-content: center;
-    }
-
-    #index-posts {
-      list-style-type: none;
-      padding-left: 0;
-      font-weight: bold;
-    }
-
-    #index-posts .post {
+      margin-top: 1.75rem;
       margin-bottom: 1rem;
     }
 
-    #index-posts .post .title {
-      display: flex;
-      font-size: 1.25rem;
-      align-items: baseline;
+    article p {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
     }
 
-    #index-posts li.post .title a:empty::after,
-    /* Preview Selector */
-    #index-posts li.post .title a span:empty::after {
-      content: "∅";
+    article ul,
+    article ol {
+      margin: 0.5rem 0;
+      padding-left: 1rem;
     }
 
-    #index-posts .post .title .thumbnails {
+    article blockquote {
+      margin: 1rem 0;
+      padding: 0 1rem;
+      border-left: solid 4px;
+    }
+
+    #notes svg {
+      width: 22px;
+      height: 22px;
       cursor: pointer;
-      display: flex;
+      vertical-align: bottom;
     }
 
-    #index-posts .post .title .thumbnails div {
-      margin: 0;
+    #notes .reblog svg {
+      width: 26px;
+      height: 26px;
+      margin-bottom: -2px;
+      margin-top: -2px;
     }
 
-    #index-posts .post .title .thumbnails img {
-      display: inherit;
-      width: 0.8em;
-      height: 0.8em;
-      margin-left: 0.5em;
+    #notes .notes {
+      margin: -0.25rem 0;
+      padding: 0;
+      list-style-type: none;
+      line-height: 1.5;
     }
 
-    #index-posts .post .title .thumbnails a {
-      pointer-events: none;
+    #notes .notes li .avatar_frame {
+      margin-right: 0.5rem;
     }
 
-    #index-posts .post .title .thumbnails p {
+    #notes .notes li .avatar_frame img {
+      border-radius: 9999px;
+      vertical-align: middle;
+    }
+
+    #notes .notes li.original_post {
       display: none;
     }
 
-    /* </IndexPage> */
-
-    /* <TagPage> */
-
-    #tag-heading {
-      font-size: 1rem;
-      text-align: center;
-      font-weight: normal;
+    #notes .notes li .action a:after {
+      content: " ";
     }
-
-    /* </TagPage> */
   </style>
+
+  <script>
+    function action(actionName) {
+      blogId = location.host.split('.')[0]
+      founds = location.pathname.match(/\/post\/(\d+)\/(.+)/);
+      postId = founds[1];
+      slug = founds[2];
+
+      open("https://www.tumblr.com/" + blogId + "/" + postId + "/" + slug + "?source=embed&action=" + actionName,
+        "_blank")
+    }
+  </script>
 </head>
 
-<body>
-  {block:PermalinkPage}
-    <header id="permalink-header">
-      {block:ShowTitle}
-        <a href="/">
-          <img src="{PortraitURL-128}" alt="{URLEncodedName}" class="portrait-icon" />
-          {block:ShowTitle}
-            <div class="title">{Title}</div>
-          {/block:ShowTitle}
-        </a>
-      {/block:ShowTitle}
-    </header>
+<body class="body">
+  {block:ifHideThumblrMenuAndPopup}
+    <script>
+      const mutationObserver = new MutationObserver((mutations) => {
+        mutations.forEach((mutation) => {
+          tumblrIframes = document.getElementsByClassName("tmblr-iframe");
+          while (tumblrIframes.length) {
+            tumblrIframes.item(0).remove()
+          }
+        });
+      });
 
-    <main id="permalink-main">
+      mutationObserver.observe(
+        document.body, { childList: true, subtree: true }
+      );
+    </script>
+  {/block:ifHideThumblrMenuAndPopup}
+
+  <header class="text-center">
+    {block:ShowAvatar}
+      <div class="my-4 block">
+        <a href="/">
+          <img src="{PortraitURL-128}" alt="{URLEncodedName}" class="align-bottom rounded-full" width="96" height="96" />
+        </a>
+      </div>
+    {/block:ShowAvatar}
+    {block:ShowTitle}
+      <{block:IndexPage}h1{/block:IndexPage}{block:PermalinkPage}div{/block:PermalinkPage}
+        class="my-3 text-3xl text-bold">
+        <a href="/" class="title-color keep-link-color">
+          {Title}
+        </a>
+      </{block:IndexPage}h1{/block:IndexPage}{block:PermalinkPage}div{/block:PermalinkPage}>
+    {/block:ShowTitle}
+    {block:ShowDescription}
+      <p class="my-1 opacity">
+        {Description}
+      </p>
+    {/block:ShowDescription}
+  </header>
+  <nav class="my-6 text-lg ui">
+    <ul class="flex-nav-list">
+      <li>
+        <a href="/" class="accent-color keep-link-color">Home</a>
+      </li>
+      {block:HasPages}
+        {block:Pages}
+          <li>
+            <a href="{URL}" class="accent-color keep-link-color">{Label}</a>
+          </li>
+        {/block:Pages}
+      {/block:HasPages}
+      <li>
+        <a href="/archive" class="accent-color keep-link-color">Archive</a>
+      </li>
+    </ul>
+  </nav>
+
+  {block:IndexPage}
+    <main class="my-8">
+      {block:TagPage}
+        <h2 class="text-3xl text-center">#{Tag}</h2>
+      {/block:TagPage}
+      <ol class="my-6 index-post-list">
+        {block:Posts}
+          <li>
+            <p class="m-0 text-bold text-xl leading-xl leading-trim-xl">
+              {block:Text}
+                <a href="{Permalink}" class="title-color fill-empty">{Title}</a>
+              {/block:Text}
+              {block:Photo}
+                [WARNING] Photo post is not supported.
+              {/block:Photo}
+              {block:Panorama}
+                [WARNING] Panorama post is not supported.
+              {/block:Panorama}
+              {block:Photoset}
+                [WARNING] Photoset post is not supported.
+              {/block:Photoset}
+              {block:Quote}
+                [WARNING] Quote post is not supported.
+              {/block:Quote}
+              {block:Link}
+                [WARNING] Link post is not supported.
+              {/block:Link}
+              {block:Chat}
+                [WARNING] Chat post is not supported.
+              {/block:Chat}
+              {block:Video}
+                [WARNING] Video post is not supported.
+              {/block:Video}
+              {block:Audio}
+                [WARNING] Audio post is not supported.
+              {/block:Audio}
+            </p>
+            <a href="{Permalink}" class="mt-2 inline-block title-color opacity">
+              {Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}
+            </a>
+          </li>
+        {/block:Posts}
+      </ol>
+    </main>
+    {block:Pagination}
+      <nav class="my-6 text-center text-2xl ui">
+        <ul class="flex-nav-list">
+          {block:PreviousPage}
+            <li><a href="{PreviousPage}" class="accent-color keep-link-color">&lsaquo;</a></li>
+          {/block:PreviousPage}
+          {block:JumpPagination length="5"}
+            {block:CurrentPage}
+              <li><span>{PageNumber}</span></li>
+            {/block:CurrentPage}
+            {block:JumpPage}
+              <li><a href="{URL}" class="accent-color keep-link-color">{PageNumber}</a></li>
+            {/block:JumpPage}
+          {/block:JumpPagination}
+          {block:NextPage}
+            <li><a href="{NextPage}" class="accent-color keep-link-color">&rsaquo;</a></li>
+          {/block:NextPage}
+        </ul>
+      </nav>
+    {/block:Pagination}
+  {/block:IndexPage}
+
+  {block:PermalinkPage}
+    <main class="my-8">
       {block:Posts}
-        <article id="permalink-article">
+        <article class="my-8">
           {block:Text}
-            <h1>{Title}</h1>
-            <ul class="metas">
-              {block:Date}
-                <li class="date">{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}</li>
-              {/block:Date}
-              {block:Tags}
-                <li class="tag"><a href="{TagURL}">#{Tag}</a></li>
-              {/block:Tags}
-            </ul>
-            <section id="body-section">
+            <h1 class="text-3xl leading-3xl leading-trim-3xl">{Title}</h1>
+            {block:Date}
+              <ul id="article-meta" class="my-6 flex-list gap-2">
+                <li class="opacity">{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}</li>
+                {block:Tags}
+                  <li><a href="{TagURL}" class="accent-color">#{Tag}</a></li>
+                {/block:Tags}
+              </ul>
+            {/block:Date}
+            <section class="my-4 text-lg leading-2xl">
               {Body}
             </section>
           {/block:Text}
         </article>
-
-        <aside id="permalink-notes">
-          <ul>
-            <li class="note-count">{NoteCountWithLabel}</li>
-            <li>{LikeButton color="grey"}</li>
-            <li>{ReblogButton color="grey"}</li>
-          </ul>
-          {PostNotes}
-        </aside>
+        {block:Date}
+          <aside id="notes" class="my-8">
+            <ul class="my-3 flex-list gap-4">
+              <li class="mr-auto text-bold text-lg opacity">
+                {NoteCountWithLabel}
+              </li>
+              <li onclick="action('like')" class="like">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                  <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                  <path
+                    d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z" />
+                </svg>
+              </li>
+              <li class="reblog">
+                <a href="{ReblogURL}">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                    <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                    <path
+                      d="M272 416c17.7 0 32-14.3 32-32s-14.3-32-32-32H160c-17.7 0-32-14.3-32-32V192h32c12.9 0 24.6-7.8 29.6-19.8s2.2-25.7-6.9-34.9l-64-64c-12.5-12.5-32.8-12.5-45.3 0l-64 64c-9.2 9.2-11.9 22.9-6.9 34.9s16.6 19.8 29.6 19.8l32 0 0 128c0 53 43 96 96 96H272zM304 96c-17.7 0-32 14.3-32 32s14.3 32 32 32l112 0c17.7 0 32 14.3 32 32l0 128H416c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l64 64c12.5 12.5 32.8 12.5 45.3 0l64-64c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8l-32 0V192c0-53-43-96-96-96L304 96z" />
+                  </svg>
+                </a>
+              </li>
+              <li onclick="action('follow')" class="follow">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+                  <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                  <path
+                    d="M96 128a128 128 0 1 1 256 0A128 128 0 1 1 96 128zM0 482.3C0 383.8 79.8 304 178.3 304h91.4C368.2 304 448 383.8 448 482.3c0 16.4-13.3 29.7-29.7 29.7H29.7C13.3 512 0 498.7 0 482.3zM504 312V248H440c-13.3 0-24-10.7-24-24s10.7-24 24-24h64V136c0-13.3 10.7-24 24-24s24 10.7 24 24v64h64c13.3 0 24 10.7 24 24s-10.7 24-24 24H552v64c0 13.3-10.7 24-24 24s-24-10.7-24-24z" />
+                </svg>
+              </li>
+            </ul>
+            <section class="grey">
+              {PostNotes}
+            </section>
+          </aside>
+        {/block:Date}
       {/block:Posts}
-
-      <nav class="bottom home-navigation">
-        <a href="/">
-          <span>H</span><span class="o"><img src="{PortraitURL-128}" alt="O"
-              class="portrait-icon" /></span><span>ME</span>
+      <nav class="back-to-home text-2xl ui">
+        <a href="/" class="accent-color keep-link-color">
+          <span>H</span><span class="o"><img src="{PortraitURL-128}" alt="O" /></span><span>ME</span>
         </a>
       </nav>
     </main>
   {/block:PermalinkPage}
 
-  {block:IndexPage}
-    <header id="index-header">
-      <a href="/"><img src="{PortraitURL-128}" alt="{URLEncodedName}" class="portrait-icon" /></a>
-      {block:ShowTitle}
-        <h1>
-          <a href="/">{Title}</a>
-        </h1>
-      {/block:ShowTitle}
-      {block:ShowDescription}
-        <p id="description">{Description}</p>
-      {/block:ShowDescription}
-    </header>
-
-    <nav id="index-menu-navigation">
-      <ul>
-        <li>
-          <a href="/">Home</a>
-        </li>
-        {block:HasPages}
-          {block:Pages}
-            <li>
-              <a href="{URL}">{Label}</a>
-            </li>
-          {/block:Pages}
-        {/block:HasPages}
-        <li>
-          <a href="/archive">Archive</a>
-        </li>
-        {block:AskEnabled}
-          <li>
-            <a href="/ask">{AskLabel}</a>
-          </li>
-        {/block:AskEnabled}
-      </ul>
-    </nav>
-
-    <main id="index-main">
-      {block:TagPage}
-        <h1 id="tag-heading">"{Tag}"</h1>
-      {/block:TagPage}
-
-      <ol id="index-posts">
-        {block:Posts}
-          <li class="post">
-            {block:Text}
-              <a href="{Permalink}">
-                <div class="title">
-                  {Title}
-                  {block:IfShowThumbnails}
-                    <div class="thumbnails" onclick="location.href='{Permalink}'">{Body}</div>
-                  {/block:IfShowThumbnails}
-                </div>
-                <ul class="metas">
-                  <li class="date">{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}</li>
-                </ul>
-              </a>
-            {/block:Text}
-
-            {block:Photo}
-              <strong>[WARNING] Photo post is not supported.</strong>
-            {/block:Photo}
-            {block:Panorama}
-              <strong>[WARNING] Panorama post is not supported.</strong>
-            {/block:Panorama}
-            {block:Photoset}
-              <strong>[WARNING] Photoset post is not supported.</strong>
-            {/block:Photoset}
-            {block:Quote}
-              <strong>[WARNING] Quote post is not supported.</strong>
-            {/block:Quote}
-            {block:Link}
-              <strong>[WARNING] Link post is not supported.</strong>
-            {/block:Link}
-            {block:Chat}
-              <strong>[WARNING] Chat post is not supported.</strong>
-            {/block:Chat}
-            {block:Video}
-              <strong>[WARNING] Video post is not supported.</strong>
-            {/block:Video}
-            {block:Audio}
-              <strong>[WARNING] Audio post is not supported.</strong>
-            {/block:Audio}
-          </li>
-        {/block:Posts}
-      </ol>
-
-
-      {block:Pagination}
-        <nav class="bottom pagination">
-          {block:PreviousPage}
-            <a href="{PreviousPage}">&lt;</a>
-          {/block:PreviousPage}
-          {block:JumpPagination length="5"}
-            {block:CurrentPage}
-              <span class="current">{PageNumber}</span>
-            {/block:CurrentPage}
-            {block:JumpPage}
-              <a href="{URL}">{PageNumber}</a>
-            {/block:JumpPage}
-          {/block:JumpPagination}
-          {block:NextPage}
-            <a href="{NextPage}">&gt;</a>
-          {/block:NextPage}
-        </nav>
-      {/block:Pagination}
-
-    </main>
-  {/block:IndexPage}
-
   <!-- Please remove followings and edit more code! -->
-  <footer>
-    <span>Powered by</span>
-    <a href="https://www.tumblr.com/">Tumblr</a>
-    <span>and</span>
-    <a href="https://github.com/obata15/minimum-maximum">Minimum-Maximum</a>
+  <footer class="my-4 text-center text-sm">
+    <span class="opacity">Powered by</span>
+    <a href="https://www.tumblr.com/" target="_blank" class="accent-color keep-link-color">Tumblr</a>
+    <span class="opacity">and</span>
+    <a href="https://github.com/obata15/minimum-maximum" target="_blank"
+      class="accent-color keep-link-color">Minimum-Maximum</a>
   </footer>
 </body>
 

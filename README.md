@@ -1,6 +1,6 @@
 # Minimum-Maximum
 
-Tumblr theme inspired by <a href="https://sanographix.github.io/tumblr/solo/">Solo</a>, <a href="https://www.tumblr.com/theme/37310">Tumblr Official</a> and many awesome website.
+Tumblr theme inspired by <a href="https://sanographix.github.io/tumblr/solo/">Solo</a>, <a href="https://www.tumblr.com/theme/37310">Tumblr Official</a>, <a href="https://developer.mozilla.org/">MDN</a>, <a href="https://tailwindcss.com/">Tailwind</a> and many awesome website.
 
 ## Demo
 
@@ -10,9 +10,10 @@ https://minimum-maximum-theme.tumblr.com/
 
 - https://text15.tumblr.com/
 
-## CDN Stacks
+## Stacks
 
-- https://csstools.github.io/sanitize.css/
+- https://necolas.github.io/normalize.css/
+- https://fontawesome.com/
 
 ## Required Appearance options
 
@@ -34,13 +35,14 @@ https://minimum-maximum-theme.tumblr.com/
 - [x] Reblog button
 - [x] Like button
 - [ ] Related posts
-- [ ] Question and Answer
+- [ ] Ask (Question and Answer)
 - [ ] NPF rendering
 - [x] Auto dark mode (Swap BackgroundColor and TitleColor)
 - [x] OGP (By Tumblr default)
 - [x] Google Tag Manager (Google Analytics)
 - [x] Google Search Console
 - [x] Hide Thumblr Menu And Popup
+- [ ] Support Brand Address
 
 ### Appearance options
 
@@ -52,16 +54,12 @@ https://minimum-maximum-theme.tumblr.com/
 - [x] Show title
 - [x] Show description
 - [x] Font Family
-  - [ ] Title font
-  - [ ] Alternate title font
-  - [ ] Use alternate title font only
-  - [ ] Body font
 - [x] Paragraph Line Height In Article
-- [x] Show thumbnails in index (Beta)
+- [ ] Show thumbnails in index (Beta)
 
 ## Never Support
 
-- Non-text post
+- Non-NPF (Neue Post Format) post
 - Source block
 - Localizing
 - Submission
@@ -76,9 +74,7 @@ https://minimum-maximum-theme.tumblr.com/
 ### Appearance options
 
 - Header image
-- Avatar
 - Avatar shape
 - Show header image
 - Stretch header image
-- Show avatar
 - Custom CSS
