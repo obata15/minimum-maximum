@@ -293,8 +293,8 @@
 
     .body {
       margin: auto;
-      padding-right: 1rem;
-      padding-left: 1rem;
+      padding-right: 0.5rem;
+      padding-left: 0.5rem;
       max-width: 45rem;
       line-height: 1;
     }
