@@ -87,7 +87,16 @@
 
     article a {
       color: {TitleColor};
+    }
+
+    article setion a {
       text-decoration: underline;
+    }
+
+    svg,
+    path,
+    polygon {
+      fill: {AccentColor}
     }
 
     @media (prefers-color-scheme: dark) {
@@ -101,13 +110,13 @@
       }
 
       a.accent-color,
+      #notes svg,
       #notes .notes a {
         filter: brightness(150%);
       }
 
       article a {
         color: {BackgroundColor};
-        text-decoration: underline;
       }
 
       article a:not(.keep-link-color):visited,
@@ -182,6 +191,10 @@
 
     .mt-2 {
       margin-top: 0.5rem;
+    }
+
+    .mr-2 {
+      margin-right: 0.5rem;
     }
 
     .list-none {
@@ -349,6 +362,20 @@
       margin: 1rem 0;
       padding: 0 1rem;
       border-left: solid 4px;
+    }
+
+    #notes svg {
+      width: 22px;
+      height: 22px;
+      cursor: pointer;
+      vertical-align: bottom;
+    }
+
+    #notes .reblog svg {
+      width: 26px;
+      height: 26px;
+      margin-bottom: -2px;
+      margin-top: -2px;
     }
 
     #notes .notes {
@@ -525,7 +552,7 @@
             <h1 class="text-3xl leading-3xl leading-trim-3xl">{Title}</h1>
             {block:Date}
               <ul id="article-meta" class="my-6 flex-list">
-                <li class="grey">{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}</li>
+                <li class="mr-2 grey">{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}</li>
                 {block:Tags}
                   <li><a href="{TagURL}" class="accent-color">#{Tag}</a></li>
                 {/block:Tags}
@@ -537,30 +564,38 @@
           {/block:Text}
         </article>
         {block:Date}
-          <aside id="notes" class="my-8 grey">
+          <aside id="notes" class="my-8">
             <ul class="my-3 flex-list">
-              <li class="text-bold text-lg">
+              <li class="mr-2 text-bold text-lg">
                 {NoteCountWithLabel}
               </li>
-              <li onclick="action('like')">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#ccc"
-                  style="width:22px;height:22px;margin-bottom:-4px;cursor:pointer;">
+              <li onclick="action('like')" class="like">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                  <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
                   <path
-                    d="m11.645 20.91-.007-.003-.022-.012a15.247 15.247 0 0 1-.383-.218 25.18 25.18 0 0 1-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0 1 12 5.052 5.5 5.5 0 0 1 16.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 0 1-4.244 3.17 15.247 15.247 0 0 1-.383.219l-.022.012-.007.004-.003.001a.752.752 0 0 1-.704 0l-.003-.001Z" />
+                    d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z" />
                 </svg>
               </li>
-              <li>
-                {ReblogButton color="grey"}
+              <li class="reblog">
+                <a href="{ReblogURL}">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                    <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                    <path
+                      d="M272 416c17.7 0 32-14.3 32-32s-14.3-32-32-32H160c-17.7 0-32-14.3-32-32V192h32c12.9 0 24.6-7.8 29.6-19.8s2.2-25.7-6.9-34.9l-64-64c-12.5-12.5-32.8-12.5-45.3 0l-64 64c-9.2 9.2-11.9 22.9-6.9 34.9s16.6 19.8 29.6 19.8l32 0 0 128c0 53 43 96 96 96H272zM304 96c-17.7 0-32 14.3-32 32s14.3 32 32 32l112 0c17.7 0 32 14.3 32 32l0 128H416c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l64 64c12.5 12.5 32.8 12.5 45.3 0l64-64c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8l-32 0V192c0-53-43-96-96-96L304 96z" />
+                  </svg>
+                </a>
               </li>
-              <li onclick="action('follow')">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#ccc"
-                  style="width:22px;height:22px;margin-top:-2px;cursor:pointer;">
+              <li onclick="action('follow')" class="follow">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+                  <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
                   <path
-                    d="M5.25 6.375a4.125 4.125 0 1 1 8.25 0 4.125 4.125 0 0 1-8.25 0ZM2.25 19.125a7.125 7.125 0 0 1 14.25 0v.003l-.001.119a.75.75 0 0 1-.363.63 13.067 13.067 0 0 1-6.761 1.873c-2.472 0-4.786-.684-6.76-1.873a.75.75 0 0 1-.364-.63l-.001-.122ZM18.75 7.5a.75.75 0 0 0-1.5 0v2.25H15a.75.75 0 0 0 0 1.5h2.25v2.25a.75.75 0 0 0 1.5 0v-2.25H21a.75.75 0 0 0 0-1.5h-2.25V7.5Z" />
+                    d="M96 128a128 128 0 1 1 256 0A128 128 0 1 1 96 128zM0 482.3C0 383.8 79.8 304 178.3 304h91.4C368.2 304 448 383.8 448 482.3c0 16.4-13.3 29.7-29.7 29.7H29.7C13.3 512 0 498.7 0 482.3zM504 312V248H440c-13.3 0-24-10.7-24-24s10.7-24 24-24h64V136c0-13.3 10.7-24 24-24s24 10.7 24 24v64h64c13.3 0 24 10.7 24 24s-10.7 24-24 24H552v64c0 13.3-10.7 24-24 24s-24-10.7-24-24z" />
                 </svg>
               </li>
             </ul>
-            {PostNotes}
+            <section class="grey">
+              {PostNotes}
+            </section>
           </aside>
         {/block:Date}
       {/block:Posts}

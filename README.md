@@ -13,7 +13,7 @@ https://minimum-maximum-theme.tumblr.com/
 ## Stacks
 
 - https://necolas.github.io/normalize.css/
-- https://heroicons.com/
+- https://fontawesome.com/
 
 ## Required Appearance options
 
