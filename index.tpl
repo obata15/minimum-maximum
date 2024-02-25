@@ -58,13 +58,6 @@
       text-decoration: none;
     }
 
-    a:visited,
-    a:hover,
-    a:active,
-    a:focus {
-      color: #777777;
-    }
-
     a:hover {
       color: {AccentColor};
     }
@@ -77,10 +70,10 @@
       color: {TitleColor};
     }
 
-    a.title-color:not(.keep-link-color):visited,
-    a.title-color:not(.keep-link-color):hover,
-    a.title-color:not(.keep-link-color):active,
-    a.title-color:not(.keep-link-color):focus {
+    a:not(.keep-link-color):visited,
+    a:not(.keep-link-color):hover,
+    a:not(.keep-link-color):active,
+    a:not(.keep-link-color):focus {
       color: #777777;
     }
 
@@ -90,6 +83,11 @@
 
     .opacity {
       opacity: 0.4;
+    }
+
+    article a {
+      color: {TitleColor};
+      text-decoration: underline;
     }
 
     @media (prefers-color-scheme: dark) {
@@ -103,8 +101,21 @@
       }
 
       a.accent-color,
-      article a:link {
+      #notes .notes a {
         filter: brightness(150%);
+      }
+
+      article a {
+        color: {BackgroundColor};
+        text-decoration: underline;
+      }
+
+      article a:not(.keep-link-color):visited,
+      article a:not(.keep-link-color):hover,
+      article a:not(.keep-link-color):active,
+      article a:not(.keep-link-color):focus {
+        color: #777777;
+        text-decoration: underline;
       }
     }
 
@@ -426,17 +437,17 @@
   <nav class="my-6 text-lg ui">
     <ul class="flex-nav-list">
       <li>
-        <a href="/" class="accent-color">Home</a>
+        <a href="/" class="accent-color keep-link-color">Home</a>
       </li>
       {block:HasPages}
         {block:Pages}
           <li>
-            <a href="{URL}" class="accent-color">{Label}</a>
+            <a href="{URL}" class="accent-color keep-link-color">{Label}</a>
           </li>
         {/block:Pages}
       {/block:HasPages}
       <li>
-        <a href="/archive" class="accent-color">Archive</a>
+        <a href="/archive" class="accent-color keep-link-color">Archive</a>
       </li>
     </ul>
   </nav>
@@ -489,18 +500,18 @@
       <nav class="my-6 text-center text-2xl ui">
         <ul class="flex-nav-list">
           {block:PreviousPage}
-            <li><a href="{PreviousPage}" class="accent-color">&lsaquo;</a></li>
+            <li><a href="{PreviousPage}" class="accent-color keep-link-color">&lsaquo;</a></li>
           {/block:PreviousPage}
           {block:JumpPagination length="5"}
             {block:CurrentPage}
               <li><span>{PageNumber}</span></li>
             {/block:CurrentPage}
             {block:JumpPage}
-              <li><a href="{URL}" class="accent-color">{PageNumber}</a></li>
+              <li><a href="{URL}" class="accent-color keep-link-color">{PageNumber}</a></li>
             {/block:JumpPage}
           {/block:JumpPagination}
           {block:NextPage}
-            <li><a href="{NextPage}" class="accent-color">&rsaquo;</a></li>
+            <li><a href="{NextPage}" class="accent-color keep-link-color">&rsaquo;</a></li>
           {/block:NextPage}
         </ul>
       </nav>
@@ -548,7 +559,7 @@
         {/block:Date}
       {/block:Posts}
       <nav class="back-to-home text-2xl ui">
-        <a href="/" class="accent-color">
+        <a href="/" class="accent-color keep-link-color">
           <span>H</span><span class="o"><img src="{PortraitURL-128}" alt="O" /></span><span>ME</span>
         </a>
       </nav>
@@ -558,9 +569,10 @@
   <!-- Please remove followings and edit more code! -->
   <footer class="my-4 text-center text-sm">
     <span class="opacity">Powered by</span>
-    <a href="https://www.tumblr.com/" target="_blank" class="accent-color">Tumblr</a>
+    <a href="https://www.tumblr.com/" target="_blank" class="accent-color keep-link-color">Tumblr</a>
     <span class="opacity">and</span>
-    <a href="https://github.com/obata15/minimum-maximum" target="_blank" class="accent-color">Minimum-Maximum</a>
+    <a href="https://github.com/obata15/minimum-maximum" target="_blank"
+      class="accent-color keep-link-color">Minimum-Maximum</a>
   </footer>
 </body>
 
