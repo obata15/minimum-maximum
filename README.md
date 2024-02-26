@@ -15,12 +15,12 @@ https://minimum-maximum-theme.tumblr.com/
 - https://necolas.github.io/normalize.css/
 - https://fontawesome.com/
 
-## Required Appearance options
+## Example appearance options 
 
 | Key | Value |
 |-|-|
 | Background color | #f6f6f6 |
-| Title color | #222222 or #011219 |
+| Title color | #222222 |
 | Accent color | #0079a8 |
 
 ## Support
