@@ -90,7 +90,7 @@
       color: {TitleColor};
     }
 
-    article a:hover {
+    article a:not(:has(img)):hover {
       color: #777777;
       opacity: 0.4;
     }
