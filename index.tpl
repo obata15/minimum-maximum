@@ -58,8 +58,8 @@
       color: {AccentColor};
     }
 
-    a:hover {
-      color: {AccentColor};
+    a:not(.keep-link-color):visited {
+      color: #777777;
     }
 
     a.accent-color {
@@ -74,11 +74,8 @@
       color: {TitleColor};
     }
 
-    a:not(.keep-link-color):visited,
-    a:not(.keep-link-color):hover,
-    a:not(.keep-link-color):active,
-    a:not(.keep-link-color):focus {
-      color: #777777;
+    a.title-color:hover {
+      opacity: 0.4;
     }
 
     .grey {
@@ -91,6 +88,11 @@
 
     article a {
       color: {TitleColor};
+    }
+
+    article a:hover {
+      color: #777777;
+      opacity: 0.4;
     }
 
     article section a {
@@ -126,13 +128,6 @@
 
         article a {
           color: {BackgroundColor};
-        }
-
-        article a:not(.keep-link-color):visited,
-        article a:not(.keep-link-color):hover,
-        article a:not(.keep-link-color):active,
-        article a:not(.keep-link-color):focus {
-          color: #777777;
         }
       }
 
