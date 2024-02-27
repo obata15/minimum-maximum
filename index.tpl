@@ -67,7 +67,7 @@
     }
 
     a.accent-color:hover {
-      opacity: 0.4;
+      opacity: 0.66;
     }
 
     a.title-color {
@@ -75,7 +75,7 @@
     }
 
     a.title-color:hover {
-      opacity: 0.4;
+      opacity: 0.66;
     }
 
     .grey {
@@ -83,7 +83,7 @@
     }
 
     .opacity {
-      opacity: 0.4;
+      opacity: 0.66;
     }
 
     article a {
@@ -92,7 +92,7 @@
 
     article a:not(:has(img)):hover {
       color: #777777;
-      opacity: 0.4;
+      opacity: 0.66;
     }
 
     article section a {
@@ -408,7 +408,7 @@
     }
 
     #notes .action-button:hover {
-      opacity: 0.4;
+      opacity: 0.75;
     }
 
     #notes .notes {
