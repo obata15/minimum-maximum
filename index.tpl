@@ -544,9 +544,9 @@
                 [WARNING] Audio post is not supported.
               {/block:Audio}
             </p>
-            <a href="{Permalink}" class="mt-2 inline-block title-color opacity keep-link-color">
+            <div href="{Permalink}" class="mt-2 opacity">
               {Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}
-            </a>
+            </div>
           </li>
         {/block:Posts}
       </ol>
