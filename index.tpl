@@ -86,20 +86,17 @@
       opacity: 0.66;
     }
 
-    article a {
+    article section a {
       color: {AccentColor};
+      text-decoration: underline;
     }
 
-    article a:not(.keep-link-color):visited {
+    article section a:not(.keep-link-color):visited {
       color: {TitleColor};
     }
 
-    article a:not(:has(img)):hover {
+    article section a:not(:has(img)):hover {
       opacity: 0.66;
-    }
-
-    article section a {
-      text-decoration: underline;
     }
 
     svg,
@@ -129,11 +126,11 @@
           filter: brightness(0.66);
         }
 
-        article a {
+        article section a:not(:has(img)) {
           filter: brightness(150%);
         }
 
-        article a:not(.keep-link-color):visited {
+        article section a:not(.keep-link-color):visited {
           color: {BackgroundColor};
         }
 
