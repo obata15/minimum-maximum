@@ -87,11 +87,14 @@
     }
 
     article a {
+      color: {AccentColor};
+    }
+
+    article a:not(.keep-link-color):visited {
       color: {TitleColor};
     }
 
     article a:not(:has(img)):hover {
-      color: #777777;
       opacity: 0.66;
     }
 
@@ -127,8 +130,13 @@
         }
 
         article a {
+          filter: brightness(150%);
+        }
+
+        article a:not(.keep-link-color):visited {
           color: {BackgroundColor};
         }
+
       }
 
     {/block:ifAutoDarkMode}
