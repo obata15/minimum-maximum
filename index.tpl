@@ -5,7 +5,7 @@
 
   <meta name="text:Font Family" content="sans-serif" />
   <meta name="if:Hide Thumblr Menu And Popup" content="0" />
-  <meta name="if:Auto Dark Mode" content="1" />
+  <meta name="if:Enable Dark Mode" content="1" />
   <meta name="text:Google Site Verification ID" content="" />
   <meta name="text:Google Tag Manager ID" content="" />
 
@@ -105,7 +105,7 @@
       fill: {AccentColor}
     }
 
-    {block:ifAutoDarkMode}
+    {block:ifEnableDarkMode}
       @media (prefers-color-scheme: dark) {
         body {
           background: {TitleColor};
@@ -126,9 +126,8 @@
           filter: brightness(0.66);
         }
 
-        article section a:not(:has(img))
-        {
-           color: {BackgroundColor};
+        article section a:not(:has(img)) {
+          color: {BackgroundColor};
         }
 
         article section a:visited {
@@ -137,7 +136,7 @@
 
       }
 
-    {/block:ifAutoDarkMode}
+    {/block:ifEnableDarkMode}
 
     a {
       text-decoration: none;
