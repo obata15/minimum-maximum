@@ -54,7 +54,6 @@ https://minimum-maximum-theme.tumblr.com/
 - [x] Show title
 - [x] Show description
 - [x] Font Family
-- [x] Paragraph Line Height In Article
 - [x] Hide Thumblr Menu And Popup
 - [x] Enable dark mode (Swap BackgroundColor and TitleColor)
 - [ ] Show thumbnails in index (Beta)
