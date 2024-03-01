@@ -87,12 +87,12 @@
     }
 
     article section a {
-      color: {AccentColor};
+      color: {TitleColor};
       text-decoration: underline;
     }
 
-    article section a:not(.keep-link-color):visited {
-      color: {TitleColor};
+    article section a:visited {
+      color: #777777;
     }
 
     article section a:not(:has(img)):hover {
@@ -126,12 +126,13 @@
           filter: brightness(0.66);
         }
 
-        article section a:not(:has(img)) {
-          filter: brightness(150%);
+        article section a:not(:has(img))
+        {
+           color: {BackgroundColor};
         }
 
-        article section a:not(.keep-link-color):visited {
-          color: {BackgroundColor};
+        article section a:visited {
+          color: #777777;
         }
 
       }
