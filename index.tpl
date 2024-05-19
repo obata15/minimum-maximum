@@ -323,9 +323,13 @@
       padding: 0;
       list-style-type: none;
       display: flex;
-      gap: 1rem;
       justify-content: center;
       align-items: baseline;
+    }
+
+    .flex-nav-list span,
+    .flex-nav-list a {
+      padding: 0.5em;
     }
 
     .index-post-list {
