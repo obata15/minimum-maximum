@@ -107,6 +107,10 @@
       opacity: 0.66;
     }
 
+    div.npf-link-block {
+      border-color: {AccentColor};
+    }
+
     {block:ifEnableDarkMode}
       @media (prefers-color-scheme: dark) {
         body {
